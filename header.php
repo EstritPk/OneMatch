@@ -29,7 +29,7 @@
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Contacto</a>
+						<a href="#" class="nav-link">Contacto estas ficha</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link">Sobre Nosotos</a>
