@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background: url("../images/iStock-949190756.jpg") no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+	font-family: 'Slabo 27px', serif;
+	font-size: 18px;
+}
+
+.posi{
+	margin-top: 150px;
+	position: relative;
+	background-color: rgba(249, 247, 247, 0.6);
+}
+
+.formulario  {
+	
+	
+	border-radius: 6px 6px 0 0;
+	color: #042130; ;
+	
+}
+
+.formulario input[type="text"],
+.formulario input[type="password"] {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 10px 10px;
+	border: none;
+	border-bottom: 2px solid #ccc;
+	font-family: 'Slabo 27px', serif;
+	font-size: 18px;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="password"]:focus {
+	border-bottom: 2px solid #246eb9;
+}
+
+.formulario .btn {
+	width: 100%;
+	text-align: center;
+	background: #13c32a;
+	color: #fff;
+	border: none;
+	display: block;
+	padding: 15px 10px;
+	cursor: pointer;
+	border-radius: 0 0 6px 6px;
+	font-family: 'Slabo 27px', serif;
+	font-size: 18px;
+}
+
+.formulario .btn:hover {
+	background: #4357ad;
+}
+
+p{
+	padding-top: 5px;
+	font-size: 19px;
+	color: #042130; 
+
+}
+p a{
+	text-decoration: none;
+}
