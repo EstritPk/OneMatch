@@ -32,7 +32,7 @@
 						<a href="#" class="nav-link">Contacto estas ficha</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Sobre Nosotos</a>
+						<a href="#" class="nav-link">Sobre Nosotos creemos que el ricki es el mas capo</a>
 					</li>
 				</ul>
 
