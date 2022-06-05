@@ -29,10 +29,10 @@
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Contacto estas ficha</a>
+						<a href="#" class="nav-link">Contacto</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Sobre Nosotos creemos que el ricki es el mas capo</a>
+						<a href="#" class="nav-link">Sobre Nosotos</a>
 					</li>
 				</ul>
 
