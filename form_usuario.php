@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Usuario</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
 
@@ -17,8 +18,11 @@
         include "includes/header.php";
         ?>
         <div class="container ">
-            <div class="row mt-3 form shadow-lg p-3 mb-5  rounded center">
-                <div class="col">
+            <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
+                <div class="card-header text-center bg-info">
+                    <h2 class="">Registro de Usuario</h2>
+                </div>
+                <div class="col mt-3">
                     <form action="" method="$_POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
@@ -120,6 +124,9 @@
                 </div>
             </div>
         </div>
+        <?php
+        include "includes/footer.php";
+        ?>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 
