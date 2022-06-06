@@ -17,8 +17,11 @@
         include "includes/header.php";
         ?>
         <div class="container ">
-            <div class="row mt-3 form shadow-lg p-3 mb-5  rounded center">
-                <div class="col">
+            <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
+                <div class="card-header text-center bg-info">
+                    <h2 class="">Registro de Administrador</h2>
+                </div>
+                <div class="col mt-3">
                     <form action="" method="$_POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
@@ -37,7 +40,7 @@
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="ap_materno" class="form-label">Apellido Paterno</label>
+                                <label for="ap_materno" class="form-label">Apellido Materno</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno" name="ap_materno">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
@@ -104,6 +107,9 @@
                 </div>
             </div>
         </div>
+        <?php
+        include "includes/footer.php";
+        ?>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 
