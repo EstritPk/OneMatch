@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+<!-- DEBO HACER CRUD -->
     <body>
         <?php
         include "includes/header.php";
@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="ap_materno" class="form-label">Apellido Paterno</label>
+                                <label for="ap_materno" class="form-label">Apellido Materno</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno" name="ap_materno">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
@@ -82,7 +82,7 @@
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 mb-3">
-                                        <label class="form-label">Genero</label>
+                                        <label class="form-label">Identidad</label>
 
                                         <div class="form-check">
                                             <input type="radio" class="form-check-input" name="genero" id="hombre">

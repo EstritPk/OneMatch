@@ -17,17 +17,18 @@
         <div class="row justify-content-center">
             <div class="col-md-7 col-lg-5 ">
 
+            <!-- DEBO HACER CRUD -->
 
                 <div class="login-wrap p-4 p-md-5 card posi center">
 
-                    <form action="#" class="signin-form formulario">
+                    <form name="formlog" action="#" class="signin-form formulario">
                         <div class="form-group mt-3 contenedor-inputs">
-                            <label class="form-control-placeholder" for="username">Username</label>
+                            <label class="form-control-placeholder" name="usern" for="username">Username</label>
                             <input type="text" class="form-control" required>
 
                         </div>
                         <div class="form-group contenedor-inputs">
-                            <label class="form-control-placeholder" for="password">Password</label>
+                            <label class="form-control-placeholder" name="claveuser" for="password">Password</label>
                             <input id="password-field" type="password" class="form-control" required>
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
