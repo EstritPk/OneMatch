@@ -8,6 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/validaciones.js"></script>
 </head>
 
 <body>
@@ -33,11 +34,12 @@
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control btn  rounded submit px-3">Ingresar</button>
+                            <button  onclick="validarLoginU()" class="form-control btn  rounded submit px-3">Ingresar</button>
                         </div>
-
                     </form>
+
                     <p class="text-center">No tiene cuenta? <a data-toggle="tab" href="#signup">Crear Cuenta</a></p>
+                    
                 </div>
 
             </div>

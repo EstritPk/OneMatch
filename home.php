@@ -56,11 +56,11 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><br>
 
-        <div class="text-uppercase fw-bold mb-4">
+        <!--<div class="text-uppercase fw-bold mb-4">
             <span>Nuestro redes social</span>
-        </div>
+        </div> -->
 
         <div>
             <a class="btn btn-outline-success" href="form_admin.php" role="button">Administrador</a>
@@ -68,7 +68,7 @@
             <a class="btn btn-outline-success" href="form_complejo.php" role="button">complejos</a>
             <a class="btn btn-outline-success" href="form_equipo.php" role="button">Equipos</a>
             <a class="btn btn-outline-success" href="form_reservas.php" role="button">Reservas</a>
-            <a class="btn btn-outline-success" href="form_usuarios.php" role="button">Usuarios</a>
+            <a class="btn btn-outline-success" href="form_usuario.php" role="button">Usuarios</a>
             <a class="btn btn-outline-success" href="perfil_admin.php" role="button">Perfil Administrador</a>
             <a class="btn btn-outline-success" href="perfil_usuario.php" role="button">Perfil usuario</a>
             
