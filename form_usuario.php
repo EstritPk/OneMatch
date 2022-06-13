@@ -23,7 +23,7 @@
                     <h2 class="">Registro de Usuario</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="" method="$_POST">
+                    <form action="functions/registrar_usuario.php" method="$_POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_usu" class="form-label">Rut</label>
@@ -48,28 +48,28 @@
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno" name="ap_materno">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="direccion" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion" name="direccion">
+                                <label for="direccion_usu" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_usu" name="direccion">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="edad" class="form-label">Edad</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad" name="edad">
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_usu" name="edad">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="telefono" class="form-label">Telefono</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono" name="telefono">
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_usu" name="telefono">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="clave" class="form-label">Clave</label>
-                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave" name="clave">
+                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_usu" name="clave">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="correo" class="form-label">Correo</label>
-                                <input type="email" class="form-control" placeholder="correo@correo.com" id="correo" name="correo">
+                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="correo">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="foto" class="form-label">Foto</label>
-                                <input type="file" class="form-control" name="foto" id="foto">
+                                <input type="file" class="form-control" name="foto_usu" id="foto">
                             </div>
                         </div>
 
@@ -85,21 +85,21 @@
                                         <label class="form-label">Identidad</label>
 
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="hombre">
+                                            <input type="radio" class="form-check-input" name="genero" id="hombre_usu">
                                             <label for="hombre" class="form-check-label">Hombre</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="mujer">
+                                            <input type="radio" class="form-check-input" name="genero" id="mujer_usu">
                                             <label for="mujer" class="form-check-label">Mujer</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="otro">
+                                            <input type="radio" class="form-check-input" name="genero" id="otro_usu">
                                             <label for="otro" class="form-check-label">Otro</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 mb-3">
                                         <label class="form-label">Deportes</label>
-                                        <select name="deportes" id="deportes" class="form-select">
+                                        <select name="deportes" id="deporte_usu" class="form-select">
                                             <option value="football">Football</option>
                                             <option value="tenis">Tenis</option>
                                             <option value="padel">Padel</option>
@@ -113,10 +113,10 @@
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
+                                        <input type="checkbox" name="terminos" id="terminos_usu" class="form-check-input">
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" class="col-12 button">Registrar</button>
+                                    <button type="submit" name="reg_usu" class="col-12 button">Registrar</button>
                                 </div>
                             </div>
                         </div>
