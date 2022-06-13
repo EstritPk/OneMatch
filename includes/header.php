@@ -44,7 +44,7 @@
 				<!-- Icon perfil-->
 				<li class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle" id="submenuCancha" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Rickelson Bresume<i class="bi bi-person-circle m-2 "></i>
+							Rickelson Bresume<i class="fa-solid fa-circle-user"></i></i>
 						</a>
 
 						<!-- Sub-elementos -->
