@@ -19,7 +19,7 @@
     </div>
     
     <div class="container ">
-        <div class="row mt-2">
+        <div class="row ">
             <div class="col">
                 <div class="carousel slide carousel-fade" id="mi-carousel" data-bs-ride="carousel">
                     <div class="carousel-inner">

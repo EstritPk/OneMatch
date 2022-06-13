@@ -1,43 +1,50 @@
 * {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-body{
- background-color: rgb(196, 251, 247);
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.form{
-	margin-top: 150px;
-	position: relative;
-	background-color: rgba(255, 255, 255, 0.6);
-	border-radius: 6px 6px 0 0;
-	color: #000000; ;
-	width: 95%;
+body {
+    background-color: rgb(196, 251, 247);
+}
+
+
+
+
+
+.form {
+    margin-top: 150px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px 6px 0 0;
+    color: #000000;
+    ;
+    width: 95%;
     padding: 30px;
     margin: 20px;
 }
-.button{
+
+.button {
     background-color: #1491d4;
     display: inline-block;
-    color:  #ffff;
+    color: #ffff;
     padding: 10px;
     border: 1px solid #0c5f9690;
     border-radius: 10px;
     text-transform: uppercase;
 }
 
-.button:hover{
+.button:hover {
     animation: pulsate 1s ease-in-out;
 }
 
 @keyframes pulsate {
-    0%{
-        box-shadow: 
-        0 0 25px #1a7db3,
-        0 0 50px #0e7ec3;
-        
+    0% {
+        box-shadow:
+            0 0 25px #1a7db3,
+            0 0 50px #0e7ec3;
+
     }
 }
