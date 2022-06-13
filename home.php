@@ -12,10 +12,13 @@
 </head>
 
 <body>
+    <div class="pt-5">
     <?php
     include "includes/header.php";
     ?>
-    <div class="container m">
+    </div>
+    
+    <div class="container ">
         <div class="row mt-2">
             <div class="col">
                 <div class="carousel slide carousel-fade" id="mi-carousel" data-bs-ride="carousel">

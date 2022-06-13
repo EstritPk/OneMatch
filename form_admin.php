@@ -11,11 +11,14 @@
 </head>
 
 <body>
-<!-- DEBO HACER CRUD -->
+    <!-- DEBO HACER CRUD -->
+
     <body>
-        <?php
-        include "includes/header.php";
-        ?>
+        <div class="pt-5">
+            <?php
+            include "includes/header.php";
+            ?>
+        </div>
         <div class="container ">
             <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
                 <div class="card-header text-center bg-info">

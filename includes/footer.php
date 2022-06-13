@@ -1,4 +1,4 @@
-<footer class="text-center text-lg-start bg-dark text-muted ">
+<footer class="text-center text-lg-start bg-dark text-muted p-2">
 
    
 

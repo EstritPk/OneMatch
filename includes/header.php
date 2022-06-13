@@ -1,5 +1,5 @@
-<header>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<header class=" pb-5 ">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top  ">
 		<div class="container">
 			<a href="#" class="navbar-brand">OneMatch</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoMenu" aria-controls="contenidoMenu" aria-expanded="false" aria-label="Mostrar/Ocultar Navegación">

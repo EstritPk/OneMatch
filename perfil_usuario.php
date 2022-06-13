@@ -13,9 +13,11 @@
 
 <body>
 
-    <?php
-    include "includes/header.php";
-    ?>
+    <div class="pt-5">
+        <?php
+        include "includes/header.php";
+        ?>
+    </div>
 
 
     <div class="container emp-profile">
@@ -29,19 +31,19 @@
                             <input type="file" name="file" />
                         </div>
                         <div class="">
-                <div class="col-md-12">
-                    <div class="profile-work">
-                        <h5>Descripcion</h5>
-                        <p>"No preguntes lo que tus compañeros de equipo pueden hacer por ti.
-                            Pregúntate qué puedes hacer tú por tus compañeros de equipo".</p>
+                            <div class="col-md-12">
+                                <div class="profile-work">
+                                    <h5>Descripcion</h5>
+                                    <p>"No preguntes lo que tus compañeros de equipo pueden hacer por ti.
+                                        Pregúntate qué puedes hacer tú por tus compañeros de equipo".</p>
 
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-               
-            </div>
-                    </div>
-                </div>
-                
+
                 <div class="col-md-6">
                     <div class="profile-head">
                         <h5>
@@ -52,14 +54,14 @@
 
                     </div>
                     <div class="col-md-8">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                        </li>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                            </li>
 
-                    </ul>
-                    <div class="tab-content profile-tab" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        </ul>
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
@@ -133,50 +135,50 @@
                                     <p>Birkorff</p>
                                 </div>
                             </div>
-                            
 
+
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div class="col-md-2">
                     <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Editar Perfil" />
                 </div>
             </div>
             <div class="col-md-8">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Created At</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Created At</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-          <?php
-          $query = "SELECT * FROM task";
-          $result_tasks = mysqli_query($conn, $query);    
+                        <?php
+                        $query = "SELECT * FROM task";
+                        $result_tasks = mysqli_query($conn, $query);
 
-          while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-          <tr>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['description']; ?></td>
-            <td><?php echo $row['created_at']; ?></td>
-            <td>
-              <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
-                <i class="fas fa-marker"></i>
-              </a>
-              <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
-                <i class="far fa-trash-alt"></i>
-              </a>
-            </td>
-          </tr>
-          <?php } ?>
-        </tbody>
-      </table>
-    </div>
-           
+                        while ($row = mysqli_fetch_assoc($result_tasks)) { ?>
+                            <tr>
+                                <td><?php echo $row['title']; ?></td>
+                                <td><?php echo $row['description']; ?></td>
+                                <td><?php echo $row['created_at']; ?></td>
+                                <td>
+                                    <a href="edit.php?id=<?php echo $row['id'] ?>" class="btn btn-secondary">
+                                        <i class="fas fa-marker"></i>
+                                    </a>
+                                    <a href="delete_task.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">
+                                        <i class="far fa-trash-alt"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+
         </form>
     </div>
 
