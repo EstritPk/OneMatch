@@ -7,17 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/form.css">
+    
 </head>
 
 <body>
     <div class="pt-5">
-    <?php
-    include "includes/header.php";
-    ?>
+        <?php
+        include "includes/header.php";
+        ?>
     </div>
-    
+
     <div class="container ">
         <div class="row ">
             <div class="col">
@@ -74,16 +79,157 @@
             <a class="btn btn-outline-success" href="form_usuario.php" role="button">Usuarios</a>
             <a class="btn btn-outline-success" href="perfil_admin.php" role="button">Perfil Administrador</a>
             <a class="btn btn-outline-success" href="perfil_usuario.php" role="button">Perfil usuario</a>
-            
+
 
         </div>
     </div>
 
+    <section class="ftco-section bg-dark mt-4 p-2 mb-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="heading-section mb-3 text-wirth pb-md-2">Complejos Deportivos</h2>
+                </div>
+                <div class="col-md-12 ite">
+                    <div class="featured-carousel owl-carousel">
+                        <div class="item ">
+                            <div class="blog-entry">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_1.jpg');">
+
+                                </a>
+                                <div class="text border border-top-0 p-4">
+                                    <h5 class="heading"><a href="#">Legal
+                                            Throughout</a></h5>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="ml-auto meta2 mb-0">
+                                            <a href="#" class="mr-2">Admin</a>
+                                            <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="blog-entry">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_2.jpg');">
+
+                                </a>
+                                <div class="text border border-top-0 p-4">
+                                    <h5 class="heading"><a href="#"> Legal Working
+                                        </a></h5>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="ml-auto meta2 mb-0">
+                                            <a href="#" class="mr-2">Admin</a>
+                                            <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="blog-entry">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_3.jpg');">
+
+                                </a>
+                                <div class="text border border-top-0 p-4">
+                                    <h3 class="heading"><a href="#"> Occur
+                                            Throughout</a></h3>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="ml-auto meta2 mb-0">
+                                            <a href="#" class="mr-2">Admin</a>
+                                            <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="blog-entry">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_4.jpg');">
+
+                                </a>
+                                <div class="text border border-top-0 p-4">
+                                    <h3 class="heading"><a href="#"> Legal Working </a></h3>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="ml-auto meta2 mb-0">
+                                            <a href="#" class="mr-2">Admin</a>
+                                            <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="blog-entry">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_5.jpg');">
+
+                                </a>
+                                <div class="text border border-top-0 p-4">
+                                    <h3 class="heading"><a href="#">Finance Legal </a></h3>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="ml-auto meta2 mb-0">
+                                            <a href="#" class="mr-2">Admin</a>
+                                            <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="blog-entry">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_6.jpg');">
+
+                                </a>
+                                <div class="text border border-top-0 p-4">
+                                    <h3 class="heading"><a href="#"> Working Streams </a></h3>
+
+                                    <div class="d-flex align-items-center mt-4">
+                                        <p class="mb-0"><a href="#" class="btn btn-info">Ver Mas <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="ml-auto meta2 mb-0">
+                                            <a href="#" class="mr-2">Admin</a>
+                                            <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-    <?php
-    include "includes/footer.php";
-    ?>
+
+
+
+    <div class="pt-5">
+
+        <?php
+        include "includes/footer.php";
+        ?>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>

@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Equipo</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
@@ -68,16 +72,20 @@
 
 
 
-
-        
-
-
         <div class="pt-5">
+
             <?php
             include "includes/footer.php";
             ?>
         </div>
 
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
 
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>

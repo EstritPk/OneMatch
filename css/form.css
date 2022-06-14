@@ -11,7 +11,11 @@ body {
 }
 
 
-
+h2{
+    text-decoration: underline;
+    color: gainsboro;
+    text-transform: uppercase;
+}
 
 
 .form {
@@ -26,7 +30,7 @@ body {
     margin: 20px;
 }
 
-.button {
+.button .btn {
     background-color: #1491d4;
     display: inline-block;
     color: #ffff;
@@ -47,4 +51,8 @@ body {
             0 0 50px #0e7ec3;
 
     }
+}
+.item{
+    width: 95%;
+    height: 50%;
 }

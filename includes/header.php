@@ -10,7 +10,7 @@
 				<!-- Enlaces -->
 				<ul class="navbar-nav me-5">
 					<li class="nav-item">
-						<a href="#" class="nav-link">Inicio</a>
+						<a href="home.php" class="nav-link">Inicio</a>
 					</li>
 
 					<!-- Dropdown -->
@@ -40,7 +40,7 @@
 				<!-- Formulario de busqueda -->
 				<form action="" class="d-flex me-auto">
 					<input type="text" class="form-control me-2" aria-label="Buscar" placeholder="Buscar">
-					<button class="btn btn-primary" type="submit">Buscar</button>
+					<button class="btn btn-info" type="submit">Buscar</button>
 				</form>
 				<!-- Icon perfil-->
 				<li class="nav-item dropdown">
