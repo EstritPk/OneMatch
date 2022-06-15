@@ -1,19 +1,21 @@
 <?php
 
-include("functions/db.php");
+//include("db.php");
+$conn=mysqli_connect("localhost","root","root","onematch");
 
 
-if (isset($_POST['save_equ'])) {   
-    $sql="INSERT INTO `equipos` (`id_equipo`, `nombre_equipo`, `nomina_equipo`, `descripcion_equipo`, `esatdo_equipo`, `imagen_equipo`, `deportes_id_deporte`) VALUES ('1',  '$nombre_equ' , '$nomina_equ', '$descripcion_equ', '1', '', '')";
-    $result=mysqli_query($conn(),$sql);
-    $result = mysqli_query($conn, $query);
-    if(!$result) {
-        die("Query Failed.");
-    }
+  
+$sql="INSERT INTO equipos SET nombre_equipo='".$_POST['nombre_equ']."' , nomina_equipo='".$_POST['nomina_equ']."' , descripcion_equipo='".$_POST['descripcion_equ']."' ";
+
+    //$sql="INSERT INTO equipos SET id_equipo='1',nombre_equipo='los panas',nomina_equipo=1,descripcion_equipo='Los pana mans',esatdo_equipo=1"; '".$_POST['frmusuario']."'
+//$sql="INSERT INTO usuarios SET nombre='".$_POST['frmnombre']."',appaterno='".$_POST['frmpaterno']."',apmaterno='".$_POST['frmmaterno']."',usuario='".$_POST['frmusuario']."',clave='".md5($_POST['frmclave'])."',estado=".$_POST['estado'].",fecha_creacion='".fechabd(fechahoy())."', hora_creacion='".hora()."',foto='".$_FILES['archivo']['name']."'";
+
+    mysqli_query($conn,$sql);
+
+    header('Location:home.php');
         
-        
-}
-header('Location:home.php');
+
+
 
 ?>
 

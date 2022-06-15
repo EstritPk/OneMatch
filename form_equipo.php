@@ -1,3 +1,6 @@
+<?php
+include "functions/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,28 +30,41 @@
                     <h2 class="">Registro de Equipo</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="" method="$_POST">
+                    <form action="functions/registrar_equipo.php" method="POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_equ" class="form-label">Nombre del Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="nombre_equ">
+                                <input type="text" class="form-control" placeholder="Mala Leche" value="nombre_equ" name="nombre_equ" id="nombre_equ">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nomina_equ" class="form-label">Nomina</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="nomina_equ" name="nomina_equ">
+                                <input type="number" class="form-control" placeholder="Mala Leche" value="nomina_equ" id="nomina_equ" name="nomina_equ">
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="descripcion_equ" class="form-label">Descripcion</label>
-                                <textarea name="descripcion_equ" id="descripcion_equ" class="form-control"></textarea>
+                                <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control"></textarea>
                             </div>
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Deportes</label>
                                 <select name="deporte_equ" id="deporte_equ" class="form-select">
-                                    <option value="football">Football</option>
-                                    <option value="tenis">Tenis</option>
-                                    <option value="padel">Padel</option>
+                                    <option value="1">Football</option>
+                                    <option value="2">Padel</option>
                                 </select>
+                                
+                                <select id="tipo_pro" class="form-control" name="tipo_pro"  class="form-select" aria-label="Default select example" placeholder="Tipo Producto"><br>>
+                                <?php
+                                 $sqlpro = "SELECT * FROM familia_pro";
+                                $resultpro = mysqli_query(conectar(), $sqlpro);
+                                while ($datospro = mysqli_fetch_array($resultpro)) {
+                                ?>
+                                    <option name="sop" value="<?php echo $datospro['cod_pro']; ?>" <?php if (isset($_GET['Id'])) {
+                                                                                                                                if ($datos['cod_pro'] == $datospro['cod_pro']) { ?> selected <?php }
+                                                                                                                                                                                            } ?>><?php echo $datospro['categoria']; ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
                             </div>
                         </div>
                         <div class="row">
@@ -58,7 +74,7 @@
                                         <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" name="save_equ" class="col-12 btn btn-info button">Registrar</button>
+                                    <button type="submit" class="col-12 btn btn-info button">Registrar</button>
                                 </div>
                             </div>
                         </div>
