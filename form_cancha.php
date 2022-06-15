@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
@@ -80,7 +81,7 @@
                                         <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" class="col-12 button">Registrar</button>
+                                    <button type="submit" class="col-12 btn btn-info button">Registrar</button>
                                 </div>
                             </div>
                         </div>
