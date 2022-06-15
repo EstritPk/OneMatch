@@ -46,25 +46,23 @@ include "functions/db.php";
                                 <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control"></textarea>
                             </div>
                             <div class="col-12 col-sm-6 mb-3">
+
                                 <label class="form-label">Deportes</label>
-                                <select name="deporte_equ" id="deporte_equ" class="form-select">
-                                    <option value="1">Football</option>
-                                    <option value="2">Padel</option>
-                                </select>
                                 
-                                <select id="tipo_pro" class="form-control" name="tipo_pro"  class="form-select" aria-label="Default select example" placeholder="Tipo Producto"><br>>
+                                <select name="deporte_equ" id="deporte_equ" class="form-select">
                                 <?php
-                                 $sqlpro = "SELECT * FROM familia_pro";
+                                 $sqlpro = "SELECT * FROM deporte";
                                 $resultpro = mysqli_query(conectar(), $sqlpro);
                                 while ($datospro = mysqli_fetch_array($resultpro)) {
                                 ?>
-                                    <option name="sop" value="<?php echo $datospro['cod_pro']; ?>" <?php if (isset($_GET['Id'])) {
-                                                                                                                                if ($datos['cod_pro'] == $datospro['cod_pro']) { ?> selected <?php }
-                                                                                                                                                                                            } ?>><?php echo $datospro['categoria']; ?></option>
-                                <?php
+                                    <option value="<?php echo $datospro['id_deporte']; ?>"><?php echo $datospro['nombre_deporte']; ?></option>
+                                    
+                                    <?php
                                 }
                                 ?>
-                            </select>
+                                </select>
+                                
+                                
                             </div>
                         </div>
                         <div class="row">
