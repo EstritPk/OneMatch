@@ -28,37 +28,28 @@
                 <div class="col mt-3">
                     <form action="" method="$_POST">
                         <div class="row">
-
-
-
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="nombre" class="form-label">Nombre del Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="nombre">
+                                <label for="nombre_equ" class="form-label">Nombre del Equipo</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="nombre_equ">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="ap_paterno" class="form-label">Nomina</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno" name="ap_paterno">
+                                <label for="nomina_equ" class="form-label">Nomina</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="nomina_equ" name="nomina_equ">
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="descripcion" class="form-label">Descripcion</label>
-                                <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
+                                <label for="descripcion_equ" class="form-label">Descripcion</label>
+                                <textarea name="descripcion_equ" id="descripcion_equ" class="form-control"></textarea>
                             </div>
-
-
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Deportes</label>
-                                <select name="deportes" id="deportes" class="form-select">
+                                <select name="deporte_equ" id="deporte_equ" class="form-select">
                                     <option value="football">Football</option>
                                     <option value="tenis">Tenis</option>
                                     <option value="padel">Padel</option>
                                 </select>
                             </div>
                         </div>
-
-
-
-
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
@@ -66,7 +57,7 @@
                                         <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" class="col-12 button">Registrar</button>
+                                    <button type="submit" name="save_equ" class="col-12 button">Registrar</button>
                                 </div>
                             </div>
                         </div>

@@ -2,37 +2,18 @@
 
 include("functions/db.php");
 
-function ingresar()
-{
-       
 
+if (isset($_POST['save_equ'])) {   
+    $sql="INSERT INTO `equipos` (`id_equipo`, `nombre_equipo`, `nomina_equipo`, `descripcion_equipo`, `esatdo_equipo`, `imagen_equipo`, `deportes_id_deporte`) VALUES ('1',  '$nombre_equ' , '$nomina_equ', '$descripcion_equ', '1', '', '')";
+    $result=mysqli_query(conn(),$sql);
+    $result = mysqli_query($conn, $query);
+    if(!$result) {
+        die("Query Failed.");
+    }
         
-
-        header('Location:formulario_usuario.php');
+        
 }
-
-
-
-
-    /*
-
-     $sql="INSERT INTO usuarios SET nombre='".$_POST['frmnombre']."',
-        appaterno='".$_POST['frmpaterno']."',
-        apmaterno='".$_POST['frmmaterno']."',
-        usuario='".$_POST['frmusuario']."',
-        clave='".md5($_POST['frmclave'])."',
-        estado=".$_POST['estado'].",
-        fecha_creacion='".fechabd(fechahoy())."',
-         hora_creacion='".hora()."',
-         foto='".$_FILES['archivo']['name']."'";
-        mysqli_query(conectar(),$sql);
-            move_uploaded_file($_FILES['archivo']['tmp_name'],"images/fotos/".$_FILES['archivo']['name']);
-    */
-
-
-
-
-
-
+header('Location:home.php');
 
 ?>
+
