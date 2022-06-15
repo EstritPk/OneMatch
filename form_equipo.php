@@ -34,7 +34,7 @@ include "functions/db.php";
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_equ" class="form-label">Nombre del Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" value="nombre_equ" name="nombre_equ" id="nombre_equ">
+                                <input type="text" class="form-control" placeholder="Mala Leche" name="nombre_equ" id="nombre_equ">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nomina_equ" class="form-label">Nomina</label>
@@ -51,7 +51,7 @@ include "functions/db.php";
                                 
                                 <select name="deporte_equ" id="deporte_equ" class="form-select">
                                 <?php
-                                 $sqlpro = "SELECT * FROM deporte";
+                                 $sqlpro = "SELECT * FROM deportes";
                                 $resultpro = mysqli_query(conectar(), $sqlpro);
                                 while ($datospro = mysqli_fetch_array($resultpro)) {
                                 ?>
