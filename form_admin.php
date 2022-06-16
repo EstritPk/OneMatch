@@ -12,6 +12,7 @@
 
 <body>
     <!-- DEBO HACER CRUD -->
+    <!-- RICKELSON, FALTA LA DESCRIPCION DEL ADMIN -->
 
     <body>
         <div class="pt-5">
@@ -25,49 +26,42 @@
                     <h2 class="">Registro de Administrador</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="" method="$_POST">
+                    <form action="functions/registrar_admin.php" method="POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="rut_usu" class="form-label">Rut</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu">
-                            </div>
-
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="nombre">
+                                <label for="rut_adm" class="form-label">Rut</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut_adm" name="rut_adm">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="ap_paterno" class="form-label">Apellido Paterno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno" name="ap_paterno">
-                            </div>
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="ap_materno" class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno" name="ap_materno">
+                                <label for="name_adm" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="name_adm" name="name_adm">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="direccion" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion" name="direccion">
-                            </div>
-
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="telefono" class="form-label">Telefono</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono" name="telefono">
+                                <label for="ap_paterno_adm" class="form-label">Apellido Paterno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_adm" name="ap_paterno_adm">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="clave" class="form-label">Clave</label>
-                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave" name="clave">
+                                <label for="ap_materno_adm" class="form-label">Apellido Materno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_adm" name="ap_materno_adm">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="correo" class="form-label">Correo</label>
-                                <input type="email" class="form-control" placeholder="correo@correo.com" id="correo" name="correo">
+                                <label for="direccion_adm" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_adm" name="direccion_adm">
                             </div>
-
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="telefono_adm" class="form-label">Telefono</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_adm" name="telefono_adm">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="clave_adm" class="form-label">Clave</label>
+                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_adm" name="clave_adm">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="email_adm" class="form-label">E-Mail</label>
+                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_adm" name="email_adm">
+                            </div>
                         </div>
-
                         <div class="row">
-
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="foto" class="form-label">Foto</label>
                                 <input type="file" class="form-control" name="foto" id="foto">
@@ -75,26 +69,23 @@
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 mb-3">
-                                        <label class="form-label">Genero</label>
-
+                                        <label class="form-label" name="identidad_adm" id="identidad_adm">Identidad</label>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="hombre">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="hombre_adm">
                                             <label for="hombre" class="form-check-label">Hombre</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="mujer">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="mujer_adm">
                                             <label for="mujer" class="form-check-label">Mujer</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="otro">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="otro_adm">
                                             <label for="otro" class="form-check-label">Otro</label>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>

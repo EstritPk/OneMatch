@@ -15,6 +15,8 @@
 <body>
     <!-- DEBO HACER CRUD -->
 
+    <!--RICKELSON, FALTA LA DIRECCION DEL USUARIO -->
+
     <body>
         <div class="pt-5">
             <?php
@@ -27,78 +29,75 @@
                     <h2 class="">Registro de Usuario</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/registrar_usuario.php" method="$_POST">
+                    <form action="functions/registrar_usuario.php" method="POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_usu" class="form-label">Rut</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="nombre_usu" class="form-label">Nombre de Usuario</label>
+                                <label for="name_usu" class="form-label">Nombre de Usuario</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="name_usu" name="name_usu">
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nombre_usu" class="form-label">Nombre</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="nombre_usu" name="nombre_usu">
                             </div>
-
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="nombre">
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="ap_paterno" class="form-label">Apellido Paterno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno" name="ap_paterno">
+                                <label for="ap_paterno_usu" class="form-label">Apellido Paterno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_usu" name="ap_paterno_usu">
                             </div>
 
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="ap_materno" class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno" name="ap_materno">
+                                <label for="ap_materno_usu" class="form-label">Apellido Materno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_usu" name="ap_materno_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_usu" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_usu" name="direccion">
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_usu" name="direccion_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="edad" class="form-label">Edad</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_usu" name="edad">
+                                <label for="edad_usu" class="form-label">Edad</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_usu" name="edad_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="telefono" class="form-label">Telefono</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_usu" name="telefono">
+                                <label for="telefono_usu" class="form-label">Telefono</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_usu" name="telefono_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="clave" class="form-label">Clave</label>
-                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_usu" name="clave">
+                                <label for="clave_usu" class="form-label">Clave</label>
+                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_usu" name="clave_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="correo" class="form-label">Correo</label>
-                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="correo">
+                                <label for="email_usu" class="form-label">E-Mail</label>
+                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="email_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="foto" class="form-label">Foto</label>
                                 <input type="file" class="form-control" name="foto_usu" id="foto">
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="descripcion" class="form-label">Descripcion</label>
-                                <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
+                                <label for="descripcion_usu" class="form-label">Descripcion</label>
+                                <textarea name="descripcion_usu" id="descripcion_usu" class="form-control"></textarea>
                             </div>
-
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 mb-3">
-                                        <label class="form-label">Identidad</label>
+                                        <label class="form-label" name="identidad_usu" id="identidad_usu">Identidad</label>
 
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="hombre_usu">
-                                            <label for="hombre" class="form-check-label">Hombre</label>
+                                            <input type="radio" class="form-check-input" name="identidad_usu" id="hombre_usu">
+                                            <label for="hombre_usu" class="form-check-label">Hombre</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="mujer_usu">
-                                            <label for="mujer" class="form-check-label">Mujer</label>
+                                            <input type="radio" class="form-check-input" name="identidad_usu" id="mujer_usu">
+                                            <label for="mujer_usu" class="form-check-label">Mujer</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="genero" id="otro_usu">
-                                            <label for="otro" class="form-check-label">Otro</label>
+                                            <input type="radio" class="form-check-input" name="identidad_usu" id="otro_usu">
+                                            <label for="otro_usu" class="form-check-label">Otro</label>
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-6 mb-3">
@@ -112,7 +111,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
@@ -120,7 +118,7 @@
                                         <input type="checkbox" name="terminos" id="terminos_usu" class="form-check-input">
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" name="reg_usu" class="col-12 btn btn-info button">Registrar</button>
+                                    <button type="submit" class="col-12 btn btn-info button">Registrar</button>
                                 </div>
                             </div>
                         </div>
