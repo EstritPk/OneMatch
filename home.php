@@ -84,11 +84,11 @@
         </div>
     </div>
 
-    <section class="ftco-section bg-dark mt-4 p-2 mb-5 ">
+    <section class="ftco-section bg-secondary mt-4 p-2 mb-5 ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="heading-section mb-3 text-wirth pb-md-2">Complejos Deportivos</h2>
+                    <h2 class="heading-section mb-3 text-light pb-md-2">Complejos Deportivos</h2>
                 </div>
                 <div class="col-md-12 ite">
                     <div class="featured-carousel owl-carousel">

@@ -39,24 +39,26 @@
 
 				<!-- Formulario de busqueda -->
 				<form action="" class="d-flex me-auto">
-					<input type="text" class="form-control me-2" aria-label="Buscar" placeholder="Buscar">
-					<button class="btn btn-info" type="submit">Buscar</button>
+					<input type="text" class="form-control me-1" aria-label="Buscar" placeholder="Buscar">
+					<button class="btn btn-outline-info" type="submit">Buscar</button>
 				</form>
 				<!-- Icon perfil-->
-				<li class="nav-item dropdown">
-						<a href="#" class="nav-link dropdown-toggle" id="submenuCancha" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Rickelson Bresume<i class="fa-solid fa-circle-user"></i></i>
-						</a>
+				<div class="nav-item dropdown me-auto">
+					<a href="#" class="nav-link  text-light" style="font-size: 20px;" id="submenuCancha" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Rickelson Bresume<i class="fa-solid fa-circle-user m-2 " style="font-size: 35px; ;"></i>
+					</a>
 
-						<!-- Sub-elementos -->
-						<ul class="dropdown-menu" aria-labelledby="submenuCancha">
-							<li><a href="#" class="dropdown-item">Mi Cuenta</a></li>
-							<li><a href="#" class="dropdown-item">Mis Equipos</a></li>
-							<li><a href="#" class="dropdown-item">Mis Reservas</a></li>
-							<li><a href="index.php" class="dropdown-item">Cerar Session</a></li>
-							
-						</ul>
-					</li>
+					<!-- Sub-elementos -->
+					<ul class="dropdown-menu " style="width: 18rem;" aria-labelledby="submenuCancha">
+
+						<li><a href="perfil_usuario.php" class="dropdown-item "><i class="fa-solid fa-user" style="font-size: 20px;"></i>
+								Mi Cuenta</a></li>
+						<li><a href="#" class="dropdown-item">Mis Equipos</a></li>
+						<li><a href="#" class="dropdown-item">Mis Reservas</a></li>
+						<li><a href="index.php" class="dropdown-item">Cerar Session</a></li>
+
+					</ul>
+				</div>
 			</div>
 		</div>
 	</nav>
