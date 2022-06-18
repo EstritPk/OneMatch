@@ -2,13 +2,14 @@
 
 session_start();
 include("functions/db.php");
-
+/*
 if (isset($_SESSION['usu'])) {
     if (isset($_GET['rut_usu'])) {
         $sql = "SELECT * FROM usuario WHERE rut_usuario=" . $_GET['rut_usu'];
         $result = mysqli_query(conectar(), $sql);
         $datos = mysqli_fetch_array($result);
     }
+    */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -154,7 +155,9 @@ if (isset($_SESSION['usu'])) {
 
 </html>
 <?php
+/*
 } else {
-    header("Location:login.php");
+    header("Location:index.php");
 }
+*/
 ?>

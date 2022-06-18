@@ -2,13 +2,14 @@
 
 session_start();
 include("functions/db.php");
-
+/*
 if (isset($_SESSION['usu'])) {
     if (isset($_GET['rut_usu'])) {
         $sql = "SELECT * FROM usuario WHERE rut_usuario=" . $_GET['rut_usu'];
         $result = mysqli_query(conectar(), $sql);
         $datos = mysqli_fetch_array($result);
     }
+    */
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -131,50 +132,51 @@ if (isset($_SESSION['usu'])) {
                                 </div>
                             </div>
                         </form>
+                       <div class="container" style="margin-top-auto: 207px;">
+                            <table id="grilla" class="table table-striped table-hover bg-light border border-primary">
+                                <tr>
+                                    <th>RUT</th>
+                                    <th>NOMBRE</th>
+                                    <th>EMAIL</th>
+                                    <th>PHONE</th>
+                                    <th>DEPORTES</th>
+                                    <th>DIRECCION</th>
+                                    <th>IDENTIDAD</th>
+                                    <th>EDAD</th>
+                                    <th>NOMBRE DE USUARIO</th>
+                                    <th>DESCRIPCION</th>
+                                    <th>IMAGEN</th>
+                                </tr>
+                            </table>
+                            <!-- 
+                            run
+                            nombre
+                            email
+                            phone
+                            deportes
+                            direccion
+                            identidad
+                            edad
+                            nombre de usuario
+                            descripcion
+                            imagen   
+                            -->
+                        </div>
                     </div>
                 </div>
             </div>
             <?php
             include "includes/footer.php";
             ?>
-
-            <div class="container" style="margin-left: 207px;">
-                <table id="grilla" class="table table-striped table-hover bg-light border border-primary">
-                <tr>
-                    <th>RUT</th>
-                    <th>NOMBRE</th>
-                    <th>EMAIL</th>
-                    <th>PHONE</th>
-                    <th>DEPORTES</th>
-                    <th>DIRECCION</th>
-                    <th>DIRECCION</th>
-                    <th>IDENTIDAD</th>
-                    <th>EDAD</th>
-                    <th>NOMBRE DE USUARIO</th>
-                    <th>DESCRIPCION</th>
-                    <th>IMAGEN</th>
-                </tr>
-                <!-- 
-                   run
-                   nombre
-                   email
-                   phone
-                   deportes
-                   direccion
-                   identidad
-                   edad
-                   nombre de usuario
-                   descripcion
-                   imagen   
-                -->
-            </div>
-
-
             <script src="js/bootstrap.bundle.min.js"></script>
         </body>
     </html>
 <?php
+/*
 } else {
-    header("Location:login.php");
+    header("Location:index.php");
 }
+*/
 ?>
+
+
