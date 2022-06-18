@@ -29,7 +29,7 @@
                     <h2 class="">Registro de Usuario</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/registrar_usuario.php" method="POST">
+                    <form action="functions/created/registrar_usuario.php" method="POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_usu" class="form-label">Rut</label>
@@ -73,8 +73,8 @@
                                 <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="email_usu">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="foto" class="form-label">Foto</label>
-                                <input type="file" class="form-control" name="foto_usu" id="foto">
+                                <label for="foto_usu" class="form-label">Foto</label>
+                                <input type="file" class="form-control" name="foto_usu" id="foto_usu">
                             </div>
                         </div>
                         <div class="row">

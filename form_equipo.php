@@ -30,7 +30,7 @@ include "functions/db.php";
                     <h2 class="">Registro de Equipo</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/registrar_equipo.php" method="POST">
+                    <form action="functions/created/registrar_equipo.php" method="POST">
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_equ" class="form-label">Nombre del Equipo</label>

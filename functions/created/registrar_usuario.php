@@ -2,8 +2,9 @@
 include("db.php");
 $conn=mysqli_connect("localhost","root","root","onematch");
 $sql="INSERT INTO usuarios SET rut_usuario='".$_POST['rut_usu']."' , nombre_usuario='".$_POST['nombre_usu']."' , email_usuario='".$_POST['email_usu']."' , clave_usuario='".$_POST['clave_usu']."' , 
-name_usuario='".$_POST['name_usu']."' , apellido_p_usuario='".$_POST['ap_paterno_usu']."' , apellido_m_usuario='".$_POST['ap_materno_usu']."' , direccion_usuario='Avenida siempre viva 742' , 
-edad_usuario='".$_POST['edad_usu']."' , telefono_usuario='".$_POST['telefono_usu']."' , identidad_usuario='".$_POST['identidad_usu']."' , descripcion_usuario='".$_POST['descripcion_usu']."' ";
+name_usuario='".$_POST['name_usu']."' , apellido_p_usuario='".$_POST['ap_paterno_usu']."' , apellido_m_usuario='".$_POST['ap_materno_usu']."' , direccion_usuario='".$_POST['direccion_usu']."' , 
+edad_usuario='".$_POST['edad_usu']."' , telefono_usuario='".$_POST['telefono_usu']."' , identidad_usuario='".$_POST['identidad_usu']."' , descripcion_usuario='".$_POST['descripcion_usu']."' , 
+imagen_usuario='".$_FILES['images']['']."' ";
 mysqli_query($conn,$sql);
 header('Location:../home.php');
 
@@ -22,13 +23,7 @@ identidad_usuario
 descripcion_usuario
 imagen_usuario
 estado_usuario
+foto='".$_FILES['foto']['name']."',
 */
-
-
-
-
-
-
-
 
 ?>
