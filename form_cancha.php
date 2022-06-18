@@ -27,20 +27,21 @@
                     <h2 class="">Registro de Cancha</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="" method="$_POST">
+                    <form action="" class="needs-validation" method="POST" novalidate>
                         <div class="row">
 
 
 
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre" class="form-label">Precio</label>
-                                <input type="text" class="form-control" placeholder="$24" id="precio" name="precio">
+                                <input type="text" class="form-control" placeholder="$24" id="precio" name="precio" required>
                             </div>
 
 
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Complejos Deportivo</label>
-                                <select name="complejos" id="complejos" class="form-select">
+                                <select name="complejos" id="complejos" class="form-select" required>
+                                    <option selected disabled value="">Choose...</option>
                                     <option value="0">Inicio Deportiva</option>
                                     <option value="1">Deportes Olimpicos</option>
                                 </select>
@@ -48,7 +49,8 @@
 
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Tipo de Cancha</label>
-                                <select name="deportes" id="deportes" class="form-select">
+                                <select name="deportes" id="deportes" class="form-select" required>
+                                    <option selected disabled value="">Choose...</option>
                                     <option value="football">Football</option>
                                     <option value="tenis">Tenis</option>
                                     <option value="padel">Padel</option>
@@ -56,18 +58,19 @@
                             </div>
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Estado de Cancha</label>
-                                <select name="estado" id="estado" class="form-select">
+                                <select name="estado" id="estado" class="form-select" required>
+                                    <option selected disabled value="">Choose...</option>
                                     <option value="0">Disponible</option>
                                     <option value="1">Nondisponible</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="foto" class="form-label">imagen Cancha</label>
-                                <input type="file" class="form-control" name="foto" id="foto">
+                                <input type="file" class="form-control" name="foto" id="foto" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="dimension" class="form-label">Dimension</label>
-                                <input type="text" class="form-control" placeholder="24mx24m" id="dimension" name="dimension">
+                                <input type="text" class="form-control" placeholder="24mx24m" id="dimension" name="dimension" required>
                             </div>
                         </div>
 
@@ -78,7 +81,7 @@
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
+                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
                                     <button type="submit" class="col-12 btn btn-info button">Registrar</button>
@@ -92,6 +95,7 @@
         <?php
         include "includes/footer.php";
         ?>
+        <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 

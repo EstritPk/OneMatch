@@ -27,38 +27,39 @@
                     <h2 class="">Registro de complejos</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="" method="$_POST">
+                    <form action="" class="needs-validation" method="POST" novalidate>
                         <div class="row">
 
 
 
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_comp" class="form-label">Nombre Complejos</label>
-                                <input type="text" class="form-control" placeholder="Deportes olimpicos" id="nombre_comp" name="nombre_comp">
+                                <input type="text" class="form-control" placeholder="Deportes olimpicos" id="nombre_comp" name="nombre_comp" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="admin" class="form-label">Aministrador</label>
-                                <input type="text" class="form-control" placeholder="JOSE MARIA" id="admin" name="admin">
+                                <input type="text" class="form-control" placeholder="JOSE MARIA" id="admin" name="admin" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Ñuble #289" id="direccion" name="direccion">
+                                <input type="text" class="form-control" placeholder="Ñuble #289" id="direccion" name="direccion" required>
                             </div>
 
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Estado</label>
-                                <select name="estado" id="estado" class="form-select">
+                                <select name="estado" id="estado" class="form-select" required>
+                                    <option selected disabled value="">Choose...</option>
                                     <option value="0">Disponible</option>
                                     <option value="1">Nondisponible</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="foto" class="form-label">logo complejos</label>
-                                <input type="file" class="form-control" name="foto" id="foto">
+                                <input type="file" class="form-control" name="foto" id="foto" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="horario" class="form-label">Horario</label>
-                                <input type="text" class="form-control" placeholder="Lunes 8h " id="horario" name="horario">
+                                <input type="text" class="form-control" placeholder="Lunes 8h " id="horario" name="horario" required>
                             </div>
                         </div>
 
@@ -69,7 +70,7 @@
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
+                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
                                     <button type="submit" class="col-12 btn btn-info button">Registrar</button>
@@ -83,6 +84,7 @@
         <?php
         include "includes/footer.php";
         ?>
+        <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 
