@@ -1,4 +1,7 @@
 <?php
-    $conn=mysqli_connect("localhost","root","root","onematch");
-    return $conn;
+     function conectar(){
+        $conn=mysqli_connect("localhost","root","root","onematch");
+        return $conn;
+     }
+   
 ?>
