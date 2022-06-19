@@ -1,5 +1,5 @@
 <?php
-$op=$_POST[''];
+$op=$_POST['  '];
 switch($op){
     case "Crear":crear();
         break;
@@ -38,7 +38,7 @@ function eliminar()
 
 function cancelar()
 {
-
+    header('Location:../home.php');
 }
 
 ?>

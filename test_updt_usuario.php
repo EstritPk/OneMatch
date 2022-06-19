@@ -22,6 +22,7 @@ if (isset($_SESSION['usu'])) {
         <link rel="stylesheet" href="css/style.css">
         <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/form.css">
+        <script src="js/validaciones.js"></script>
     </head>
     <body>
         <!-- DEBO HACER CRUD -->
@@ -38,11 +39,11 @@ if (isset($_SESSION['usu'])) {
                         <h2 class="">Modificar de Usuario</h2>
                     </div>
                     <div class="col mt-3">
-                        <form action="functions/updated/modificar_usuario.php" method="POST">
+                        <form  class="needs-validation" name="formusuario" action="functions/crud_usuario.php" method="POST">
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="rut_usu" class="form-label">Rut</label>
-                                    <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu">
+                                    <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu" value="">
                                 </div>
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="name_usu" class="form-label">Nombre de Usuario</label>
@@ -127,12 +128,26 @@ if (isset($_SESSION['usu'])) {
                                             <input type="checkbox" name="terminos" id="terminos_usu" class="form-check-input">
                                             <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                         </div>
-                                        <button type="submit" class="col-12 btn btn-info button">Registrar</button>
+                                        <!--<button onclick="validarform_usuario()">Registrar</button> -->
+                                        <!--<div class="card-footer text-center">
+                                        <input type="button"  class="btn btn-primary" style="min-width: 150px;" id="btn" onclick="validarform_usuario()" value="Crear">
+                                        </div>-->
+                                        <div class="row" style="margin-left: 110px;">
+                                            <button type="button"  class="btn btn-primary" style="min-width: 150px;" id="btn" value="Crear" onclick="validarform_usuario(this.value)">
+                                                Registrar
+                                            </button>
+                                        </div>
+                                        <!-- <a href="functions/crud_usuario.php?adduser=<?php //echo $datos['rut_usu']; ?>"> -->
+                                        <!-- <input type="submit" class="btn btn-primary" value="Crear" id="btncrear" onclick="validarform_usuario(this.value);">-->
                                     </div>
+                                    
                                 </div>
                             </div>
+                            <input type="hidden" class="form-control" id="frmaccion" name="frmaccion">
+                            <input type="hidden" class="form-control" id="idc" name="iusu" value="<?php echo $datos['usuarios']; ?>">
                         </form>
-                       <div class="container" style="margin-top-auto: 207px;">
+                        
+                        <div class="container" style="margin-top-auto: 207px;">
                             <table id="grilla" class="table table-striped table-hover bg-light border border-primary">
                                 <tr>
                                     <th>RUT</th>
@@ -160,6 +175,10 @@ if (isset($_SESSION['usu'])) {
                             nombre de usuario
                             descripcion
                             imagen   
+
+
+
+                            
                             -->
                         </div>
                     </div>

@@ -1,15 +1,6 @@
 <?php
-
 session_start();
 include("functions/db.php");
-/*
-if (isset($_SESSION['usu'])) {
-    if (isset($_GET['rut_usu'])) {
-        $sql = "SELECT * FROM usuario WHERE rut_usuario=" . $_GET['rut_usu'];
-        $result = mysqli_query(conectar(), $sql);
-        $datos = mysqli_fetch_array($result);
-    }
-    */
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +12,8 @@ if (isset($_SESSION['usu'])) {
     <title>Formulario Administrador</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/validaciones.js"></script>
 </head>
 
 <body>
@@ -39,60 +32,65 @@ if (isset($_SESSION['usu'])) {
                     <h2 class="">Registro de Administrador</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/created/registrar_admin.php" method="POST">
+                    <!--<form action="functions/crud_admin.php" class="needs-validation" method="POST" novalidate>-->
+                    <form  class="needs-validation" name="formadmin" action="functions/crud_admin.php" method="POST">    
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_adm" class="form-label">Rut</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut_adm" name="rut_adm">
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut" name="rut_adm" required>
+                                <!--<div id="msgerror" class="invalid-feedback">
+                                </div>
+                                    <div id="msgvalid" class="valid-feedback">
+                                </div>-->
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="name_adm" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="name_adm" name="name_adm">
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="name_adm" name="name_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_paterno_adm" class="form-label">Apellido Paterno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_adm" name="ap_paterno_adm">
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_adm" name="ap_paterno_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_materno_adm" class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_adm" name="ap_materno_adm">
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_adm" name="ap_materno_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_adm" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_adm" name="direccion_adm">
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_adm" name="direccion_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="telefono_adm" class="form-label">Telefono</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_adm" name="telefono_adm">
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_adm" name="telefono_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="clave_adm" class="form-label">Clave</label>
-                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_adm" name="clave_adm">
+                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_adm" name="clave_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="email_adm" class="form-label">E-Mail</label>
-                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_adm" name="email_adm">
+                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_adm" name="email_adm" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="foto_adm" class="form-label">Foto</label>
-                                <input type="file" class="form-control" name="foto_adm" id="foto_adm">
+                                <input type="file" class="form-control" name="foto_adm" id="foto_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 mb-3">
                                         <label class="form-label" name="identidad_adm" id="identidad_adm">Identidad</label>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_adm" id="hombre_adm">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="hombre_adm" required>
                                             <label for="hombre" class="form-check-label">Hombre</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_adm" id="mujer_adm">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="mujer_adm" required>
                                             <label for="mujer" class="form-check-label">Mujer</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_adm" id="otro_adm">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="otro_adm" required>
                                             <label for="otro" class="form-check-label">Otro</label>
                                         </div>
                                     </div>
@@ -103,13 +101,23 @@ if (isset($_SESSION['usu'])) {
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input">
+                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" class="col-12 button">Registrar</button>
+                                    <div class="row" style="margin-left: 110px;">
+                                        <button type="button" class="col-12 button" id="btn" value="Crear" ondblclick="validarform_administrador(this.value)">Registrar</button>
+                                    </div>
+                                    <div class="row" style="margin-left: 110px;">
+                                        <button type="button"  class="btn btn-primary" style="min-width: 150px;" id="btn" value="Crear" onclick="validarform_administrador(this.value)">
+                                            Registrar
+                                        </button>
+                                    </div>
+                                    <!--<button type="button" class="btn btn-primary" style="min-width: 150px;" id="btn" value="Crear" onclick="validarform_usuario(this.value)">-->
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" class="form-control" id="frmaccion" name="frmaccion">
+                        <input type="hidden" class="form-control" id="idc" name="iusu" value="<?php// echo $datos['administradores']; ?>">
                     </form>
                 </div>
             </div>
@@ -117,47 +125,9 @@ if (isset($_SESSION['usu'])) {
         <?php
         include "includes/footer.php";
         ?>
-        <div class="container" style="margin-left: 207px;">
-                <table id="grilla" class="table table-striped table-hover bg-light border border-primary">
-                <tr>
-                    <th>RUT</th>
-                    <th>NOMBRE</th>
-                    <th>EMAIL</th>
-                    <th>PHONE</th>
-                    <th>DEPORTES</th>
-                    <th>DIRECCION</th>
-                    <th>DIRECCION</th>
-                    <th>IDENTIDAD</th>
-                    <th>EDAD</th>
-                    <th>NOMBRE DE USUARIO</th>
-                    <th>DESCRIPCION</th>
-                    <th>IMAGEN</th>
-                </tr>
-                <!-- 
-                   run
-                   nombre
-                   email
-                   phone
-                   deportes
-                   direccion
-                   identidad
-                   edad
-                   nombre de usuario
-                   descripcion
-                   imagen   
-                -->
-            </div>
-
-
-            
+        <script src="js/main.js"></script>
+        <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 
 </html>
-<?php
-/*
-} else {
-    header("Location:index.php");
-}
-*/
-?>

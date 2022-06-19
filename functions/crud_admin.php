@@ -1,5 +1,7 @@
 <?php
-$op=$_POST[''];
+include("db.php");
+   
+$op=$_POST['frmaccion'];
 switch($op){
     case "Crear":crear();
         break;
@@ -42,7 +44,7 @@ function eliminar()
 
 function cancelar()
 {
-
+    header('Location:../home.php'); 
 }
 
 ?>
