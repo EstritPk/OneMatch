@@ -29,12 +29,12 @@
 
 
                                         <div class="form-outline form-white mb-4">
-                                            <input type="text" id="form2Example11" class="form-control" placeholder="ingresa tu rut o user name" require />
+                                            <input type="text" id="form2Example11" class="form-control" placeholder="ingresa tu rut o user name" required />
 
                                         </div>
 
                                         <div class="form-outline form-white mb-4">
-                                            <input type="password" id="form2Example22" class="form-control" require />
+                                            <input type="password" id="form2Example22" class="form-control" required />
 
                                         </div>
 
