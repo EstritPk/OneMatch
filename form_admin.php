@@ -27,7 +27,7 @@
                     <h2 class="">Registro de Administrador</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/created/registrar_admin.php" class="needs-validation" method="POST" novalidate>
+                    <form action="functions/crud_admin.php" class="needs-validation" method="POST" novalidate>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_adm" class="form-label">Rut</label>

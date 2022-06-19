@@ -30,7 +30,7 @@ include "functions/db.php";
                     <h2 class="">Registro de Equipo</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/created/registrar_equipo.php" class="needs-validation" method="POST" novalidate>
+                    <form action="functions/crud_equipo.php" class="needs-validation" method="POST" novalidate>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_equ" class="form-label">Nombre del Equipo</label>
@@ -38,13 +38,13 @@ include "functions/db.php";
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nomina_equ" class="form-label">Creador Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" value="nomina_equ" id="nomina_equ" name="nomina_equ" required>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="nomina_equ" name="nomina_equ" required>
                             </div>
 
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Tipo de eqipo</label>
                                 <select name="Teqipo" id="Teqipo" class="form-select" required>
-                                    <option selected disabled value="">Choose...</option>
+                                    <option selected disabled value="">Seleccione tipo de equipo</option>
                                     <option value="empresa">Empresa</option>
                                     <option value="Colegio">Colegio</option>
                                     <option value="Universida">Universida</option>
@@ -60,7 +60,7 @@ include "functions/db.php";
                                 <label class="form-label">Deportes</label>
 
                                 <select name="deporte_equ" id="deporte_equ" class="form-select" required>
-                                    <option selected disabled value="">Choose...</option>
+                                    <option selected disabled value="">Seleccione Deporte</option>
                                     <?php
                                     $sqlpro = "SELECT * FROM deportes";
                                     $resultpro = mysqli_query(conectar(), $sqlpro);

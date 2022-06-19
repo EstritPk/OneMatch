@@ -29,7 +29,7 @@
                     <h2 class="">Registro de Usuario</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/created/registrar_usuario.php" class="needs-validation " method="POST" novalidate>
+                    <form action="functions/crud_usuario.php" class="needs-validation " method="POST" novalidate>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_usu" class="form-label">Rut</label>
