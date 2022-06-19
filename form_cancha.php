@@ -27,7 +27,7 @@
                     <h2 class="">Registro de Cancha</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="" class="needs-validation" method="POST" novalidate>
+                    <form action="functions/crud_cancha.php" class="needs-validation" method="POST" novalidate>
                         <div class="row">
 
 
