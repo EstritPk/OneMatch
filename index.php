@@ -22,7 +22,7 @@
 
                 <div class="login-wrap p-4 p-md-5 card posi center">
 
-                    <form name="formlog" action="#" class="signin-form formulario">
+                    <form name="formlog" action="#" class="signin-form formulario needs-validation"  method="POST" novalidate>
                         <div class="form-group mt-3 contenedor-inputs">
                             <label class="form-control-placeholder" name="usern" for="username">Username</label>
                             <input type="text" class="form-control" required>
@@ -34,7 +34,7 @@
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
-                            <button  onclick="validarLoginU()" class="form-control btn  rounded submit px-3">Ingresar</button>
+                            <button type="submit" onclick="validarLoginU()" class="form-control btn  rounded submit px-3">Ingresar</button>
                         </div>
                     </form>
 
@@ -47,6 +47,7 @@
     </div>
 
 
+    <script src="js/validaciones.js"></script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>

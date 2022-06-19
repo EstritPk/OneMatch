@@ -8,6 +8,7 @@
     <title>Formulario Administrador</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
