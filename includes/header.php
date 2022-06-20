@@ -30,7 +30,7 @@
 						</ul>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Contacto</a>
+						<a href="admin_canchas.php" class="nav-link">Complejos</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link">Sobre Nosotos</a>
