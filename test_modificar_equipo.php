@@ -32,31 +32,37 @@ include "functions/db.php";
                 <div class="col mt-3">
                     <form action="functions/crud_equipo.php" class="needs-validation" name="actionequipo" id="actionequipo" method="POST" enctype="multipart/form-data" novalidate >
                         <div class="row">
+                            <?php
+                                $conn = mysqli_connect("localhost", "root", "root", "onematch");
+                                $sql = "SELECT * FROM equipos";
+                                $result = mysqli_query($conn, $sql);
+                                while ($datos = mysqli_fetch_array($result)) { 
+                            ?>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_equ" class="form-label">Nombre del Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" name="nombre_equ" id="nombre_equ validationCustom03" required>
+                                <input type="text" class="form-control" placeholder="Mala Leche" name="nombre_equ" id="nombre_equ validationCustom03" value="<?php echo $datos['nombre_equipo'];?>" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="creador_equ" class="form-label">Creador Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="creador_equ" name="creador_equ" required>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="creador_equ" name="creador_equ" value="<?php echo $datos['creador_equipo'];?>" required>
                             </div>
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Tipo de eqipo</label>
                                 <select name="tipo_equ" id="tipo_equ" class="form-select" required>
                                     <option selected disabled value="">Seleccione tipo de equipo</option>
-                                    <option name="tipo_equ" value="empresa">Empresa</option>
-                                    <option name="tipo_equ" value="Colegio">Colegio</option>
-                                    <option name="tipo_equ" value="Universida">Universida</option>
-                                    <option name="tipo_equ" value="Otro">Otro</option>
+                                    <option name="tipo_equ" value="<?php echo $datos['tipo_equipo'];?>">Empresa</option>
+                                    <option name="tipo_equ" value="<?php echo $datos['tipo_equipo'];?>">Colegio</option>
+                                    <option name="tipo_equ" value="<?php echo $datos['tipo_equipo'];?>">Universida</option>
+                                    <option name="tipo_equ" value="<?php echo $datos['tipo_equipo'];?>">Otro</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="descripcion_equ" class="form-label">Descripcion</label>
-                                <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control" required></textarea>
+                                <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control" value="<?php echo $datos['descripcion_equipo'];?>" required></textarea>
                             </div>
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Deportes</label>
-                                <select name="deporte_equ" id="deporte_equ" class="form-select" required>
+                                <select name="deporte_equ" id="deporte_equ" class="form-select" value="<?php echo $datos['nombre_deporte'];?>" required>
                                     <option selected disabled value="">Seleccione Deporte</option>
                                     <?php
                                     $sqlpro = "SELECT * FROM deportes";
@@ -82,11 +88,14 @@ include "functions/db.php";
                                 </div>
                             </div>
                         </div>
+                        <?php
+                            }
+                        ?>
                     </form>
                 </div>
             </div>
         </div>
-        <section>
+        <!-- <section>
             <div class="card m-2">
                 <div class="card-header py-2  bg-info">
                     <h5 class=" text-light">Mis Reservas</h5>
@@ -94,9 +103,9 @@ include "functions/db.php";
                 <div class="card-body bb ">
                     <div class="row">
                         <?php
-                            $conn = mysqli_connect("localhost", "root", "root", "onematch");
-                            $sql = "SELECT * FROM equipos";
-                            $result = mysqli_query($conn, $sql);
+                            //$conn = mysqli_connect("localhost", "root", "root", "onematch");
+                            //$sql = "SELECT * FROM equipos";
+                            //$result = mysqli_query($conn, $sql);
                         ?>
                         <div class="box-body">
                             <table id="tabla_equipos" class="table table-bordered table-condensed table-hover responsive" cellspacing="0" width="100%">
@@ -108,23 +117,23 @@ include "functions/db.php";
                                         <th class="text-center">Descripcion del Equipo</th>
                                         <th class="text-center">Deporte</th>
                                     </tr>
-                                    <?php while ($datos = mysqli_fetch_array($result)) { ?>
+                                    <?php //while ($datos = mysqli_fetch_array($result)) { ?>
                                     <tr>
-                                        <td class="text-center"><?php echo $datos['nombre_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['creador_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['tipo_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['descripcion_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['deportes_id_deporte']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['nombre_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['creador_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['tipo_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['descripcion_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['deportes_id_deporte']; ?></td>
                                         <td>
                                             <button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Modificar</button><br><br>
-                                            <!--<a href="functions/crud_equipo.php?actionequipo=<?php //echo $datos['nombre_equ']; ?>" > -->
+                                            <!-- <a href="functions/crud_equipo.php?actionequipo=<?php //echo $datos['nombre_equ']; ?>" > -->
                                             <!--<img src="images/refresh.png" width="25px" height="25px" ></a> -->
-                                            <button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Eliminar</button>
+                                            <!--<button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Eliminar</button>-->
                                             <!--<a href="functions/crud_equipo.php?nombre_equ=<?php //echo $datos['nombre_equ']; ?>" > -->
                                             <!--<img src="images/delete.png" width="25px" height="25px" ></a> -->
                                         </td>
                                         <?php
-                                        }
+                                        //}
                                         ?>
                                     </tr>
                                 </thead>
@@ -135,7 +144,7 @@ include "functions/db.php";
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <?php
         include "includes/footer.php";
         ?>
