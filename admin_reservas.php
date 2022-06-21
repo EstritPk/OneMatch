@@ -54,7 +54,7 @@
         </div>
 
         <div class="card m-2">
-            <div class="card-header py-2  bg-info"">
+            <div class="card-header py-2  bg-info">
                 <h5 class=" text-light">Busequeda de Reservas</h5>
             </div>
             <div class="card-body bg-dark">

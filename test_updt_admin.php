@@ -101,6 +101,49 @@ include "functions/db.php"
                 </div>
             </div>
         </div>
+
+        <section>
+            <div class="card m-2">
+                <div class="card-header py-2  bg-info">
+                    <h5 class=" text-light">Mis Reservas</h5>
+                </div>
+                <div class="card-body bb ">
+                    <div class="row">
+                        <div class="box-body">
+                            <table id="tabla_Reservas" class="table table-bordered table-condensed table-hover responsive" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">Rut</th>
+                                        <th class="text-center">Nombres</th>
+                                        <th class="text-center">Cancha</th>
+                                        <th class="text-center">Cantidad de hora</th>
+                                        <th class="text-center">Fecha reservacion</th>
+                                        <th class="text-center">Monto</th>
+                                        <th class="text-center">Hora Empezar</th>
+                                        <th class="text-center">Hora Termino</th>
+                                        <th class="text-center" style="width: 10%;">Facturas</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10045</td>
+                                        <td class="text-center">21345234-1</td>
+                                        <td class="text-center">Nedjo Rojas</td>
+                                        <td class="text-center">01_cancha</td>
+                                        <td class="text-center">5</td>
+                                        <td class="text-center">25-31-2022</td>
+                                        <td class="text-center">$24.000</td>
+                                        <td class="text-center">14h</td>
+                                        <td class="text-center">19h</td>
+                                        <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
         <?php
         include "includes/footer.php";
         ?>
