@@ -1,30 +1,23 @@
 <?php
-session_start();
-include("functions/db.php");
+include "includes/header.php";
+include "functions/db.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Administrador</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/validaciones.js"></script>
+    <link rel="stylesheet" href="css/form.css">
+    <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/form.css">
 </head>
-
 <body>
-    <!-- DEBO HACER CRUD -->
-    <!-- RICKELSON, FALTA LA DESCRIPCION DEL ADMIN -->
-
     <body>
         <div class="pt-5">
-            <?php
-            include "includes/header.php";
-            ?>
         </div>
         <div class="container ">
             <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
@@ -32,16 +25,11 @@ include("functions/db.php");
                     <h2 class="">Registro de Administrador</h2>
                 </div>
                 <div class="col mt-3">
-                    <!--<form action="functions/crud_admin.php" class="needs-validation" method="POST" novalidate>-->
-                    <form  class="needs-validation" name="formadmin" action="functions/crud_admin.php" method="POST">    
+                    <form action="functions/crud_admin.php" class="needs-validation" name="actiones" id="actiones" method="POST" enctype="multipart/form-data" novalidate >
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_adm" class="form-label">Rut</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="rut" name="rut_adm" required>
-                                <!--<div id="msgerror" class="invalid-feedback">
-                                </div>
-                                    <div id="msgvalid" class="valid-feedback">
-                                </div>-->
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="name_adm" class="form-label">Nombre</label>
@@ -97,27 +85,18 @@ include("functions/db.php");
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" value="Crear" id="actiones" name="actiones" readonly>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input" required>
+                                        <input type="checkbox" name="terminos" id="terminos_adm" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <div class="row" style="margin-left: 110px;">
-                                        <button type="button" class="col-12 button" id="btn" value="Crear" ondblclick="validarform_administrador(this.value)">Registrar</button>
-                                    </div>
-                                    <div class="row" style="margin-left: 110px;">
-                                        <button type="button"  class="btn btn-primary" style="min-width: 150px;" id="btn" value="Crear" onclick="validarform_administrador(this.value)">
-                                            Registrar
-                                        </button>
-                                    </div>
-                                    <!--<button type="button" class="btn btn-primary" style="min-width: 150px;" id="btn" value="Crear" onclick="validarform_usuario(this.value)">-->
+                                    <button type="submit" name="Crear" value="Crear" class="col-12 btn btn-info button">Registrar</button>
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" class="form-control" id="frmaccion" name="frmaccion">
-                        <input type="hidden" class="form-control" id="idc" name="iusu" value="<?php// echo $datos['administradores']; ?>">
                     </form>
                 </div>
             </div>
@@ -125,9 +104,8 @@ include("functions/db.php");
         <?php
         include "includes/footer.php";
         ?>
-        <script src="js/main.js"></script>
+        <!--<script src="js/main.js"></script>-->
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
 </html>

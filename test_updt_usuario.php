@@ -1,201 +1,137 @@
 <?php
-
-session_start();
-include("functions/db.php");
-/*
-if (isset($_SESSION['usu'])) {
-    if (isset($_GET['rut_usu'])) {
-        $sql = "SELECT * FROM usuario WHERE rut_usuario=" . $_GET['rut_usu'];
-        $result = mysqli_query(conectar(), $sql);
-        $datos = mysqli_fetch_array($result);
-    }
-    */
+include "includes/header.php";
+include "functions/db.php"
 ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulario UPDATE Usuario</title>
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/form.css">
-        <script src="js/validaciones.js"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Usuario</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
     <body>
-        <!-- DEBO HACER CRUD -->
-        <!--RICKELSON, FALTA LA DIRECCION DEL USUARIO -->
-        <body>
-            <div class="pt-5">
-                <?php
-                include "includes/header.php";
-                ?>
-            </div>
-            <div class="container ">
-                <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
-                    <div class="card-header text-center bg-info">
-                        <h2 class="">Modificar de Usuario</h2>
-                    </div>
-                    <div class="col mt-3">
-                        <form  class="needs-validation" name="formusuario" action="functions/crud_usuario.php" method="POST">
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="rut_usu" class="form-label">Rut</label>
-                                    <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu" value="">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="name_usu" class="form-label">Nombre de Usuario</label>
-                                    <input type="text" class="form-control" placeholder="Mala Leche" id="name_usu" name="name_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="nombre_usu" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" placeholder="Mala Leche" id="nombre_usu" name="nombre_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="ap_paterno_usu" class="form-label">Apellido Paterno</label>
-                                    <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_usu" name="ap_paterno_usu">
-                                </div>
-
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="ap_materno_usu" class="form-label">Apellido Materno</label>
-                                    <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_usu" name="ap_materno_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="direccion_usu" class="form-label">Direccion</label>
-                                    <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_usu" name="direccion_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="edad_usu" class="form-label">Edad</label>
-                                    <input type="number" class="form-control" placeholder="Mala Leche" id="edad_usu" name="edad_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="telefono_usu" class="form-label">Telefono</label>
-                                    <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_usu" name="telefono_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="clave_usu" class="form-label">Clave</label>
-                                    <input type="password" class="form-control" placeholder="Mala Leche" id="clave_usu" name="clave_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="email_usu" class="form-label">E-Mail</label>
-                                    <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="email_usu">
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="foto_usu" class="form-label">Foto</label>
-                                    <input type="file" class="form-control" name="foto_usu" id="foto_usu">
-                                </div>
+        <div class="pt-5">
+        </div>
+        <div class="container ">
+            <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
+                <div class="card-header text-center bg-info">
+                    <h2 class="">Registro de Usuario</h2>
+                </div>
+                <div class="col mt-3">
+                    <form action="functions/crud_usuario.php" class="needs-validation" name="actione" id="actione" method="POST" enctype="multipart/form-data" novalidate >
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="rut_usu" class="form-label">Rut</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu" required>
                             </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6 mb-3">
-                                    <label for="descripcion_usu" class="form-label">Descripcion</label>
-                                    <textarea name="descripcion_usu" id="descripcion_usu" class="form-control"></textarea>
-                                </div>
-                                <div class="col-12 col-md-6 mb-3">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label" name="identidad_usu" id="identidad_usu">Identidad</label>
-
-                                            <div class="form-check">
-                                                <input type="radio" class="form-check-input" name="identidad_usu" id="hombre_usu">
-                                                <label for="hombre_usu" class="form-check-label">Hombre</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input type="radio" class="form-check-input" name="identidad_usu" id="mujer_usu">
-                                                <label for="mujer_usu" class="form-check-label">Mujer</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input type="radio" class="form-check-input" name="identidad_usu" id="otro_usu">
-                                                <label for="otro_usu" class="form-check-label">Otro</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label">Deportes</label>
-                                            <select name="deportes" id="deporte_usu" class="form-select">
-                                                <option value="football">Football</option>
-                                                <option value="tenis">Tenis</option>
-                                                <option value="padel">Padel</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="name_usu" class="form-label">Nombre de Usuario</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="name_usu" name="name_usu" required>
                             </div>
-                            <div class="row">
-                                <div class="col-12 d-flex justify-content-center">
-                                    <div>
-                                        <div class="form-check mb-3">
-                                            <input type="checkbox" name="terminos" id="terminos_usu" class="form-check-input">
-                                            <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
-                                        </div>
-                                        <!--<button onclick="validarform_usuario()">Registrar</button> -->
-                                        <!--<div class="card-footer text-center">
-                                        <input type="button"  class="btn btn-primary" style="min-width: 150px;" id="btn" onclick="validarform_usuario()" value="Crear">
-                                        </div>-->
-                                        <div class="row" style="margin-left: 110px;">
-                                            <button type="button"  class="btn btn-primary" style="min-width: 150px;" id="btn" value="Crear" onclick="validarform_usuario(this.value)">
-                                                Registrar
-                                            </button>
-                                        </div>
-                                        <!-- <a href="functions/crud_usuario.php?adduser=<?php //echo $datos['rut_usu']; ?>"> -->
-                                        <!-- <input type="submit" class="btn btn-primary" value="Crear" id="btncrear" onclick="validarform_usuario(this.value);">-->
-                                    </div>
-                                    
-                                </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nombre_usu" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="nombre_usu" name="nombre_usu" required>
                             </div>
-                            <input type="hidden" class="form-control" id="frmaccion" name="frmaccion">
-                            <input type="hidden" class="form-control" id="idc" name="iusu" value="<?php echo $datos['usuarios']; ?>">
-                        </form>
-                        
-                        <div class="container" style="margin-top-auto: 207px;">
-                            <table id="grilla" class="table table-striped table-hover bg-light border border-primary">
-                                <tr>
-                                    <th>RUT</th>
-                                    <th>NOMBRE</th>
-                                    <th>EMAIL</th>
-                                    <th>PHONE</th>
-                                    <th>DEPORTES</th>
-                                    <th>DIRECCION</th>
-                                    <th>IDENTIDAD</th>
-                                    <th>EDAD</th>
-                                    <th>NOMBRE DE USUARIO</th>
-                                    <th>DESCRIPCION</th>
-                                    <th>IMAGEN</th>
-                                </tr>
-                            </table>
-                            <!-- 
-                            run
-                            nombre
-                            email
-                            phone
-                            deportes
-                            direccion
-                            identidad
-                            edad
-                            nombre de usuario
-                            descripcion
-                            imagen   
-
-
-
-                            
-                            -->
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="ap_paterno_usu" class="form-label">Apellido Paterno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_usu" name="ap_paterno_usu" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="ap_materno_usu" class="form-label">Apellido Materno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_usu" name="ap_materno_usu" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="direccion_usu" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_usu" name="direccion_usu" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="edad_usu" class="form-label">Edad</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_usu" name="edad_usu" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="telefono_usu" class="form-label">Telefono</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_usu" name="telefono_usu" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="clave_usu" class="form-label">Clave</label>
+                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_usu" name="clave_usu" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="email_usu" class="form-label">E-Mail</label>
+                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="email_usu" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="foto_usu" class="form-label">Foto</label>
+                                <input type="file" class="form-control" name="foto_usu" id="foto_usu" required>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="descripcion_usu" class="form-label">Descripcion</label>
+                                <textarea name="descripcion_usu" id="descripcion_usu" class="form-control" required></textarea>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <label class="form-label" name="identidad_usu" id="identidad_usu" >Identidad</label>
+
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="identidad_usu" id="hombre_usu"required>
+                                            <label for="hombre_usu" class="form-check-label">Hombre</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="identidad_usu" id="mujer_usu"required>
+                                            <label for="mujer_usu" class="form-check-label">Mujer</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="identidad_usu" id="otro_usu"required>
+                                            <label for="otro_usu" class="form-check-label">Otro</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <label class="form-label">Deportes</label>
+                                        <select name="deporte_equ" id="deporte_equ" class="form-select" required>
+                                            <option selected disabled value="">Seleccione Deporte</option>
+                                            <?php
+                                            $sqlpro = "SELECT * FROM deportes";
+                                            $resultpro = mysqli_query(conectar(), $sqlpro);
+                                            while ($datospro = mysqli_fetch_array($resultpro)) {
+                                            ?>
+                                                <option value="<?php echo $datospro['id_deporte']; ?>"><?php echo $datospro['nombre_deporte']; ?></option>
+                                            <?php
+                                            }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" value="Crear" id="actione" name="actione" readonly>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <div>
+                                    <div class="form-check mb-3">
+                                        <input type="checkbox" name="terminos" id="terminos_usu" class="form-check-input" required>
+                                        <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
+                                    </div>
+                                    <button type="submit" name="Crear" value="Crear" class="col-12 btn btn-info button">Registrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <?php
-            include "includes/footer.php";
-            ?>
-            <script src="js/bootstrap.bundle.min.js"></script>
-        </body>
-    </html>
-<?php
-/*
-} else {
-    header("Location:index.php");
-}
-*/
-?>
-
-
+        </div>
+        <?php
+        include "includes/footer.php";
+        ?>
+        <script src="js/validaciones.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
