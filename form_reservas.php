@@ -31,7 +31,7 @@
                 <h4 class="text-light"><i class="fa fa-calendar"></i>Haz tu reservas de canchas en minutos</h4>
             </div>
 
-            <form method="post" action="/" id="contact">
+            <form  action="" id="reserva" class="needs-validation" method="POST" novalidate>
                 <div class="card-body">
 
                     <div class="row">
@@ -69,7 +69,7 @@
                                     </div>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">Precio</span>
-                                        <input type="text" aria-label="Precio" value="24000" name="precio" class="form-control" readonly>
+                                        <input type="text" aria-label="Precio" id="precio" value="24000" name="precio" class="form-control" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@
                         <div class="col-12 col-sm-12">
                             <div class="card mt-2 border border-info">
                                 <div class="card-body">
-                                    <h5 class="card-title">Datos de la cancha</h5>
+                                    <h5 class="card-title">Datos Reserva</h5>
 
                                     <div class="row">
                                         <div class="col-12 col-md-6 mb-3">
@@ -88,20 +88,20 @@
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="cantidad" class="form-label">Cantidade de hora</label>
-                                            <input type="text" class="form-control" placeholder="" id="cantidad" name="cantidad" required>
+                                            <input type="text" class="form-control" onblur=" calculaMonto();" placeholder="" id="cantidad" name="cantidad" required>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="Monto" class="form-label">Monto Apagar</label>
-                                            <input type="text" class="form-control" placeholder="" id="Monto" name="Monto" required>
+                                            <input type="text" class="form-control"  placeholder="" id="monto" name="Monto" readonly >
                                         </div>
 
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="form-label">Tipo de eqipo</label>
-                                            <select name="Teqipo" id="Teqipo" class="form-select" required>
-                                                <option selected disabled value="">Seleccione tipo de equipo</option>
-                                                <option value="empresa">Empresa</option>
-                                                <option value="Colegio">Colegio</option>
-                                                <option value="Universida">Universida</option>
+                                            <label class="metodoPago">Tipo de eqipo</label>
+                                            <select name="metodoPago" id="metodoPago" class="form-select" required>
+                                                <option selected disabled value="">Seleccione metodo de pago</option>
+                                                <option value="visa">visa</option>
+                                                <option value="debito">Debito</option>
+                                                <option value="Paypal">Paypal</option>
                                                 <option value="Otro">Otro</option>
                                             </select>
                                         </div>
@@ -140,13 +140,15 @@
     <script src="js/popper.js"></script>
 
     <script src="js/owl.carousel.min.js"></script>
+    
     <script src="js/main.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script>
+        function calculaMonto() {
 
-    <script >
-        function calculaMonto(){
-
-            var precio=Do
-
+            var precio = document.getElementById('precio').value;
+            hora = document.getElementById('cantidad').value;
+            document.getElementById('monto').value=precio* hora;
         }
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
