@@ -8,6 +8,7 @@
 
 body {
     background-color: rgb(196, 251, 247);
+    overflow-x:hidden;
 }
 
 
@@ -182,4 +183,10 @@ ul li a:focus {
     background: rgb(7, 125, 194);
     color: #ffffff;
 
+}
+@media screen and (max-width: 720px) {
+    .bb {
+      display: block;
+      overflow-x: auto;
+    }
 }
