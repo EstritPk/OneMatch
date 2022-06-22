@@ -15,8 +15,7 @@ include "functions/db.php";
     <link rel="stylesheet" href="css/form.css">
 </head>
 
-<body>
-    <!-- DEBO HACER CRUD -->
+
 
     <body>
         <div class="pt-5">
@@ -49,7 +48,7 @@ include "functions/db.php";
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Tipo de eqipo</label>
                                 <select name="tipo_equ" id="tipo_equ" class="form-select" required>
-                                    <option selected disabled value="">Seleccione tipo de equipo</option>
+                                    <option selected disabled value=""><?php echo $datos['tipo_equipo'];?></option>
                                     <option name="tipo_equ" value="<?php echo $datos['tipo_equipo'];?>">Empresa</option>
                                     <option name="tipo_equ" value="<?php echo $datos['tipo_equipo'];?>">Colegio</option>
                                     <option name="tipo_equ" value="<?php echo $datos['tipo_equipo'];?>">Universida</option>
@@ -58,12 +57,20 @@ include "functions/db.php";
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="descripcion_equ" class="form-label">Descripcion</label>
-                                <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control" value="<?php echo $datos['descripcion_equipo'];?>" required></textarea>
+                                <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control" required><?php echo $datos['descripcion_equipo'];?></textarea>
                             </div>
+                            <?php
+                                $sqlpro = "SELECT * FROM deportes";
+                                $resultpro = mysqli_query(conectar(), $sqlpro);
+                                while ($datospro = mysqli_fetch_array($resultpro)) {
+                            ?>
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Deportes</label>
-                                <select name="deporte_equ" id="deporte_equ" class="form-select" value="<?php echo $datos['nombre_deporte'];?>" required>
-                                    <option selected disabled value="">Seleccione Deporte</option>
+                                <select name="deporte_equ" id="deporte_equ" class="form-select" required>
+                                    <option selected disabled ><?php echo $datospro['nombre_deporte']; ?></option>
+                                    <?php
+                                    }
+                                    ?>
                                     <?php
                                     $sqlpro = "SELECT * FROM deportes";
                                     $resultpro = mysqli_query(conectar(), $sqlpro);
@@ -95,7 +102,7 @@ include "functions/db.php";
                 </div>
             </div>
         </div>
-        <!-- <section>
+        <section>
             <div class="card m-2">
                 <div class="card-header py-2  bg-info">
                     <h5 class=" text-light">Mis Reservas</h5>
@@ -126,9 +133,9 @@ include "functions/db.php";
                                         <td class="text-center"><?php //echo $datos['deportes_id_deporte']; ?></td>
                                         <td>
                                             <button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Modificar</button><br><br>
-                                            <!-- <a href="functions/crud_equipo.php?actionequipo=<?php //echo $datos['nombre_equ']; ?>" > -->
+                                            <!--<a href="functions/crud_equipo.php?actionequipo=<?php //echo $datos['nombre_equ']; ?>" > -->
                                             <!--<img src="images/refresh.png" width="25px" height="25px" ></a> -->
-                                            <!--<button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Eliminar</button>-->
+                                            <button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Eliminar</button>
                                             <!--<a href="functions/crud_equipo.php?nombre_equ=<?php //echo $datos['nombre_equ']; ?>" > -->
                                             <!--<img src="images/delete.png" width="25px" height="25px" ></a> -->
                                         </td>
