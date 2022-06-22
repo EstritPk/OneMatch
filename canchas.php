@@ -13,6 +13,7 @@ include "functions/db.php"
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
@@ -49,7 +50,7 @@ include "functions/db.php"
                     </div>
 
                     <!-- Controles -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev " type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Anterior</span>
                     </button>
@@ -95,25 +96,112 @@ include "functions/db.php"
 
                 <div class="col-6 col-sm-6 col-lg-3 mb-4">
                     <div class="card" style="width: 100%;">
-                        <img class="card-img-top" src="images/futbol5.jpg" alt="">
+                        <img class="card-img-top" src="images/<?php echo $datospro['imagen_cancha']; ?>" alt="">
                         <div class="card-body">
 
                             <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
                             <p class="card-text "><?php echo $datospro['dimension_cancha']; ?>,
-                                <?php echo$datoscomple['direccion_complejo'];; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
+                                <?php echo $datoscomple['direccion_complejo'];; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
                             <p class="ml-auto meta2 m-3">
                                 <a href="#" class="mr-2">Precio</a>
                                 <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
                             </p>
                             <p><a href="#" class="btn btn-sm btn-info">Reservar</a>
-                                <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Detalles
+                                </button>
                             </p>
+
+                            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <div class="row mt-3 form shadow-lg p-3 mb-1  rounded card">
+                                                <div class="card-header text-center bg-info">
+                                                    <h5 class="">Detalles de la Cancha</h5>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 col-sm-6">
+                                                        <img class="card-img-top" src="images/<?php echo $datospro['imagen_cancha']; ?>" alt="">
+
+                                                    </div>
+                                                    <div class="col-12 col-sm-6">
+                                                        <table class="table table-bordered border-info">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col"></th>
+                                                                    <th scope="col">Datos</th>
+                                                                    
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Dimencion</th>
+                                                                    <td><?php echo $datospro['dimension_cancha']; ?></td>
+                                                                    
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Precio</th>
+                                                                    <td>$<?php echo $datospro['precio_cancha']; ?> x hora</td>
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Complejos deportivos</th>
+                                                                    <td><?php echo $datoscomple['nombre_complejo']; ?></td>
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Direccion</th>
+                                                                    <td><?php echo $datoscomple['direccion_complejo'];; ?></td>
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Horario</th>
+                                                                    <td><?php echo $datoscomple['horario_complejo'];; ?></td>
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Estados</th>
+                                                                    <td>Disponible</td>
+                                                                    
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Tipos de Cancha</th>
+                                                                    <td><?php echo $datospro['tipo_cancha']; ?></td>
+                                                                    
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    </div>
+                                               
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             <?php
             }
             ?>
+            <!-- Button trigger modal -->
+
+
+            <!-- Modal -->
 
 
             <!-- <div class="col-6 col-sm-6 col-lg-3 mb-4">
@@ -243,6 +331,17 @@ include "functions/db.php"
     </div>
 
 
+    <script>
+        $('#exampleModal').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
