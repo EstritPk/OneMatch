@@ -1,2 +1,3 @@
 imagen_administrador='".$_FILES['images']['foto_usu']."'
 
+<form action="functions/crud_equipo.php" class="needs-validation" name="actionequipo" id="actionequipo" method="POST" enctype="multipart/form-data" novalidate >

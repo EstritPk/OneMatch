@@ -1,4 +1,4 @@
-<<?php
+<?php
 include "includes/header.php";
 include "functions/db.php";
 ?>
@@ -23,26 +23,27 @@ include "functions/db.php";
             include "includes/header.php";
             ?>
         </div>
-        <div class="container ">
+        <!--<div class="container ">
             <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
                 <div class="card-header text-center bg-info">
-                    <h2 class="">Modificar de Equipo</h2>
+                    <h2 class="">Registro de Equipo</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/crud_equipo.php" class="needs-validation" name="actionequipo" id="actionequipo" method="POST" enctype="multipart/form-data" novalidate >
-                        <div class="row">
-    
-                        <section>
+                    
+                </div>
+            </div>
+        </div>-->
+        <section>
             <div class="card m-2">
                 <div class="card-header py-2  bg-info">
-                    <h5 class=" text-light">Mis Equipos</h5>
+                    <h5 class=" text-light">Modificar Equipo</h5>
                 </div>
                 <div class="card-body bb ">
                     <div class="row">
                         <?php
-                            $conn = mysqli_connect("localhost", "root", "root", "onematch");
-                            $sql = "SELECT * FROM equipos";
-                            $result = mysqli_query($conn, $sql);
+                            //$conn = mysqli_connect("localhost", "root", "root", "onematch");
+                            //$sql = "SELECT * FROM equipos";
+                            //$result = mysqli_query($conn, $sql);
                         ?>
                         <div class="box-body">
                             <table id="tabla_equipos" class="table table-bordered table-condensed table-hover responsive" cellspacing="0" width="100%">
@@ -54,13 +55,13 @@ include "functions/db.php";
                                         <th class="text-center">Descripcion del Equipo</th>
                                         <th class="text-center">Deporte</th>
                                     </tr>
-                                    <?php while ($datos = mysqli_fetch_array($result)) { ?>
+                                    <?php //while ($datos = mysqli_fetch_array($result)) { ?>
                                     <tr>
-                                        <td class="text-center"><?php echo $datos['nombre_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['creador_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['tipo_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['descripcion_equipo']; ?></td>
-                                        <td class="text-center"><?php echo $datos['deportes_id_deporte']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['nombre_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['creador_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['tipo_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['descripcion_equipo']; ?></td>
+                                        <td class="text-center"><?php //echo $datos['deportes_id_deporte']; ?></td>
                                         <td>
                                             <button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Modificar</button><br><br>
                                             <!--<a href="functions/crud_equipo.php?actionequipo=<?php //echo $datos['nombre_equ']; ?>" > -->
@@ -70,7 +71,7 @@ include "functions/db.php";
                                             <!--<img src="images/delete.png" width="25px" height="25px" ></a> -->
                                         </td>
                                         <?php
-                                        }
+                                        //}
                                         ?>
                                     </tr>
                                 </thead>
