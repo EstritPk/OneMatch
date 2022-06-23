@@ -96,7 +96,7 @@
                                         </div>
 
                                         <div class="col-12 col-sm-6 mb-3">
-                                            <label class="metodoPago">Tipo de eqipo</label>
+                                            <label class="metodoPago">Tipo de pago</label>
                                             <select name="metodoPago" id="metodoPago" class="form-select" required>
                                                 <option selected disabled value="">Seleccione metodo de pago</option>
                                                 <option value="visa">visa</option>
