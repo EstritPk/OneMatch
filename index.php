@@ -1,3 +1,6 @@
+<?php
+include "functions/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +28,8 @@
 
                                     </div>
 
-                                    <form action="" class="needs-validation formulario" method="POST" novalidate>
+                                    <form action="functions/validar_login.php" class="needs-validation formulario" method="POST" novalidate>
+                                    <!--<form action="functions/crud_usuario.php" class="needs-validation " method="POST" novalidate>-->
 
 
                                         <div class="form-outline form-white mb-4">
@@ -38,10 +42,24 @@
 
                                         </div>
 
-                                        <div class="text-center pt-1 mb-5 pb-1">
-                                            <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" ">Ingresar</button>
+                                        <!--<div class="text-center pt-1 mb-5 pb-1">
+                                            <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" >Ingresar</button>
                                             <a class=" text-danger m-0" href="#!">Olvidaste tu contraseña?</a>
+                                        </div>-->
+                                        <input type="hidden" id="actionusuario" name="actionusuario" readonly>
+                                        <div class="row">
+                                            <div class="col-12 d-flex justify-content-center">
+                                                <div>
+                                                    <!--<div class="form-check mb-3">
+                                                        <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
+                                                        <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
+                                                    </div>-->
+                                                    <button type="submit" class="col-12 btn btn-info button">Registrar</button>
+                                                </div>
+                                            </div>
                                         </div>
+
+
                                     </form>
                                     <div class="d-flex align-items-center justify-content-center pb-4">
                                         <p class="mb-0 me-2 text-white">No tienes una cuenta?</p>

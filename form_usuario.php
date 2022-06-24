@@ -1,3 +1,10 @@
+<?php
+include "includes/header.php";
+include "functions/db.php";
+
+if(isset($_SESSION['user']))
+{
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -112,14 +119,15 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" value="Crear" id="actionusuario" name="actionusuario" readonly>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos_usu" class="form-check-input" required>
+                                        <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" class="col-12 btn btn-info button">Registrar</button>
+                                    <button type="submit" name="Crear" value="Crear" class="col-12 btn btn-info button">Registrar</button>
                                 </div>
                             </div>
                         </div>
@@ -135,3 +143,8 @@
     </body>
 
 </html>
+<?php
+}else{
+    header("Location:error.php");
+}
+?>

@@ -1,7 +1,7 @@
 <?php
 include("db.php");
    
-$op=$_POST['actione'];
+$op=$_POST['actionusuario'];
 switch($op){
     case "Crear": crear();
         break;

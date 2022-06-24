@@ -1,3 +1,10 @@
+<?php
+include "includes/header.php";
+include "functions/db.php";
+
+if(isset($_SESSION['user']))
+{
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +26,6 @@
 <body>
     <div class="pt-5">
         <?php
-        include "includes/header.php";
         ?>
     </div>
 
@@ -267,3 +273,8 @@
 </body>
 
 </html>
+<?php
+}else{
+    header("Location:error.php");
+}
+?>
