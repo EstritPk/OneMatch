@@ -144,7 +144,7 @@ include "functions/db.php";
 
 </html>
 <?php
-}else{
+//}else{
   //  header("Location:error.php");
-}
+//}
 ?>

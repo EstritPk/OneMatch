@@ -5,9 +5,9 @@
 include "functions/db.php";
 
 
-$sqlpro = "SELECT * FROM usuarios where rut_usuario=34562";
-$resultpro = mysqli_query(conectar(), $sqlpro);
-$datos = mysqli_fetch_array($resultpro);
+//$sqlpro = "SELECT * FROM usuarios where rut_usuario=34562";
+//$resultpro = mysqli_query(conectar(), $sqlpro);
+//$datos = mysqli_fetch_array($resultpro);
 
 
 ?>

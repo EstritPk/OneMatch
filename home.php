@@ -3,8 +3,8 @@
 include "includes/header.php";
 include "functions/db.php";
 
-if(isset($_SESSION['user']))
-{
+//if(isset($_SESSION['user']))
+//{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -275,7 +275,7 @@ if(isset($_SESSION['user']))
 
 </html>
 <?php
-}else{
-    header("Location:home.php");
-}
+//}else{
+  //  header("Location:home.php");
+//}
 ?>
