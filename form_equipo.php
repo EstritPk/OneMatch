@@ -51,6 +51,7 @@ include "functions/db.php";
                                     <option value="Otro">Otro</option>
                                 </select>
                             </div>
+                            
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="descripcion_equ" class="form-label">Descripcion</label>
                                 <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control" required></textarea>

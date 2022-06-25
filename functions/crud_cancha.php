@@ -16,6 +16,12 @@ switch($op){
 
 function crear()
 {
+    $sql="INSERT INTO canchas SET precio_cancha='".$_POST['precio']."',horario_cancha='".$_POST['horario']."',complejosDeportivos_id_complejo='".$_POST['complejos']."',tipo_cancha='".$_POST['deportes']."',
+    dimension_cancha='".$_POST['dimension']."',estado_cancha=".$_POST['estado'].",imagen_cancha='".$_FILES['foto']['name']."'";
+    move_uploaded_file($_FILES['foto']['tmp_name'],"../images/fotos/".$_FILES['foto']['name']);
+
+    mysqli_query(conectar(),$sql);
+    header('Location:../admin_canchas.php');
 
 }
 
