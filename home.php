@@ -1,6 +1,8 @@
 <?php
+session_start();
 include "includes/header.php";
 include "functions/db.php";
+
 
 if(isset($_SESSION['user']))
 {

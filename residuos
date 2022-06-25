@@ -1,3 +1,15 @@
 imagen_administrador='".$_FILES['images']['foto_usu']."'
 
 <form action="functions/crud_equipo.php" class="needs-validation" name="actionequipo" id="actionequipo" method="POST" enctype="multipart/form-data" novalidate >
+    
+<!--<form action="functions/crud_usuario.php" class="needs-validation " method="POST" novalidate>-->
+
+<!--<div class="form-check mb-3">
+                                                        <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
+                                                        <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
+                                                    </div>-->
+
+<!--<div class="text-center pt-1 mb-5 pb-1">
+                                            <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" >Ingresar</button>
+                                            <a class=" text-danger m-0" href="#!">Olvidaste tu contraseña?</a>
+                                        </div>-->

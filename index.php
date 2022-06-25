@@ -1,5 +1,10 @@
 <?php
-include "functions/db.php";
+
+  session_start();
+
+  if (isset($_SESSION['user'])) {
+    //header('Location:home.php');
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +17,6 @@ include "functions/db.php";
     <link rel="stylesheet" href="css/estlog.css">
     <title>Login</title>
 </head>
-
 <body>
     <section class="h-100 gradient-form bg-dark">
         <div class="container py-5 h-100">
@@ -22,52 +26,29 @@ include "functions/db.php";
                         <div class="row g-0">
                             <div class="col-lg-6 bg-dark ">
                                 <div class="card-body p-md-5 mx-md-4">
-
                                     <div class="text-center">
                                         <img src="images/My project.png" style="width: 265px;" alt="logo">
-
                                     </div>
-
                                     <form action="functions/validar_login.php" class="needs-validation formulario" method="POST" novalidate>
-                                    <!--<form action="functions/crud_usuario.php" class="needs-validation " method="POST" novalidate>-->
-
-
                                         <div class="form-outline form-white mb-4">
-                                            <input type="text" id="form2Example11" class="form-control" placeholder="ingresa tu rut o user name" required />
-
+                                            <input type="text" id="form2Example11" class="form-control" placeholder="ingresa tu user name" required />
                                         </div>
-
                                         <div class="form-outline form-white mb-4">
                                             <input type="password" id="form2Example22" class="form-control" required />
-
                                         </div>
-
-                                        <!--<div class="text-center pt-1 mb-5 pb-1">
-                                            <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" >Ingresar</button>
-                                            <a class=" text-danger m-0" href="#!">Olvidaste tu contraseña?</a>
-                                        </div>-->
-                                        <input type="hidden" id="actionusuario" name="actionusuario" readonly>
+                                        <input type="hidden" id="actionlogin" name="actionlogin" readonly>
                                         <div class="row">
                                             <div class="col-12 d-flex justify-content-center">
                                                 <div>
-                                                    <!--<div class="form-check mb-3">
-                                                        <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
-                                                        <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
-                                                    </div>-->
                                                     <button type="submit" class="col-12 btn btn-info button">Registrar</button>
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </form>
                                     <div class="d-flex align-items-center justify-content-center pb-4">
                                         <p class="mb-0 me-2 text-white">No tienes una cuenta?</p>
                                         <button type="button" class="btn btn-outline-danger">Crear cuenta</button>
                                     </div>
-
-
-
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
@@ -83,12 +64,7 @@ include "functions/db.php";
             </div>
         </div>
     </section>
-
-
-
-
     <script src="js/validaciones.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
