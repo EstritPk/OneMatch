@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+
+include "functions/db.php"
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -50,14 +54,140 @@
         </div>
     </div>
 
-    <div class="row py-3 m-5 bg-dark" >
+    <div class="row py-3 m-5 bg-dark">
         <div class="col">
-           
-                <a href="form_cancha.php" class="btn btn-outline-info" style="font-size: 20px;">Agregar Nueva Cancha<i class="fa-solid fa-circle-plus p-2" style="font-size: 20px;"></i></a>
-           
+
+            <a href="form_cancha.php" class="btn btn-outline-info" style="font-size: 20px;">Agregar Nueva Cancha<i class="fa-solid fa-circle-plus p-2" style="font-size: 20px;"></i></a>
+
         </div>
     </div>
+
     <div class="  row  justify-content-center">
+        <div class="row ">
+
+
+            <?php
+            $sqlpro = "SELECT * FROM canchas where estado_cancha=1";
+            $resultpro = mysqli_query(conectar(), $sqlpro);
+            while ($datospro = mysqli_fetch_array($resultpro)) {
+            ?>
+                <?php
+                $sqlcomple = "SELECT * FROM complejosdeportivos where id_complejo=$datospro[complejosDeportivos_id_complejo]";
+                $resulcomple = mysqli_query(conectar(), $sqlcomple);
+                $datoscomple = mysqli_fetch_array($resulcomple);
+                ?>
+
+                <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 100%;">
+                        <img class="card-img-top" src="images/fotos/<?php echo $datospro['imagen_cancha']; ?>" alt="">
+                        <div class="card-body">
+
+                            <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
+                            <p class="card-text "><?php echo $datospro['dimension_cancha']; ?>,
+                                <?php echo $datoscomple['direccion_complejo'];; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
+                            <p class="ml-auto meta2 m-3">
+                                <a href="#" class="mr-2">Precio</a>
+                                <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
+                            </p>
+                            <p>
+                            <a href="#" class="btn btn-sm btn-danger">Eliminar</a>
+                            <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha'];?>" class="btn btn-sm btn-success">Modificar</a>
+                            <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
+                               
+                                
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+            <!-- Button trigger modal -->
+            <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Detalles</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row mt-3 form shadow-lg p-3 mb-1  rounded card">
+                                <div class="card-header text-center bg-info">
+                                    <h5 class="">Detalles de la Cancha</h5>
+                                    <span>Color:</span><input type="text" id="codigo" />
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <img class="card-img-top" src="images/<?php echo $datospro['imagen_cancha']; ?>" alt="">
+
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <table class="table table-bordered border-info">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Datos</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Dimencion</th>
+                                                    <td><?php echo $datospro['dimension_cancha']; ?></td>
+
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Precio</th>
+                                                    <td>$<?php echo $datospro['precio_cancha']; ?> x hora</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Complejos deportivos</th>
+                                                    <td><?php echo $datoscomple['nombre_complejo']; ?></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Direccion</th>
+                                                    <td><?php echo $datoscomple['direccion_complejo'];; ?></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Horario</th>
+                                                    <td><?php echo $datoscomple['horario_complejo'];; ?></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Estados</th>
+                                                    <td>Disponible</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Tipos de Cancha</th>
+                                                    <td><?php echo $datospro['tipo_cancha']; ?></td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="  row  justify-content-center">
         <div class="row ">
             <div class="col-6 col-sm-6 col-lg-3 mb-4">
                 <div class="card" style="width: 100%;">
@@ -109,7 +239,7 @@
                         <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
         </div>
