@@ -27,7 +27,7 @@ include "functions/db.php";
     <body>
         <div class="pt-5">
             <?php
-            include "includes/header.php";
+            //include "includes/header.php";
             ?>
         </div>
         <div class="container ">

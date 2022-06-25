@@ -1,6 +1,9 @@
+<?php
+include "includes/header.php";
+include "functions/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +14,7 @@
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
-
 <body>
-    <!-- DEBO HACER CRUD -->
-
     <body>
         <div class="pt-5">
             <?php
@@ -27,53 +27,46 @@
                     <h2 class="">Registro de complejos</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="" class="needs-validation" method="POST" novalidate>
+                    <form action="functions/crud_complejo.php" class="needs-validation " method="POST" novalidate>
                         <div class="row">
-
-
-
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_comp" class="form-label">Nombre Complejos</label>
                                 <input type="text" class="form-control" placeholder="Deportes olimpicos" id="nombre_comp" name="nombre_comp" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="admin" class="form-label">Aministrador</label>
-                                <input type="text" class="form-control" placeholder="JOSE MARIA" id="admin" name="admin" required>
+                                <label for="admin_comp" class="form-label">Aministrador</label>
+                                <input type="text" class="form-control" placeholder="JOSE MARIA" id="admin_comp" name="admin_comp" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="direccion" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Ñuble #289" id="direccion" name="direccion" required>
+                                <label for="direccion_comp" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" placeholder="Ñuble #289" id="direccion_comp" name="direccion_comp" required>
                             </div>
-
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Estado</label>
-                                <select name="estado" id="estado" class="form-select" required>
+                                <select name="estado_comp" id="estado_comp" class="form-select" required>
                                     <option selected disabled value="">Choose...</option>
-                                    <option value="0">Disponible</option>
-                                    <option value="1">Nondisponible</option>
+                                    <option value="1">Disponible</option>
+                                    <option value="0">No disponible</option>
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="foto" class="form-label">logo complejos</label>
-                                <input type="file" class="form-control" name="foto" id="foto" required>
+                                <label for="imagen_comp" class="form-label">Logo del Complejo</label>
+                                <input type="file" class="form-control" name="imagen_comp" id="imagen_comp" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="horario" class="form-label">Horario</label>
-                                <input type="text" class="form-control" placeholder="Lunes 8h " id="horario" name="horario" required>
+                                <label for="horario_comp" class="form-label">Horario</label>
+                                <input type="text" class="form-control" placeholder="Lunes 8h " id="horario_comp" name="horario_comp" required>
                             </div>
                         </div>
-
-
-
-
+                        <input type="hidden" value="Crear" id="actioncomp" name="actioncomp" readonly>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input" required>
+                                        <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" class="col-12 btn btn-info button">Registrar</button>
+                                    <button type="submit" name="Crear" value="Crear" class="col-12 btn btn-info button">Registrar</button>
                                 </div>
                             </div>
                         </div>
@@ -87,5 +80,9 @@
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
 </html>
+<?php
+//}else{
+  //  header("Location:error.php");
+//}
+?>

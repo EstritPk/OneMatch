@@ -1,6 +1,9 @@
+<?php
+include "includes/header.php";
+include "functions/db.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +13,11 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!-- DEBO HACER CRUD -->
-    <!-- RICKELSON, FALTA LA DESCRIPCION DEL ADMIN -->
-
     <body>
         <div class="pt-5">
             <?php
-            include "includes/header.php";
+            //include "includes/header.php";
             ?>
         </div>
         <div class="container ">
@@ -33,10 +32,8 @@
                                 <label for="rut_adm" class="form-label">Rut</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="rut" name="rut_adm" required>
                                 <div id="msgerror" class="invalid-feedback">
-                                   
                                 </div>
                                 <div id="msgvalid" class="valid-feedback">
-                                   
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
@@ -54,6 +51,10 @@
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_adm" class="form-label">Direccion</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_adm" name="direccion_adm" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="edad_adm" class="form-label">Edad</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_adm" name="edad_adm" >
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="telefono_adm" class="form-label">Telefono</label>
@@ -93,14 +94,15 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" value="Crear" id="actiones" name="actiones" readonly>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos" class="form-check-input" required>
+                                        <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <button type="submit" class="col-12 button" ondblclick="vali()" onclick="vali()">Registrar</button>
+                                    <button type="submit" name="Crear" value="Crear" class="col-12 btn btn-info button">Registrar</button>
                                 </div>
                             </div>
                         </div>
@@ -115,5 +117,4 @@
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
 </html>
