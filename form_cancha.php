@@ -41,7 +41,7 @@ include "functions/db.php";
                             </div>
                             <div class="col-12 col-sm-6 mb-3">
                                 <label for="horario" class="form-label">Horario</label>
-                                <input type="text" class="form-control" placeholder="Lunes a Sabado" id="horario" name="horario" value="<?php echo $datos['horario_cancha']; ?>" required>
+                                <input type="text" class="form-control" placeholder="Lunes a Sabado" id="horario" name="horario"  required>
                             </div>
 
 
