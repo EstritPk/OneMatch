@@ -1,8 +1,7 @@
 <?php
-session_start();
+//session_start();
 include "includes/header.php";
 include "functions/db.php";
-
 
 if(isset($_SESSION['user']))
 {
@@ -277,6 +276,6 @@ if(isset($_SESSION['user']))
 </html>
 <?php
 }else{
-    header("Location:error.php");
+    header("Location:home.php");
 }
 ?>

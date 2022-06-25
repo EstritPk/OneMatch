@@ -1,44 +1,42 @@
 <?php
-session_start();
-
 include("db.php");
 
 $op=$_POST['actionlogin'];
 switch($op){
-    case "Logear": logear();
+    case "Loguear": loguear();
         break;
-} 
-
-function logear()
-{
-    $sql="SELECT * FROM  usuarios where name_usuario='".$_POST['name_usu']."' and clave_usuario='".md5($_POST['clave_usu'])."' and estado_usuario=1 ";
-    $result=mysqli_query(conectar(),$sql);
-    $cont=mysqli_num_rows($result);
-
-    $datos=mysqli_fetch_array($result);
-
-    header('Location:../home.php');
+    case "RegistrarSinLogin": registrarsinlogin();
+        break;
 }
 
+    function loguear(){
+        $sql="SELECT * FROM  usuarios where name_usuario='".$_POST['name_usu']."' , clave_usuario='".md5($_POST['clave_usu'])."' , estado_usuario=1 ";
+        mysqli_query(conectar(),$sql);
+        $cont=mysqli_num_rows($result);
 
+        $datos=mysqli_fetch_array($result);
 
-//header('Location:../home.php');
+        while($datos=mysqli_fetch_array($result))
+        {
+            //header('Location:../home.php');
+            header('Location:error.php');
+        }
 
+        //echo "Holanda";
 
-//while($datos=mysqli_fetch_array($result))
-//{
-    //echo $datos['name_usu']." ".$datos['apellido_p_usuario']." ".$datos['apellido_m_usuario']." <br>";
-//}
+        
+    }
 
-//header('Location:../home.php');
+    function registrarsinlogin(){
+        $sql="INSERT INTO usuarios SET rut_usuario='".$_POST['rut_usu']."' , nombre_usuario='".$_POST['nombre_usu']."' , email_usuario='".$_POST['email_usu']."' , clave_usuario='".md5($_POST['clave_usu'])."' , 
+        name_usuario='".$_POST['name_usu']."' , apellido_p_usuario='".$_POST['ap_paterno_usu']."' , apellido_m_usuario='".$_POST['ap_materno_usu']."' , direccion_usuario='".$_POST['direccion_usu']."' , 
+        edad_usuario='".$_POST['edad_usu']."' , telefono_usuario='".$_POST['telefono_usu']."' , identidad_usuario='".$_POST['identidad_usu']."' , descripcion_usuario='".$_POST['descripcion_usu']."' , 
+        imagen_usuario='".$_FILES['images']['foto_usu']."' ";
+        mysqli_query($conn,$sql);
+        header('Location:../home.php');
+    }
 
-/*if($cont)
-{
-    $_SESSION['user']=$datos['nombre_usuario']." ".$datos['apellido_p_usuario']." ".$datos['apellido_m_usuario'];
-    header('Location:../home.php');
     
-}else{
-    header('Location:../index.php');
-}*/
+    
 
 ?>

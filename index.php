@@ -1,10 +1,7 @@
 <?php
 
-  session_start();
+include "functions/db.php";
 
-  if (isset($_SESSION['user'])) {
-    //header('Location:home.php');
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,11 +33,11 @@
                                         <div class="form-outline form-white mb-4">
                                             <input type="password" id="form2Example22" class="form-control" required />
                                         </div>
-                                        <input type="hidden" id="actionlogin" name="actionlogin" readonly>
+                                        <input type="hidden" value="actionlogin" id="Loguear" name="actionlogin" readonly>
                                         <div class="row">
                                             <div class="col-12 d-flex justify-content-center">
                                                 <div>
-                                                    <button type="submit" class="col-12 btn btn-info button">Registrar</button>
+                                                    <button type="submit" name="Loguear" value="Loguear" class="col-12 btn btn-info button">Registrar</button>
                                                 </div>
                                             </div>
                                         </div>
