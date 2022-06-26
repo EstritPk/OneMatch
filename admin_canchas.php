@@ -84,13 +84,13 @@ include "functions/db.php"
 
                             <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
                             <p class="card-text "><?php echo $datospro['dimension_cancha']; ?>,
-                                <?php echo $datoscomple['direccion_complejo'];; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
+                                <?php echo $datoscomple['direccion_complejo']; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
                             <p class="ml-auto meta2 m-3">
                                 <a href="#" class="mr-2">Precio</a>
                                 <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
                             </p>
                             <p>
-                            <a href="#" class="btn btn-sm btn-danger">Eliminar</a>
+                            <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha'];?>" class="btn btn-sm btn-danger">Eliminar</a>
                             <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha'];?>" class="btn btn-sm btn-success">Modificar</a>
                             <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
                                

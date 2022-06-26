@@ -15,15 +15,18 @@ switch($op){
 
 function crear()
 {
-    $sql="INSERT INTO complejosdeportivos SET nombre_complejo='".$_POST['nombre_comp']."' , direccion_complejo='".$_POST['direccion_comp']."' , horario_complejo='".$_POST['horario_comp']."' , imagen_complejo='".$_POST['imagen_comp']."' ,
-    estado_complejo='".$_POST['estado_comp']."' , administradores_rut_admin='".$_POST['admin_comp']."'    ";
+    $sql="INSERT INTO complejosdeportivos SET nombre_complejo='".$_POST['nombre_comp']."' , direccion_complejo='".$_POST['direccion_comp']."' , horario_complejo='".$_POST['horario_comp']."' , imagen_complejo='".$_FILES['imagen_comp']['name']."' ,
+    estado_complejo='".$_POST['estado_comp']."', adminsitradores_rut_admin='".$_POST['admin_comp']."'";
     mysqli_query(conectar(),$sql);
     header('Location:../home.php');
 }
 
 function modificar()
 {
-
+    $sql="UPDATE INTO complejosdeportivos SET nombre_complejo='".$_POST['nombre_comp']."' , direccion_complejo='".$_POST['direccion_comp']."' , horario_complejo='".$_POST['horario_comp']."' , imagen_complejo='".$_FILES['imagen_comp']['name']."' ,
+    estado_complejo='".$_POST['estado_comp']."', adminsitradores_rut_admin='".$_POST['admin_comp']."'";
+    mysqli_query(conectar(),$sql);
+    header('Location:../home.php');
 }
 
 function eliminar()
