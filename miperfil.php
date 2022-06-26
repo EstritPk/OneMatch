@@ -5,9 +5,9 @@
 include "functions/db.php";
 
 
-//$sqlpro = "SELECT * FROM usuarios where rut_usuario=34562";
-//$resultpro = mysqli_query(conectar(), $sqlpro);
-//$datos = mysqli_fetch_array($resultpro);
+$sqlpro = "SELECT * FROM usuarios where rut_usuario=1234";
+$resultpro = mysqli_query(conectar(), $sqlpro);
+$datos = mysqli_fetch_array($resultpro);
 
 
 ?>
@@ -47,7 +47,7 @@ include "functions/db.php";
                 <div class="col-lg-12 col-md-10">
                     <h1 class=" text-white"><?php echo $datos['nombre_usuario'], " ", $datos['apellido_p_usuario']; ?></h1>
                     <p class="text-white mt-0 mb-5">estarrrrrrr</p>
-                    <a href="#!" class="btn btn-info">Editar tu prerfil</a>
+                    <a href="modificar_usuario.php?rut_usu=<?php echo $datos['rut_usuario'];?> " class="btn btn-info"> Editar tu prerfil</a>
                 </div>
             </div>
         </div>

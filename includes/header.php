@@ -51,7 +51,7 @@
 					<!-- Sub-elementos -->
 					<ul class="dropdown-menu " style="width: 18rem;" aria-labelledby="submenuCancha">
 
-						<li><a href="perfil_usuario.php" class="dropdown-item "><i class="fa-solid fa-user" style="font-size: 20px;"></i>
+						<li><a href="miperfil.php" class="dropdown-item "><i class="fa-solid fa-user" style="font-size: 20px;"></i>
 								Mi Cuenta</a></li>
 						<li><a href="equipos_usu.php" class="dropdown-item">Mis Equipos</a></li>
 						<li><a href="#" class="dropdown-item">Mis Reservas</a></li>
