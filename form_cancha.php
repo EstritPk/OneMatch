@@ -26,7 +26,7 @@ include "functions/db.php";
                     <h2 class="">Registro de Cancha</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/crud_cancha.php" class="needs-validation" method="POST" novalidate>
+                    <form action="functions/crud_cancha.php" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
                         <div class="row">
                             <input type="hidden" class="form-control" id="actiones" value="Crear" name="actiones">
                             <div class="col-12 col-md-6 mb-3">
@@ -70,7 +70,7 @@ include "functions/db.php";
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="imagen_can" class="form-label">Imagen Cancha</label>
-                                <input type="file" class="form-control" name="imagen_can" id="imagen_can" required>
+                                <input type="file" class="form-control" name="imagen_can" accept="image/png, .jpeg, .jpg, image/gif" id="imagen_can" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="dimension_can" class="form-label">Dimension</label>

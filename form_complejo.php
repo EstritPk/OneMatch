@@ -27,7 +27,7 @@ include "functions/db.php";
                     <h2 class="">Registro de complejos</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/crud_complejo.php" class="needs-validation " method="POST" novalidate>
+                    <form action="functions/crud_complejo.php" class="needs-validation " enctype="multipart/form-data" method="POST" novalidate>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_comp" class="form-label">Nombre Complejos</label>
@@ -50,8 +50,8 @@ include "functions/db.php";
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="imagen_comp" class="form-label">Logo del Complejo</label>
-                                <input type="file" class="form-control" name="imagen_comp" id="imagen_comp" required>
+                                <label for=admincomp" class="form-label">Logo del Complejo</label>
+                                <input type="file" class="form-control" name="admincomp" id="admincomp"  accept="image/png, .jpeg, .jpg, image/gif" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="horario_comp" class="form-label">Horario</label>

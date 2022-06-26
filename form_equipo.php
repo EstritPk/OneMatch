@@ -30,15 +30,15 @@ include "functions/db.php";
                     <h2 class="">Registro de Equipo</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/crud_equipo.php" class="needs-validation" method="POST" novalidate>
+                    <form action="functions/crud_equipo.php" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_equ" class="form-label">Nombre del Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" name="nombre_equ" id="nombre_equ validationCustom03" required>
+                                <input type="text" class="form-control" placeholder="" name="nombre_equ" id="nombre_equ validationCustom03" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="creador_equ" class="form-label">Creador Equipo</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="creador_equ" name="creador_equ" required>
+                                <input type="text" class="form-control" placeholder="" id="creador_equ" name="creador_equ" required>
                             </div>
 
                             <div class="col-12 col-sm-6 mb-3">
@@ -70,6 +70,10 @@ include "functions/db.php";
                                     }
                                     ?>
                                 </select>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="imagen_equi" class="form-label">Imagen Equipo</label>
+                                <input type="file" class="form-control" name="imagen_equi"  accept="image/png, .jpeg, .jpg, image/gif" id="imagen_equi" required>
                             </div>
                         </div>
                         <input type="hidden" value="Crear" id="actionequipo" name="actionequipo" readonly>

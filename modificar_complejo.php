@@ -57,16 +57,15 @@ if (isset($_GET['idcomple'])) {
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="imagen_comp" class="form-label">Logo del Complejo</label>
-                                <input type="file" class="form-control" name="imagen_comp" id="imagen_comp" required>
+                                <label for="admincomp" class="form-label">Logo del Complejo</label>
+                                <input type="file" class="form-control" name="admincomp" id="admincomp"  accept="image/png, .jpeg, .jpg, image/gif" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="horario_comp" class="form-label">Horario</label>
                                 <input type="text" class="form-control" placeholder="Lunes 8h " id="horario_comp" name="horario_comp" required>
                             </div>
                         </div>
-                        <input type="hidden" class="form-control" id="idcomple" name="idcomple" value="<?php echo $_GET['idcomple']; ?>">
-                               
+                             
                         <input type="hidden" value="Modificar" id="actioncomp" name="actioncomp" readonly>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">

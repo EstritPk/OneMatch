@@ -31,7 +31,7 @@
                 <h4 class="text-light"><i class="fa fa-calendar"></i>Haz tu reservas de canchas en minutos</h4>
             </div>
 
-            <form  action="" id="reserva" class="needs-validation" method="POST" novalidate>
+            <form  action="" id="reserva" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
                 <div class="card-body">
 
                     <div class="row">
