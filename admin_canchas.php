@@ -45,6 +45,65 @@ include "functions/db.php"
             </div>
         </div>
     </section>
+    <div class="row">
+        <div class="col">
+            <div class="border-bottom">
+                <h3 class="text-dark text-center">Mi complejos</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="row py-3">
+
+            <?php
+             $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
+             $resulcomple = mysqli_query(conectar(), $sqlcomple);
+             
+            while ($datoscomple = mysqli_fetch_array($resulcomple)) {
+            ?>
+
+                <div class=" col-6 col-sm-6 col-lg-3 mb-2">
+
+
+                    <div class="card card-block" style=" max-width: 20rem;">
+                        <div class="">
+                            <img src="images/comple.jpg" class="img-fluid" />
+                            <a href="#!">
+                                <div style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title font-weight-bold"><a><?php echo $datoscomple['nombre_complejo']; ?></a></h5>
+
+                            <p class="mb-1"></p>
+                            <p class="card-text">
+                                Some quick example text to build on the card title and make up the bulk of the
+                                card's content.
+                            </p>
+
+                            <a href="modificar_complejo.php?idcomple=<?php echo $datoscomple['id_complejo']; ?>" class="btn btn-outline-success p-md-1 mb-0">Modificar</a>
+                            <a href="functions/crud_complejo.php?compleli=<?php echo $datoscomple['id_complejo']; ?>" class="btn btn-outline-danger p-md-1 mb-0">Eliminar</a>
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+            <?php
+            }
+            ?>
+
+        </div>
+    </div>
+
+
 
     <div class="row">
         <div class="col">
@@ -78,8 +137,8 @@ include "functions/db.php"
                 ?>
 
                 <div class="col-6 col-sm-6 col-lg-3 mb-4">
-                    <div class="card" style="width: 100%;">
-                        <img class="card-img-top" src="images/fotos/<?php echo $datospro['imagen_cancha']; ?>" alt="">
+                    <div class="card" style="max-width: 19rem;">
+                        <img class="card-img-top" src="images/fotos/<?php echo $datospro['imagen_cancha']; ?>" class="img-fluid" alt="">
                         <div class="card-body">
 
                             <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
@@ -90,11 +149,11 @@ include "functions/db.php"
                                 <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
                             </p>
                             <p>
-                            <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha'];?>" class="btn btn-sm btn-danger">Eliminar</a>
-                            <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha'];?>" class="btn btn-sm btn-success">Modificar</a>
-                            <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
-                               
-                                
+                                <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
+                                <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-success">Modificar</a>
+                                <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
+
+
                             </p>
 
 
