@@ -71,8 +71,8 @@ include "functions/db.php";
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="foto_adm" class="form-label">Foto</label>
-                                <input type="file" class="form-control" name="foto_adm" id="foto_adm" required>
+                                <label for="imagen_adm" class="form-label">Foto</label>
+                                <input type="file" class="form-control" name="imagen_adm" id="imagen_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="row">

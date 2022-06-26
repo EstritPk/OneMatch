@@ -34,8 +34,8 @@ include "functions/db.php";
                                 <input type="text" class="form-control" placeholder="Deportes olimpicos" id="nombre_comp" name="nombre_comp" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="admin_comp" class="form-label">Aministrador</label>
-                                <input type="text" class="form-control" placeholder="JOSE MARIA" id="admin_comp" name="admin_comp" required>
+                                <label for="admin_comp" class="form-label">Nombre Administrador</label>
+                                <input type="text" class="form-control" placeholder="Nombre Administrador" id="admin_comp" name="admin_comp" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_comp" class="form-label">Direccion</label>
