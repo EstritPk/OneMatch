@@ -11,8 +11,8 @@ if (isset($_SESSION['usu'])) {
 
     include "functions/db.php";
 
+    $sqlpro = "select * from usuarios where rut_usuario='" .$_SESSION['rut']. "'  and estado_usuario=1";
 
-    $sqlpro = "SELECT * FROM usuarios where rut_usuario=$_SESSION[rut]";
     $resultpro = mysqli_query(conectar(), $sqlpro);
     $datos = mysqli_fetch_array($resultpro);
 

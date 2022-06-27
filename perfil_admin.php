@@ -8,11 +8,11 @@ if (isset($_SESSION['usu'])) {
     <!DOCTYPE html>
     <html lang="en">
     <?php
-
+ $rut=$_SESSION['rut'];
     include "functions/db.php";
 
 
-    $sqlpro = "SELECT * FROM adminsitradores where rut_admin=$_SESSION[rut]";
+    $sqlpro = "select * from adminsitradores where rut_admin='" .$_SESSION['rut']. "'  and estado_administrador=1";
     $resultpro = mysqli_query(conectar(), $sqlpro);
     $datos = mysqli_fetch_array($resultpro);
 
