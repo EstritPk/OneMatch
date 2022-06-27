@@ -69,8 +69,32 @@
 					<!-- Sub-elementos -->
 					<ul class="dropdown-menu " style="width: 18rem;" aria-labelledby="submenuCancha">
 
-						<li><a href="miperfil.php" class="dropdown-item "><i class="fa-solid fa-user" style="font-size: 20px;"></i>
-								Mi Cuenta</a></li>
+						<?php
+						if (isset($_SESSION['admin'])) {
+						?>
+							<li>
+								<a href="perfil_admin.php" class="dropdown-item "><i class="fa-solid fa-user" style="font-size: 20px;"></i>
+									Mi Cuenta
+								</a>
+							</li>
+						<?php
+						}
+						?>
+
+						<?php
+						if (isset($_SESSION['user'])) {
+						?>
+							<li>
+								<a href="miperfil.php" class="dropdown-item "><i class="fa-solid fa-user" style="font-size: 20px;"></i>
+									Mi Cuenta
+								</a>
+							</li>
+						<?php
+						}
+						?>
+
+
+
 						<li><a href="equipos_usu.php" class="dropdown-item">Mis Equipos</a></li>
 						<li><a href="#" class="dropdown-item">Mis Reservas</a></li>
 						<li><a href="functions/cerrar_sesion.php" class="dropdown-item">Cerar Session</a></li>

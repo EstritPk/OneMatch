@@ -19,6 +19,8 @@ function validarUsuari()
     if ($cont != 0) {
         $_SESSION['usu'] =$datos['nombre_usuario']." ".$datos['apellido_p_usuario'] ;
         $_SESSION['user']="usuario ";
+        $_SESSION['rut']=$datos['rut_usuario'];
+
         header("Location:../home.php");
     } else {
         header("Location:error.php");
@@ -35,6 +37,7 @@ function validarAdmin()
     if ($cont != 0) {
          $_SESSION['usu'] =$datos['name_administrador']." ".$datos['apellido_p_administrador'] ;
          $_SESSION['admin'] = "Admin0000";
+         $_SESSION['rut']=$datos['rut_admin'];
         header("Location:../home.php");
     } else {
         header("Location:error.php");

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include "functions/db.php";
+
 
 if (isset($_SESSION['usu'])) {
 ?>
@@ -12,7 +12,7 @@ if (isset($_SESSION['usu'])) {
     include "functions/db.php";
 
 
-    $sqlpro = "SELECT * FROM usuarios where rut_usuario=1234";
+    $sqlpro = "SELECT * FROM usuarios where rut_usuario=$_SESSION[rut]";
     $resultpro = mysqli_query(conectar(), $sqlpro);
     $datos = mysqli_fetch_array($resultpro);
 
@@ -45,22 +45,24 @@ if (isset($_SESSION['usu'])) {
             ?>
         </div>
 
-        <div class="header pb-8 pt-5 pt-lg-8 d-flex bg-info align-items-center" style="min-height: 600px; background-image: url(images/dep2.jpeg); background-size: cover; background-position: center top;">
+        <div class="header pb-8 pt-5 pt-lg-8 d-flex bg-info align-items-center" style="min-height: 600px; background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-simple-atmosphere-blue-technology-panel-background-image_277438.jpg); background-size: cover; background-position: center top;">
 
             <span class="mask bg-gradient-default opacity-8"></span>
 
             <div class="container-fluid d-flex align-items-center">
                 <div class="row">
                     <div class="col-lg-12 col-md-10">
-                        <h1 class=" text-white"><?php echo $datos['nombre_usuario'], " ", $datos['apellido_p_usuario']; ?></h1>
-                        <p class="text-white mt-0 mb-5">estarrrrrrr</p>
+                        <h1 class=" text-white">Bienvenido <?php echo $datos['nombre_usuario'], " ", $datos['apellido_p_usuario']; ?></h1>
+                        <p class="text-white mt-0 mb-5">"No preguntes lo que tus compañeros de equipo pueden hacer por ti. <br>
+                            Pregúntate qué puedes hacer tú por tus compañeros de equipo".</p>
+                        
                         <a href="modificar_usuario.php?rut_usu=<?php echo $datos['rut_usuario']; ?> " class="btn btn-info"> Editar tu prerfil</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container-fluid mt--7">
+        <div class="container-fluid mb-5 mt--7">
             <div class="row">
                 <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                     <div class="card card-profile shadow">
@@ -126,64 +128,51 @@ if (isset($_SESSION['usu'])) {
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-username">Nobre de usuario</label>
-                                            <input type="text" id="input-username" class="form-control form-control-alternative" readonly value="<?php echo $datos['edad_usuario']; ?>">
+                                            <label class="form-control-label text-light" for="input-username">Nobre de usuario</label>
+                                            <input type="text" id="input-username" class="form-control form-control-alternative" readonly value="<?php echo $datos['name_usuario']; ?>">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="form-control-label" for="input-email">Correo</label>
-                                            <input type="email" id="input-email" class="form-control form-control-alternative" readonly placeholder="<?php echo $datos['edad_usuario']; ?>">
+                                            <label class="form-control-label text-light" for="input-email">Correo</label>
+                                            <input type="email" id="input-email" class="form-control form-control-alternative" readonly placeholder="<?php echo $datos['email_usuario']; ?>">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-first-name">Nombre</label>
-                                            <input type="text" id="input-first-name" class="form-control form-control-alternative" readonly placeholder="First name" value="<?php echo $datos['edad_usuario']; ?>">
+                                            <label class="form-control-label text-light" for="input-first-name">Nombre</label>
+                                            <input type="text" id="input-first-name" class="form-control form-control-alternative" readonly placeholder="First name" value="<?php echo $datos['nombre_usuario']; ?>">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="">Apellidos</label>
-                                            <input type="text" class="form-control form-control-alternative" readonly placeholder="Last name" value="<?php echo $datos['edad_usuario']; ?>">
+                                            <label class="form-control-label text-light" for="">Apellidos</label>
+                                            <input type="text" class="form-control form-control-alternative" readonly placeholder="Last name" value="<?php echo $datos['apellido_p_usuario'] . "  " . $datos['apellido_p_usuario']; ?>">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <hr class="my-4">
                             <!-- Address -->
-                            <h4 class="text-light text-muted mb-4">Contact information</h4>
+                            <h4 class="text-light  mb-4">Contacto</h4>
                             <div class="pl-lg-4">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-6">
                                         <div class="form-group focused">
-                                            <label class="form-control-label" for="input-address">Direccion</label>
-                                            <input id="input-address" class="form-control form-control-alternative" readonly placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
+                                            <label class="form-control-label text-light" for="input-address">Direccion</label>
+                                            <input id="input-address" class="form-control form-control-alternative" value="<?php echo $datos['direccion_usuario']; ?>" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label text-light" for="input-address">Telefono</label>
+                                            <input id="input-address" class="form-control form-control-alternative" value="<?php echo $datos['telefono_usuario']; ?>" type="text">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-4">
-                                        <div class="form-group focused">
-                                            <label class="form-control-label" for="input-city">Ciudad</label>
-                                            <input type="text" id="input-city" readonly class="form-control form-control-alternative" placeholder="City" value="New York">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group focused">
-                                            <label class="form-control-label" for="input-country">Pais</label>
-                                            <input type="text" id="input-country" readonly class="form-control form-control-alternative" placeholder="Country" value="United States">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="form-group">
-                                            <label class="form-control-label" for="input-country">Telefono</label>
-                                            <input type="number" id="input-postal-code" readonly class="form-control form-control-alternative" placeholder="Postal code">
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                             <hr class="my-4">
                             <!-- Description -->
