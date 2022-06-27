@@ -1,5 +1,10 @@
 <?php
+session_start();
+
 include "functions/db.php";
+
+if(isset($_SESSION['usu']))
+{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -99,3 +104,8 @@ include "functions/db.php";
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
+<?php
+}else{
+    header("Location:index.php");
+}
+?>

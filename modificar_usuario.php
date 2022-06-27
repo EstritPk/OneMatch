@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+
+session_start();
+if(isset($_SESSION['usu']))
+{
 include "functions/db.php";
 if (isset($_GET['rut_usu'])) {
     $sql = "select * from usuarios where rut_usuario=" . $_GET['rut_usu'];
@@ -90,3 +94,8 @@ if (isset($_GET['rut_usu'])) {
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
+<?php
+}else{
+    header("Location:functions/error.php");
+}
+?>

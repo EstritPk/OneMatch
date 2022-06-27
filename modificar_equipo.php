@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+session_start();
+if(isset($_SESSION['usu']))
+{
 include "functions/db.php";
+
 if (isset($_GET['idequipo'])) {
     $sql = "SELECT * FROM equipos where id_equipo=" . $_GET['idequipo'];
     $resul = mysqli_query(conectar(), $sql);
@@ -107,3 +111,8 @@ if (isset($_GET['idequipo'])) {
     </body>
 
 </html>
+<?php
+}else{
+    header("Location:functions/error.php");
+}
+?>

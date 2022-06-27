@@ -1,6 +1,10 @@
 <?php
-include "includes/header.php";
+session_start();
+
 include "functions/db.php";
+
+if(isset($_SESSION['usu']))
+{
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +21,7 @@ include "functions/db.php";
     <body>
         <div class="pt-5">
             <?php
-            //include "includes/header.php";
+            include "includes/header.php";
             ?>
         </div>
         <div class="container ">
@@ -113,3 +117,8 @@ include "functions/db.php";
     </body>
 
 </html>
+<?php
+}else{
+    header("Location:index.php");
+}
+?>

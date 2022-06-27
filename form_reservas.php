@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+include "functions/db.php";
+
+if(isset($_SESSION['usu']))
+{
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -156,3 +165,8 @@
 </body>
 
 </html>
+<?php
+}else{
+    header("Location:index.php");
+}
+?>

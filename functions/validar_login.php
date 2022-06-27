@@ -12,7 +12,7 @@ switch ($op) {
 function validarUsuari()
 {
     session_start();
-    $sql = "select * from usuarios where email_usuario='" .$_POST['email_usu']. "' and clave_usuario='" .$_POST['clave_usu'] . "' and estado_usuario=1";
+    $sql = "select * from usuarios where email_usuario='" .$_POST['email']. "' and clave_usuario='" .md5($_POST['clave']). "' and estado_usuario=1";
     $result = mysqli_query(conectar(), $sql);
     $cont = mysqli_num_rows($result);
     $datos = mysqli_fetch_array($result);
@@ -21,13 +21,14 @@ function validarUsuari()
         $_SESSION['user']="usuario ";
         header("Location:../home.php");
     } else {
-        header("Location:../index.php");
+        header("Location:error.php");
+
     }
 }
 function validarAdmin()
 {   
     session_start();
-    $sql = "select * from adminsitradores where email_administrador='" .$_POST['email_adm']. "' and clave_administrador='" .md5($_POST['clave_adm']). "' and estado_administrador=1";
+    $sql = "select * from adminsitradores where email_administrador='" .$_POST['email']. "' and clave_administrador='" .md5($_POST['clave']). "' and estado_administrador=1";
     $result = mysqli_query(conectar(), $sql);
     $cont = mysqli_num_rows($result);
     $datos = mysqli_fetch_array($result);

@@ -1,8 +1,11 @@
 <?php
+session_start();
 
-include "functions/db.php"
+include "functions/db.php";
+
+if(isset($_SESSION['usu']))
+{
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -367,3 +370,8 @@ include "functions/db.php"
 </body>
 
 </html>
+<?php
+}else{
+    header("Location:index.php");
+}
+?>

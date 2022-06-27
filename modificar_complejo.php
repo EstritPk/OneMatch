@@ -1,5 +1,10 @@
 <?php
+session_start();
 
+
+
+if(isset($_SESSION['usu']))
+{
 include "functions/db.php";
 if (isset($_GET['idcomple'])) {
     $sql = "select * from complejosdeportivos where id_complejo=" . $_GET['idcomple'];
@@ -92,7 +97,7 @@ if (isset($_GET['idcomple'])) {
     </body>
 </html>
 <?php
-//}else{
-  //  header("Location:error.php");
-//}
+}else{
+    header("Location:error.php");
+}
 ?>

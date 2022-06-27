@@ -28,7 +28,7 @@ include "functions/db.php";
                                     </div>
                                     <form action="functions/validar_login.php" class="needs-validation formulario" method="POST" novalidate>
                                         <div class="form-outline form-white mb-4">
-                                            <input type="email" id="form2Example11" class="form-control" name="name" placeholder="ingresa tu user name" required />
+                                            <input type="email" id="form2Example11" class="form-control" name="email" placeholder="ingresa tu user mail" required />
                                         </div>
                                         <div class="form-outline form-white mb-4">
                                             <input type="password" id="form2Example22" name="clave" class="form-control" required />
@@ -50,7 +50,7 @@ include "functions/db.php";
                                     <div class="d-flex align-items-center justify-content-center p-4">
                                         <p class="mb-0 me-2 text-white">No tienes una cuenta?</p>
                                         <button type="button" class="btn btn-outline-danger">Crear cuenta</button>
-                                    </div><br>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center  gradient-custom-2">

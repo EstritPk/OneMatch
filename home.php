@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "functions/db.php";
-if(isset($_SESSION['user']))
+if(isset($_SESSION['usu']))
 {
 ?>
 <!DOCTYPE html>
