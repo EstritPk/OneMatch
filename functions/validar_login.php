@@ -43,7 +43,7 @@ function validarAdmin()
 
    
 
-    $sql = "select * from adminsitradores where email_administrador='" .$_POST['name']. "' and clave_administrador='" .$_POST['clave'] . "' and estado_administrador=1";
+    $sql = "select * from adminsitradores where email_administrador='" .$_POST['name']. "' and clave_administrador='" .md5($_POST['clave']). "' and estado_administrador=1";
     $result = mysqli_query(conectar(), $sql);
     $cont = mysqli_num_rows($result);
 

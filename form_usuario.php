@@ -80,8 +80,8 @@ include "functions/db.php";
                                 <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="email_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="foto_usu" class="form-label">Foto</label>
-                                <input type="file" class="form-control" name="foto_usu" id="foto_usu" required>
+                                <label for="imagen_usu" class="form-label">Imagen</label>
+                                <input type="file" class="form-control" name="imagen_usu" id="imagen_usu" required>
                             </div>
                         </div>
                         <div class="row">
