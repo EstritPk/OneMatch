@@ -63,7 +63,7 @@
 					<a href="#" class="nav-link  text-light" style="font-size: 20px;" id="submenuCancha" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
 
-						<?php echo strtoupper($_SESSION['usu']); ?><i class="fa-solid fa-circle-user m-2 " style="font-size: 35px; ;"></i>
+						<?php echo strtoupper($_SESSION['user']); ?><i class="fa-solid fa-circle-user m-2 " style="font-size: 35px; ;"></i>
 					</a>
 
 					<!-- Sub-elementos -->

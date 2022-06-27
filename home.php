@@ -1,18 +1,11 @@
 <?php
-
 session_start();
-
 include "functions/db.php";
-if(isset($_SESSION['usu']))
+if(isset($_SESSION['user']))
 {
-
-
-//if(isset($_SESSION['user']))
-//{
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,16 +18,13 @@ if(isset($_SESSION['usu']))
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
-
 </head>
-
 <body>
 <div class="pt-5">
         <?php
          include "includes/header.php";
         ?>
     </div>
-
     <div class="container ">
         <div class="row ">
             <div class="col">
@@ -54,19 +44,14 @@ if(isset($_SESSION['usu']))
                             <img class="img-fluid" src="images/ipadel.jpg" alt="">
                         </div>
                     </div>
-
-                    <!-- Controles -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#mi-carousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Anterior</span>
                     </button>
-
                     <button class="carousel-control-next" type="button" data-bs-target="#mi-carousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Siguiente</span>
                     </button>
-
-                    <!-- Indicadores -->
                     <div class="carousel-indicators">
                         <button type="button" class="active" data-bs-target="#mi-carousel" data-bs-slide-to="0" aria-label="Slide 1"></button>
                         <button type="button" class="" data-bs-target="#mi-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -77,11 +62,6 @@ if(isset($_SESSION['usu']))
         </div>
     </div>
     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><br>
-
-        <!--<div class="text-uppercase fw-bold mb-4">
-            <span>Nuestro redes social</span>
-        </div> -->
-
         <div>
             <a class="btn btn-outline-success" href="form_admin.php" role="button">Administrador</a>
             <a class="btn btn-outline-success" href="form_cancha.php" role="button">canchas</a>
@@ -91,8 +71,6 @@ if(isset($_SESSION['usu']))
             <a class="btn btn-outline-success" href="form_usuario.php" role="button">Usuarios</a>
             <a class="btn btn-outline-success" href="perfil_admin.php" role="button">Perfil Administrador</a>
             <a class="btn btn-outline-success" href="perfil_usuario.php" role="button">Perfil usuario</a>
-
-
         </div>
     </div>
     <section class="main">
@@ -103,7 +81,6 @@ if(isset($_SESSION['usu']))
                         <h3 class="titulo">Nuestros Servicios</h3>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-sm-4 caracteristica">
                         <img src="images/reserva.png" alt="" class="icono">
@@ -123,11 +100,6 @@ if(isset($_SESSION['usu']))
                 </div>
             </div>
         </section>
-
-
-
-
-
         <section class="ftco-section bg-secondary  p-2 mb-3 ">
             <div class="container">
                 <div class="row">
@@ -139,12 +111,10 @@ if(isset($_SESSION['usu']))
                             <div class="item ">
                                 <div class="blog-entry">
                                     <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_1.jpg');">
-
                                     </a>
                                     <div class="text border border-top-0 p-4">
                                         <h5 class="heading"><a href="#">Legal
                                                 Throughout</a></h5>
-
                                         <div class="d-flex align-items-center mt-4">
                                             <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                                             <p class="ml-auto meta2 mb-0">
@@ -155,16 +125,13 @@ if(isset($_SESSION['usu']))
                                     </div>
                                 </div>
                             </div>
-
                             <div class="item">
                                 <div class="blog-entry">
                                     <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_2.jpg');">
-
                                     </a>
                                     <div class="text border border-top-0 p-4">
                                         <h5 class="heading"><a href="#"> Legal Working
                                             </a></h5>
-
                                         <div class="d-flex align-items-center mt-4">
                                             <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                                             <p class="ml-auto meta2 mb-0">
@@ -175,16 +142,13 @@ if(isset($_SESSION['usu']))
                                     </div>
                                 </div>
                             </div>
-
                             <div class="item">
                                 <div class="blog-entry">
                                     <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_3.jpg');">
-
                                     </a>
                                     <div class="text border border-top-0 p-4">
                                         <h3 class="heading"><a href="#"> Occur
                                                 Throughout</a></h3>
-
                                         <div class="d-flex align-items-center mt-4">
                                             <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                                             <p class="ml-auto meta2 mb-0">
@@ -195,15 +159,12 @@ if(isset($_SESSION['usu']))
                                     </div>
                                 </div>
                             </div>
-
                             <div class="item">
                                 <div class="blog-entry">
                                     <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_4.jpg');">
-
                                     </a>
                                     <div class="text border border-top-0 p-4">
                                         <h3 class="heading"><a href="#"> Legal Working </a></h3>
-
                                         <div class="d-flex align-items-center mt-4">
                                             <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                                             <p class="ml-auto meta2 mb-0">
@@ -214,15 +175,12 @@ if(isset($_SESSION['usu']))
                                     </div>
                                 </div>
                             </div>
-
                             <div class="item">
                                 <div class="blog-entry">
                                     <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_5.jpg');">
-
                                     </a>
                                     <div class="text border border-top-0 p-4">
                                         <h3 class="heading"><a href="#">Finance Legal </a></h3>
-
                                         <div class="d-flex align-items-center mt-4">
                                             <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
                                             <p class="ml-auto meta2 mb-0">
@@ -233,11 +191,9 @@ if(isset($_SESSION['usu']))
                                     </div>
                                 </div>
                             </div>
-
                             <div class="item">
                                 <div class="blog-entry">
                                     <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_6.jpg');">
-
                                     </a>
                                     <div class="text border border-top-0 p-4">
                                         <h3 class="heading"><a href="#"> Working Streams </a></h3>
@@ -257,27 +213,17 @@ if(isset($_SESSION['usu']))
                 </div>
             </div>
         </section>
-
-
-
-
-
         <div class="pt-5">
-
             <?php
             include "includes/footer.php";
             ?>
         </div>
-
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.js"></script>
-
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/main.js"></script>
-
         <script src="js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
 <?php
 }else{

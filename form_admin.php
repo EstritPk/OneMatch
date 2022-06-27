@@ -77,19 +77,13 @@ include "functions/db.php";
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 mb-3">
-                                        <label class="form-label" name="identidad_adm" id="identidad_adm">Identidad</label>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_adm" id="hombre_adm" required>
-                                            <label for="hombre" class="form-check-label">Hombre</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_adm" id="mujer_adm" required>
-                                            <label for="mujer" class="form-check-label">Mujer</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_adm" id="otro_adm" required>
-                                            <label for="otro" class="form-check-label">Otro</label>
-                                        </div>
+                                        <label class="form-label">Identidad</label>
+                                        <select name="identidad_adm" id="identidad_adm" class="form-select" required>
+                                            <option selected disabled value="">Seleccione Identidad</option>
+                                            <option value="Hombre">Hombre</option>
+                                            <option value="Mujer">Mujer</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -117,4 +111,5 @@ include "functions/db.php";
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
+
 </html>

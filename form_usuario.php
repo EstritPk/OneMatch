@@ -2,12 +2,11 @@
 include "includes/header.php";
 include "functions/db.php";
 
-//if(isset($_SESSION['user']))
-//{
+if(isset($_SESSION['user']))
+{
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,7 +53,6 @@ include "functions/db.php";
                                 <label for="ap_paterno_usu" class="form-label">Apellido Paterno</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_usu" name="ap_paterno_usu" required>
                             </div>
-
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_materno_usu" class="form-label">Apellido Materno</label>
                                 <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_usu" name="ap_materno_usu" required>
@@ -92,28 +90,28 @@ include "functions/db.php";
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="row">
                                     <div class="col-12 col-sm-6 mb-3">
-                                        <label class="form-label" name="identidad_usu" id="identidad_usu" >Identidad</label>
-
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_usu" id="hombre_usu"required>
-                                            <label for="hombre_usu" class="form-check-label">Hombre</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_usu" id="mujer_usu"required>
-                                            <label for="mujer_usu" class="form-check-label">Mujer</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input type="radio" class="form-check-input" name="identidad_usu" id="otro_usu"required>
-                                            <label for="otro_usu" class="form-check-label">Otro</label>
-                                        </div>
+                                        <label class="form-label">Identidad</label>
+                                        <select name="identidad_adm" id="identidad_adm" class="form-select" required>
+                                            <option selected disabled value="">Seleccione Identidad</option>
+                                            <option value="Hombre">Hombre</option>
+                                            <option value="Mujer">Mujer</option>
+                                            <option value="Otro">Otro</option>
+                                        </select>
+                                    </div>
                                     </div>
                                     <div class="col-12 col-sm-6 mb-3">
                                         <label class="form-label">Deportes</label>
-                                        <select name="deportes" id="deporte_usu" class="form-select" required>
-                                            <option selected disabled value="">Choose...</option>
-                                            <option value="football">Football</option>
-                                            <option value="tenis">Tenis</option>
-                                            <option value="padel">Padel</option>
+                                        <select name="deporte_equ" id="deporte_equ" class="form-select" required>
+                                            <option selected disabled value="">Seleccione Deporte</option>
+                                            <?php
+                                            $sqlpro = "SELECT * FROM deportes";
+                                            $resultpro = mysqli_query(conectar(), $sqlpro);
+                                            while ($datospro = mysqli_fetch_array($resultpro)) {
+                                            ?>
+                                                <option value="<?php echo $datospro['id_deporte']; ?>"><?php echo $datospro['nombre_deporte']; ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -141,10 +139,9 @@ include "functions/db.php";
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
 </html>
 <?php
-//}else{
-  //  header("Location:error.php");
-//}
+}else{
+    header("Location:index.php");
+}
 ?>

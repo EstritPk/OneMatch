@@ -57,5 +57,30 @@ body{ font: 14px sans-serif; text-align: center; }
 
 
 
+// $_SESSION['usu'] = $datos['nombre'] . " " . $datos['appaterno'] . " " . $datos['apmaterno'];
 
+
+
+                                    <div class="col-12 col-sm-6 mb-3">
+                                        <label class="form-label" name="identidad_adm" id="identidad_adm">Identidad</label>
+                                        <div class="form-check">
+                                            <option value="volvo">Hombre</option>
+                                        </div>
+                                        <option value="saab">Mujer</option>
+                                        <option value="mercedes">Otro</option>
+
+
+                                        <!--<div class="form-check">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="hombre_adm" required>
+                                            <label for="hombre" class="form-check-label">Hombre</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="mujer_adm" required>
+                                            <label for="mujer" class="form-check-label">Mujer</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input" name="identidad_adm" id="otro_adm" required>
+                                            <label for="otro" class="form-check-label">Otro</label>
+                                        </div>-->
+                                    </div>
 
