@@ -1,7 +1,11 @@
 <?php
-//session_start();
-include "includes/header.php";
+
+session_start();
+
 include "functions/db.php";
+if(isset($_SESSION['usu']))
+{
+
 
 //if(isset($_SESSION['user']))
 //{
@@ -25,8 +29,9 @@ include "functions/db.php";
 </head>
 
 <body>
-    <div class="pt-5">
+<div class="pt-5">
         <?php
+         include "includes/header.php";
         ?>
     </div>
 
@@ -275,7 +280,7 @@ include "functions/db.php";
 
 </html>
 <?php
-//}else{
-  //  header("Location:home.php");
-//}
+}else{
+    header("Location:index.php");
+}
 ?>

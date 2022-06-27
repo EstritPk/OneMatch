@@ -1,42 +1,59 @@
 <?php
 include("db.php");
 
-$op=$_POST['actionlogin'];
-switch($op){
-    case "Loguear": loguear();
+$op = $_POST['actionlogin'];
+switch ($op) {
+    case "ingresar como Usuario":
+        validarUsuari();
         break;
-    case "RegistrarSinLogin": registrarsinlogin();
+    case "ingresar como Aministrador":
+        validarAdmin();
         break;
 }
 
-    function loguear(){
-        $sql="SELECT * FROM  usuarios where name_usuario='".$_POST['name_usu']."' , clave_usuario='".md5($_POST['clave_usu'])."' , estado_usuario=1 ";
-        mysqli_query(conectar(),$sql);
-        $cont=mysqli_num_rows($result);
 
-        $datos=mysqli_fetch_array($result);
+function validarUsuari()
+{
 
-        while($datos=mysqli_fetch_array($result))
-        {
-            //header('Location:../home.php');
-            header('Location:error.php');
-        }
-
-        //echo "Holanda";
-
-        
-    }
-
-    function registrarsinlogin(){
-        $sql="INSERT INTO usuarios SET rut_usuario='".$_POST['rut_usu']."' , nombre_usuario='".$_POST['nombre_usu']."' , email_usuario='".$_POST['email_usu']."' , clave_usuario='".md5($_POST['clave_usu'])."' , 
-        name_usuario='".$_POST['name_usu']."' , apellido_p_usuario='".$_POST['ap_paterno_usu']."' , apellido_m_usuario='".$_POST['ap_materno_usu']."' , direccion_usuario='".$_POST['direccion_usu']."' , 
-        edad_usuario='".$_POST['edad_usu']."' , telefono_usuario='".$_POST['telefono_usu']."' , identidad_usuario='".$_POST['identidad_usu']."' , descripcion_usuario='".$_POST['descripcion_usu']."' , 
-        imagen_usuario='".$_FILES['images']['foto_usu']."' ";
-        mysqli_query($conn,$sql);
-        header('Location:../home.php');
-    }
-
+    session_start();
     
-    
+ 
 
-?>
+
+    $sql = "select * from usuarios where email_usuario='" .$_POST['name']. "' and clave_usuario='" .$_POST['clave'] . "' and estado_usuario=1";
+    $result = mysqli_query(conectar(), $sql);
+    $cont = mysqli_num_rows($result);
+
+    $datos = mysqli_fetch_array($result);
+
+    if ($cont != 0) {
+        $_SESSION['usu'] =$datos['nombre_usuario']." ".$datos['apellido_p_usuario'] ;
+        $_SESSION['user']="usuario ";
+        // $_SESSION['usu'] = $datos['nombre'] . " " . $datos['appaterno'] . " " . $datos['apmaterno'];
+        header("Location:../home.php");
+    } else {
+        header("Location:../index.php");
+    }
+}
+
+function validarAdmin()
+{
+    
+    session_start();
+
+   
+
+    $sql = "select * from adminsitradores where email_administrador='" .$_POST['name']. "' and clave_administrador='" .$_POST['clave'] . "' and estado_administrador=1";
+    $result = mysqli_query(conectar(), $sql);
+    $cont = mysqli_num_rows($result);
+
+    $datos = mysqli_fetch_array($result);
+
+    if ($cont != 0) {
+         $_SESSION['usu'] =$datos['name_administrador']." ".$datos['apellido_p_administrador'] ;
+         $_SESSION['admin'] = "Admin0000";
+        header("Location:../home.php");
+    } else {
+        header("Location:error.php");
+    }
+}

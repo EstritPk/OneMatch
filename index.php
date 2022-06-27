@@ -28,27 +28,32 @@ include "functions/db.php";
                                     </div>
                                     <form action="functions/validar_login.php" class="needs-validation formulario" method="POST" novalidate>
                                         <div class="form-outline form-white mb-4">
-                                            <input type="text" id="form2Example11" class="form-control" placeholder="ingresa tu user name" required />
+                                            <input type="email" id="form2Example11" class="form-control" name="name" placeholder="ingresa tu user name" required />
                                         </div>
                                         <div class="form-outline form-white mb-4">
-                                            <input type="password" id="form2Example22" class="form-control" required />
+                                            <input type="password" id="form2Example22" name="clave" class="form-control" required />
                                         </div>
-                                        <input type="hidden" value="actionlogin" id="Loguear" name="actionlogin" readonly>
+
                                         <div class="row">
-                                            <div class="col-12 d-flex justify-content-center">
+                                            <div class="col-6 col-sm-6 d-flex justify-content-center">
                                                 <div>
-                                                    <button type="submit" name="Loguear" value="Loguear" class="col-12 btn btn-info button">Registrar</button>
+                                                    <input type="submit" name="actionlogin" value="ingresar como Usuario" class="col-12 btn btn-outline-info ">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-sm-6 d-flex justify-content-center">
+                                                <div>
+                                                    <input type="submit" name="actionlogin" value="ingresar como Aministrador" class="col-12 btn btn-outline-success ">
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
-                                    <div class="d-flex align-items-center justify-content-center pb-4">
+                                    <div class="d-flex align-items-center justify-content-center p-4">
                                         <p class="mb-0 me-2 text-white">No tienes una cuenta?</p>
                                         <button type="button" class="btn btn-outline-danger">Crear cuenta</button>
-                                    </div>
+                                    </div><br>
                                 </div>
                             </div>
-                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="col-lg-6 d-flex align-items-center  gradient-custom-2">
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                     <h4 class="mb-4"></h4>
                                     <p class="lg mb-0">"Lo más importante del deporte no es ganar, sino participar, porque lo esencial en la vida no es el éxito, sino esforzarse por conseguirlo".

@@ -16,7 +16,7 @@
     }
 }
 
-.formulario input[type="text"],
+.formulario input[type="email"],
 .formulario input[type="password"] {
     display: block;
     width: 100%;
