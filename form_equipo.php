@@ -38,11 +38,11 @@ if (isset($_SESSION['usu'])) {
                             <div class="row">
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="nombre_equ" class="form-label">Nombre del Equipo</label>
-                                    <input type="text" class="form-control" placeholder="" name="nombre_equ" id="nombre_equ validationCustom03" required>
+                                    <input type="text" class="form-control" placeholder="" name="nombre_equ"  id="nombre_equ validationCustom03" required>
                                 </div>
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="creador_equ" class="form-label">Creador Equipo</label>
-                                    <input type="text" class="form-control" placeholder="" id="creador_equ" name="creador_equ" required>
+                                    <input type="text" class="form-control" placeholder="" id="creador_equ" value="<?php echo strtoupper($_SESSION['rut']); ?>" readonly name="creador_equ" required>
                                 </div>
 
                                 <div class="col-12 col-sm-6 mb-3">

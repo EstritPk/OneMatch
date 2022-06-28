@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +10,12 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
     <body>
         <div class="pt-5">
-           
+
         </div>
         <div class="container ">
             <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
@@ -48,7 +51,7 @@
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="edad_adm" class="form-label">Edad</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_adm" name="edad_adm" >
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_adm" name="edad_adm">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="telefono_adm" class="form-label">Telefono</label>
@@ -63,42 +66,40 @@
                                 <input type="email" class="form-control" placeholder="correo@correo.com" id="email_adm" name="email_adm" required>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-12 col-md-6 mb-3">
-                                <label for="imagen_adm" class="form-label">Foto</label>
-                                <input type="file" class="form-control" name="imagen_adm" id="imagen_adm" required>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="row">
-                                    <div class="col-12 col-sm-6 mb-3">
-                                        <label class="form-label">Identidad</label>
-                                        <select name="identidad_adm" id="identidad_adm" class="form-select" required>
-                                            <option selected disabled value="">Seleccione Identidad</option>
-                                            <option value="Hombre">Hombre</option>
-                                            <option value="Mujer">Mujer</option>
-                                            <option value="Otro">Otro</option>
-                                        </select>
-                                    </div>
+
+                        <div class="col-12 col-md-6 mb-3">
+                            <label for="imagen_adm" class="form-label">Foto</label>
+                            <input type="file" class="form-control" name="imagen_adm" id="imagen_adm" required>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label">Identidad</label>
+                                    <select name="identidad_adm" id="identidad_adm" class="form-select" required>
+                                        <option selected disabled value="">Seleccione Identidad</option>
+                                        <option value="Hombre">Hombre</option>
+                                        <option value="Mujer">Mujer</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <input type="hidden" value="Crear" id="actiones" name="actiones" readonly>
-                        <div class="row">
-                            <div class="col-12 d-flex justify-content-center">
-                                <div>
-                                    <div class="form-check mb-3">
-                                        <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
-                                        <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
-                                    </div>
-                                    <button type="submit" name="Crear" value="Crear" class="col-12 btn btn-info button">Registrar</button>
+                        <div class="col-12 d-flex justify-content-center">
+                            <div>
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
+                                    <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                 </div>
+                                <button type="submit" name="Crear" value="Crear" class="col-12 btn btn-info button">Registrar</button>
                             </div>
                         </div>
-                    </form>
                 </div>
+
+                </form>
             </div>
         </div>
-        
+        </div>
+
         <script src="js/main.js"></script>
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>

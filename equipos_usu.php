@@ -28,23 +28,32 @@ if (isset($_SESSION['usu'])) {
             <?php
             include "includes/header.php";
             ?>
+            <div class="row py-3 m-5 bg-dark">
+                <div class="col">
 
+                    <a href="form_equipo.php" class="btn btn-outline-warning" style="font-size: 20px;">Agregar Nuevo Equipo<i class="fa-solid fa-circle-plus p-2" style="font-size: 20px;"></i></a>
 
-            <div class="row py-3">
+                </div>
+            </div>
+
+            <div class="row  m-3">
 
 
 
                 <?php
-                $sql = "SELECT * FROM equipos where estado_equipo=1";
-                $result = mysqli_query(conectar(), $sql);
+                $sqlpro = "select * from equipos where creador_equipo='" . $_SESSION['rut'] . "'  and estado_equipo=1";
+
+                $result = mysqli_query(conectar(), $sqlpro);
                 while ($datosequi = mysqli_fetch_array($result)) {
                 ?>
 
-                    <div class=" my-5" style="max-width: 20rem;">
+                    <div class=" my-3" style="max-width: 20rem;">
 
                         <div class="card">
                             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                                <img src="images/fotos/<?php echo $datosequi['imagen_equipo']; ?>" class="img-fluid" />
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/fotos/<?php echo  $datosequi['imagen_equipo']; ?>');">
+                                </a>
+                                
                                 <a href="#!">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
@@ -60,7 +69,7 @@ if (isset($_SESSION['usu'])) {
 
                                 <a href="
                             " class="btn btn-outline-success p-md-1 mb-0">Modificar</a>
-                                <a href="functions/crud_equipo.php?equipoeli=<?php echo $datosequi['id_equipo']; ?>" class="btn btn-outline-danger p-md-1 mb-0">Eliminar</a>
+                                <a href="functions/crud_equipo.php?equipoeli=<?php echo $datosequi['id_equipo']; ?>" class=" p-md-1 mb-0"><button class="btn btn-outline-danger" onclick="return confimarEliminar();">Eliminar</button> </a>
 
                                 <a href="#!" class="btn btn-outline-info p-md-1 mb-0">Ver nominas</a>
 
@@ -78,6 +87,16 @@ if (isset($_SESSION['usu'])) {
             ?>
             <script src="js/validaciones.js"></script>
             <script src="js/bootstrap.bundle.min.js"></script>
+            <script type="text/javascript">
+                function confimarEliminar() {
+                    var respuesta = confirm("Estas Segura que deseas eliminar tu equipo");
+                    if (respuesta == true) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            </script>
         </body>
 
     </html>
