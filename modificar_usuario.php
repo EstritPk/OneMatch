@@ -22,7 +22,6 @@ if (isset($_GET['rut_usu'])) {
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
-<body>
     <body>
         <div class="pt-5">
             <?php
@@ -35,41 +34,67 @@ if (isset($_GET['rut_usu'])) {
                     <h2 class=""> Modificar Usuario</h2>
                 </div>
                 <div class="col mt-3">
-                    <form action="functions/crud_cancha.php" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+                    <form action="functions/crud_usuario.php" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
                         <div class="row">
-                            <input type="hidden" class="form-control" id="actiones" value="Modificar" name="actiones">
-                            <input type="hidden" class="form-control" id="idcancha" name="idcancha" value="<?php echo $_GET['rut_usu']; ?>">
+                            <input type="hidden" class="form-control" value="Modificar" id="actionusuario" name="actionusuario">
+                            <input type="hidden" class="form-control" id="rutusuario" name="rutusuario" value="<?php echo $_GET['rut_usu']; ?>">
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="nombre" class="form-label">Precio</label>
-                                <input type="number" class="form-control" placeholder="$24" id="precio" name="precio" value="<?php echo $datos['precio_cancha']; ?>" required>
-                            </div>
-                            <div class="col-12 col-sm-6 mb-3">
-                                <label for="horario" class="form-label">Horario</label>
-                                <input type="text" class="form-control" placeholder="Lunes a Sabado" id="horario" name="horario" value="<?php echo $datos['horario_cancha']; ?>" required>
-                            </div>
-                            <div class="col-12 col-sm-6 mb-3">
-                                <label class="form-label">Tipo de Cancha</label>
-                                <select name="deportes" id="deportes" class="form-select" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option value="football">Football</option>
-                                    <option value="padel">Padel</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6 mb-3">
-                                <label class="form-label">Estado del Usuario</label>
-                                <select name="estado" id="estado" class="form-select" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option value="1" <?php if ($datos['estado_usuario'] == 1) { ?> selected <?php } ?>>Disponible</option>
-                                    <option value="0" <?php if ($datos['estado_usuario'] == 0) { ?> selected <?php } ?>>No disponible</option>
-                                </select>
+                                <label for="rut_usu" class="form-label">Rut</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu" value="<?php echo $datos['rut_usuario']; ?>" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="foto" class="form-label">imagen Cancha</label>
-                                <input type="file" class="form-control" name="foto" id="foto" required>
+                                <label for="name_usu" class="form-label">Nombre de Usuario</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="name_usu" name="name_usu" value="<?php echo $datos['name_usuario']; ?>" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="dimension" class="form-label">Dimension</label>
-                                <input type="text" class="form-control" placeholder="24mx24m" id="dimension" name="dimension" value="<?php echo $datos['dimension_cancha']; ?>" required>
+                                <label for="nombre_usu" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="nombre_usu" name="nombre_usu" value="<?php echo $datos['nombre_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="ap_paterno_usu" class="form-label">Apellido Paterno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_usu" name="ap_paterno_usu" value="<?php echo $datos['apellido_p_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="ap_materno_usu" class="form-label">Apellido Materno</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_usu" name="ap_materno_usu" value="<?php echo $datos['apellido_m_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="direccion_usu" class="form-label">Direccion</label>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_usu" name="direccion_usu" value="<?php echo $datos['direccion_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="edad_usu" class="form-label">Edad</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_usu" name="edad_usu" value="<?php echo $datos['edad_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="telefono_usu" class="form-label">Telefono</label>
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_usu" name="telefono_usu" value="<?php echo $datos['telefono_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="clave_usu" class="form-label">Clave</label>
+                                <input type="password" class="form-control" placeholder="" id="clave_usu" name="clave_usu" readonly>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="email_usu" class="form-label">E-Mail</label>
+                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="email_usu" value="<?php echo $datos['email_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="imagen_usu" class="form-label">Imagen</label>
+                                <input type="file" class="form-control" name="imagen_usu" id="imagen_usu" value="<?php echo $datos['email_usuario']; ?>" required>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="descripcion_usu" class="form-label">Descripcion</label>
+                                <textarea name="descripcion_usu" id="descripcion_usu" class="form-control" value="<?php echo $datos['email_usuario']; ?>" required></textarea>
+                            </div>
+                                <div class="col-12 col-sm-6 mb-3">
+                                    <label class="form-label">Identidad</label>
+                                    <select name="identidad_usu" id="identidad_usu" class="form-select" required>
+                                        <option value="<?php echo $datos['identidad_usuario']; ?>">Seleccione Identidad</option>
+                                        <option value="Hombre">Hombre</option>
+                                        <option value="Mujer">Mujer</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -79,7 +104,8 @@ if (isset($_GET['rut_usu'])) {
                                         <input type="checkbox" name="terminos" id="terminos" class="form-check-input" required>
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
-                                    <input type="submit"  value="Modificar" id="Modificar" name="Modificar" action="Modificar" class="col-12 btn btn-info button">
+                                    <!--<input type="submit" value="Modificar" id="Modificar" name="Modificar" action="Modificar" class="col-12 btn btn-info button">-->
+                                    <button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Modificar</button>
                                 </div>
                             </div>
                         </div>

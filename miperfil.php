@@ -57,6 +57,7 @@ if (isset($_SESSION['usu'])) {
                             Pregúntate qué puedes hacer tú por tus compañeros de equipo".</p>
                         
                         <a href="modificar_usuario.php?rut_usu=<?php echo $datos['rut_usuario']; ?> " class="btn btn-info"> Editar tu prerfil</a>
+                        <a href="functions/crud_usuario.php?deleteusuario=<?php echo $datos['rut_usuario']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
                     </div>
                 </div>
             </div>
