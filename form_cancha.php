@@ -47,7 +47,9 @@ if(isset($_SESSION['usu']))
                                 <select name="complejos_can" id="complejos_can" class="form-select" required>
                                     <option selected disabled value="">Complejos Deportivo</option>
                                     <?php
-                                    $sqlpro = "SELECT * FROM complejosdeportivos";
+                                     $sqlpro = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
+
+                                    
                                     $resultpro = mysqli_query(conectar(), $sqlpro);
                                     while ($datospro = mysqli_fetch_array($resultpro)) {
                                     ?>

@@ -56,23 +56,33 @@ if (isset($_SESSION['usu'])) {
                 </div>
             </div>
         </div>
+        <div class="row py-3 m-5 bg-dark">
+            <div class="col">
+
+                <a href="form_complejo.php" class="btn btn-outline-info" style="font-size: 20px;">Agregar Nueva complejos<i class="fa-solid fa-circle-plus p-2" style="font-size: 20px;"></i></a>
+
+            </div>
+        </div>
 
         <div class="row">
             <div class="row py-3">
-
                 <?php
-                $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
+                $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
+
+                // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
                 $resulcomple = mysqli_query(conectar(), $sqlcomple);
 
                 while ($datoscomple = mysqli_fetch_array($resulcomple)) {
                 ?>
 
+
                     <div class=" col-6 col-sm-6 col-lg-3 mb-2">
 
 
-                        <div class="card card-block" style=" max-width: 20rem;">
+                        <div class="card card-block" style=" max-width: 20rem; ">
                             <div class="">
-                                <img src="images/comple.jpg" class="img-fluid" />
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/fotos/<?php echo $datoscomple['imagen_complejo']; ?>');">
+                                </a>
                                 <a href="#!">
                                     <div style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
@@ -125,48 +135,77 @@ if (isset($_SESSION['usu'])) {
             </div>
         </div>
 
+
+
+
+
+
+
+
+
+
+
         <div class="  row  justify-content-center">
             <div class="row ">
 
 
                 <?php
-                $sqlpro = "SELECT * FROM canchas where estado_cancha=1";
-                $resultpro = mysqli_query(conectar(), $sqlpro);
-                while ($datospro = mysqli_fetch_array($resultpro)) {
+                $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
+
+                // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
+                $resulcomple = mysqli_query(conectar(), $sqlcomple);
+
+                while ($datoscomple = mysqli_fetch_array($resulcomple)) {
                 ?>
                     <?php
-                    $sqlcomple = "SELECT * FROM complejosdeportivos where id_complejo=$datospro[complejosDeportivos_id_complejo]";
-                    $resulcomple = mysqli_query(conectar(), $sqlcomple);
-                    $datoscomple = mysqli_fetch_array($resulcomple);
+                    $sqlpro = "select * from canchas where complejosDeportivos_id_complejo='" . $datoscomple['id_complejo'] . "'  and estado_cancha=1";
+
+                    //$sqlpro = "SELECT * FROM canchas where estado_cancha=1";
+                    $resultpro = mysqli_query(conectar(), $sqlpro);
+
+
+                    while ($datospro = mysqli_fetch_array($resultpro)) {
                     ?>
 
-                    <div class="col-6 col-sm-6 col-lg-3 mb-4">
-                        <div class="card" style="max-width: 19rem;">
-                            <img class="card-img-top" src="images/fotos/<?php echo $datospro['imagen_cancha']; ?>" class="img-fluid" alt="">
-                            <div class="card-body">
 
-                                <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
-                                <p class="card-text "><?php echo $datospro['dimension_cancha']; ?>,
-                                    <?php echo $datoscomple['direccion_complejo']; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
-                                <p class="ml-auto meta2 m-3">
-                                    <a href="#" class="mr-2">Precio</a>
-                                    <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
-                                </p>
-                                <p>
-                                    <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
-                                    <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-success">Modificar</a>
-                                    <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
+                        <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                            <div class="card" style="max-width: 19rem;">
+                            <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/fotos/<?php echo $datospro['imagen_cancha']; ?>');">
+                                </a>
+                                <div class="card-body">
+
+                                    <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
+                                    <p class="card-text "><?php echo $datospro['dimension_cancha']; ?>,
+                                        <?php echo $datoscomple['direccion_complejo']; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
+                                    <p class="ml-auto meta2 m-3">
+                                        <a href="#" class="mr-2">Precio</a>
+                                        <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
+                                    </p>
+                                    <p>
+                                        <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-danger">Eliminar</a>
+                                        <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-success">Modificar</a>
+                                        <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
 
 
-                                </p>
+                                    </p>
 
 
+                                </div>
                             </div>
                         </div>
-                    </div>
+
+
+
+
+
+                    <?php
+                    }
+                    ?>
                 <?php
                 }
                 ?>
+
+
                 <!-- Button trigger modal -->
                 <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">

@@ -62,8 +62,8 @@ if (isset($_GET['idcomple'])) {
                                 </select>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="admincomp" class="form-label">Logo del Complejo</label>
-                                <input type="file" class="form-control" name="admincomp" id="admincomp"  accept="image/png, .jpeg, .jpg, image/gif" required>
+                                <label for="imagen_comple" class="form-label">Logo del Complejo</label>
+                                <input type="file" class="form-control" name="imagen_comple" id="imagen_comple"  accept="image/png, .jpeg, .jpg, image/gif" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="horario_comp" class="form-label">Horario</label>
