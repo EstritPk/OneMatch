@@ -56,7 +56,7 @@ if (isset($_SESSION['usu'])) {
                         <p class="text-white mt-0 mb-5">"No preguntes lo que tus compañeros de equipo pueden hacer por ti. <br>
                             Pregúntate qué puedes hacer tú por tus compañeros de equipo".</p>
                         
-                        <a href="modificar_admin.php?rut_usu=<?php echo $datos['rut_admin']; ?> " class="btn btn-info"> Editar tu prerfil</a>
+                        <a href="modificar_admin.php?rut_adm=<?php echo $datos['rut_admin']; ?> " class="btn btn-info"> Editar tu prerfil</a>
                     </div>
                 </div>
             </div>
