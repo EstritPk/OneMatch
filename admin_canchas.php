@@ -182,7 +182,7 @@ if (isset($_SESSION['usu'])) {
                                         <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
                                     </p>
                                     <p>
-                                        <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-danger"><button class="btn btn-outline-danger" onclick="return confimarEliminar();">Eliminar</button></a>
+                                        <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha']; ?>" class=""><button class="btn btn-outline-danger" onclick="return confimarEliminar();">Eliminar</button></a>
                                         <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-success">Modificar</a>
                                         <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
 

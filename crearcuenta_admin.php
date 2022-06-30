@@ -66,7 +66,7 @@
                                 <input type="email" class="form-control" placeholder="correo@correo.com" id="email_adm" name="email_adm" required>
                             </div>
                         </div>
-
+                        <input type="hidden" value="Crear" id="actionadmin" name="actionadmin" readonly>
                         <div class="col-12 col-md-6 mb-3">
                             <label for="imagen_adm" class="form-label">Foto</label>
                             <input type="file" class="form-control" name="imagen_adm" id="imagen_adm" required>

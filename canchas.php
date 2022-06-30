@@ -111,14 +111,12 @@ if(isset($_SESSION['usu']))
                                 <a href="#" class="mr-2">Precio</a>
                                 <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
                             </p>
-                            <p><a href="#" class="btn btn-sm btn-info">Reservar</a>
-                                <input type="text" id="texto" value="<?php echo $datospro['precio_cancha']; ?>" />
+                            <p><a href="form_reservas.php?can_reserva=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-info">Reservar</a>
+                                
                                 <button type="submit" onclick="recibir();" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     Detalles
                                 </button>
-                                <a href="?fac=<?php echo $datospro['precio_cancha'];  ?>"  data-toggle="modal" data-bs-target="#exampleModal">
-                                    Ver factura
-                                </a>
+                                
                             </p>
 
 

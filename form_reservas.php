@@ -3,8 +3,17 @@ session_start();
 
 include "functions/db.php";
 
-if(isset($_SESSION['usu']))
-{
+if(isset($_SESSION['usu'])){
+
+    if (isset($_GET['can_reserva'])) {
+        $sql = "select * from canchas where id_cancha=" . $_GET['can_reserva'];
+        $resul = mysqli_query(conectar(), $sql);
+        $datoscancha = mysqli_fetch_array($resul);
+    }
+    $sqlpro = "select * from usuarios where rut_usuario='" .$_SESSION['rut']. "'  and estado_usuario=1";
+
+    $resultpro = mysqli_query(conectar(), $sqlpro);
+    $datos = mysqli_fetch_array($resultpro);
 ?>
 
 <!DOCTYPE html>
@@ -50,15 +59,15 @@ if(isset($_SESSION['usu']))
                                     <h5 class="card-title">Datos del Usuario</h5>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">Rut</span>
-                                        <input type="text" aria-label="Rut" value="23456654-2" name="rut_usu" class="form-control" readonly>
+                                        <input type="text" aria-label="Rut" value="23456654-2" name="<?php echo $datos['rut_usuario']; ?>" class="form-control" readonly>
                                     </div>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">Nombres</span>
-                                        <input type="text" aria-label="Nombres" value="Rickelson Bresume" name="nombre" class="form-control" readonly>
+                                        <input type="text" aria-label="Nombres" value="<?php echo $datos['nombre_usuario'], " ", $datos['apellido_p_usuario']; ?>" name="nombre" class="form-control" readonly>
                                     </div>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">correo</span>
-                                        <input type="text" aria-label="Correo" value="Rickelson@gmail.com" name="gmail" class="form-control" readonly>
+                                        <input type="text" aria-label="Correo" value="<?php echo $datos['email_usuario']; ?>" name="gmail" class="form-control" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -70,15 +79,15 @@ if(isset($_SESSION['usu']))
 
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">IDCancha</span>
-                                        <input type="text" aria-label="Rut" value="2345" name="rut_usu" class="form-control" readonly>
+                                        <input type="number" aria-label="Id_cancha" value="<?php echo $datoscancha['id_cancha']; ?>" name="Id_cancha" class="form-control" readonly>
                                     </div>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">Tipo Cancha</span>
-                                        <input type="text" aria-label="Nombres" value="Football" name="nombre" class="form-control" readonly>
+                                        <input type="text" aria-label="tipo_cancha" value="<?php echo $datoscancha['tipo_cancha']; ?>" name="tipo_cancha" class="form-control" readonly>
                                     </div>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">Precio</span>
-                                        <input type="text" aria-label="Precio" id="precio" value="24000" name="precio" class="form-control" readonly>
+                                        <input type="number" aria-label="Precio" id="precio_cancha" value="<?php echo $datoscancha['precio_cancha']; ?>" name="precio_cancha" class="form-control" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +106,7 @@ if(isset($_SESSION['usu']))
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="cantidad" class="form-label">Cantidade de hora</label>
-                                            <input type="text" class="form-control" onblur=" calculaMonto();" placeholder="" id="cantidad" name="cantidad" required>
+                                            <input type="number" class="form-control" onblur=" calculaMonto();" placeholder="" id="cantidad" name="cantidad" required>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
                                             <label for="Monto" class="form-label">Monto Apagar</label>
@@ -155,7 +164,7 @@ if(isset($_SESSION['usu']))
     <script>
         function calculaMonto() {
 
-            var precio = document.getElementById('precio').value;
+            var precio = document.getElementById('precio_cancha').value;
             hora = document.getElementById('cantidad').value;
             document.getElementById('monto').value=precio* hora;
         }
