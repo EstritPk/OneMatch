@@ -28,6 +28,7 @@ if (isset($_SESSION['usu'])) {
             <?php
             include "includes/header.php";
             ?>
+           
             <div class="row py-3 m-5 bg-dark">
                 <div class="col">
 
@@ -53,7 +54,7 @@ if (isset($_SESSION['usu'])) {
                             <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
                                 <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/fotos/<?php echo  $datosequi['imagen_equipo']; ?>');">
                                 </a>
-                                
+
                                 <a href="#!">
                                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                                 </a>
