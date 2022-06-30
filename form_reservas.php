@@ -49,7 +49,7 @@ if(isset($_SESSION['usu'])){
                 <h4 class="text-light"><i class="fa fa-calendar"></i>Haz tu reservas de canchas en minutos</h4>
             </div>
 
-            <form  action="" id="reserva" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
+            <form  action="functions/crud_reservas.php" id="reserva" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
                 <div class="card-body">
 
                     <div class="row">
@@ -59,7 +59,7 @@ if(isset($_SESSION['usu'])){
                                     <h5 class="card-title">Datos del Usuario</h5>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">Rut</span>
-                                        <input type="text" aria-label="Rut" value="23456654-2" name="<?php echo $datos['rut_usuario']; ?>" class="form-control" readonly>
+                                        <input type="text" aria-label="Rut" value="<?php echo $datos['rut_usuario']; ?>" name="rut_usu" class="form-control" readonly>
                                     </div>
                                     <div class="input-group col-12 col-sm-12 m-1">
                                         <span class="input-group-text bg-info text-light">Nombres</span>
@@ -109,10 +109,10 @@ if(isset($_SESSION['usu'])){
                                             <input type="number" class="form-control" onblur=" calculaMonto();" placeholder="" id="cantidad" name="cantidad" required>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="Monto" class="form-label">Monto Apagar</label>
-                                            <input type="text" class="form-control"  placeholder="" id="monto" name="Monto" readonly >
+                                            <label for="monto" class="form-label">Monto Apagar</label>
+                                            <input type="text" class="form-control"  placeholder="" id="monto" name="monto" readonly >
                                         </div>
-
+                                        <input type="hidden" value="Reservar" id="actionreserva" name="actionreserva" readonly>
                                         <div class="col-12 col-sm-6 mb-3">
                                             <label class="metodoPago">Tipo de pago</label>
                                             <select name="metodoPago" id="metodoPago" class="form-select" required>
