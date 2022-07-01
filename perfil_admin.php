@@ -8,11 +8,11 @@ if (isset($_SESSION['usu'])) {
     <!DOCTYPE html>
     <html lang="en">
     <?php
- $rut=$_SESSION['rut'];
+    $rut = $_SESSION['rut'];
     include "functions/db.php";
 
 
-    $sqlpro = "select * from adminsitradores where rut_admin='" .$_SESSION['rut']. "'  and estado_administrador=1";
+    $sqlpro = "select * from adminsitradores where rut_admin='" . $_SESSION['rut'] . "'  and estado_administrador=1";
     $resultpro = mysqli_query(conectar(), $sqlpro);
     $datos = mysqli_fetch_array($resultpro);
 
@@ -55,7 +55,7 @@ if (isset($_SESSION['usu'])) {
                         <h1 class=" text-white">Bienvenido <?php echo $datos['name_administrador'], " ", $datos['apellido_p_administrador']; ?></h1>
                         <p class="text-white mt-0 mb-5">"No preguntes lo que tus compañeros de equipo pueden hacer por ti. <br>
                             Pregúntate qué puedes hacer tú por tus compañeros de equipo".</p>
-                        
+
                         <a href="modificar_admin.php?rut_adm=<?php echo $datos['rut_admin']; ?> " class="btn btn-info"> Editar tu prerfil</a>
                     </div>
                 </div>
@@ -70,7 +70,18 @@ if (isset($_SESSION['usu'])) {
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img src="images/perfil.jpg" class="rounded-circle">
+                                        <?php
+                                        if ($datos['imagen_administrador'] == "") {
+                                        ?>
+                                            <img src="images/fotos/user.png" class="rounded-circle">
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <img src="images/fotos/<?php echo $datos['imagen_administrador']; ?>" class="rounded-circle">
+                                        <?php
+                                        }
+                                        ?>
+                                        
                                     </a>
                                 </div>
                             </div>

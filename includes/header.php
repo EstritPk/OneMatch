@@ -90,7 +90,7 @@
 								</a>
 							</li>
 							<li><a href="equipos_usu.php" class="dropdown-item">Mis Equipos</a></li>
-							<li><a href="#" class="dropdown-item">Mis Reservas</a></li>
+							<li><a href="usuario_reservas.php" class="dropdown-item">Mis Reservas</a></li>
 						<?php
 						}
 						?>

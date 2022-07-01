@@ -96,7 +96,7 @@ if (isset($_SESSION['usu'])) {
                                         <th class="text-center">Monto</th>
                                         <th class="text-center">Estado Pago</th>
                                         <th class="text-center" style="width: 10%;">Facturas</th>
-                                        <th class="text-center">Action</th>
+                                        
                                     </tr>
 
                                     <?php
@@ -110,7 +110,7 @@ if (isset($_SESSION['usu'])) {
                                         <tr>
                                             <td class="text-center"><?php echo $datos['folio_reserva']; ?></td>
                                             <td class="text-center"><?php echo $datos['usuarios_rut_usuario']; ?></td>
-                                            <td class="text-center">Nedjo Rojas</td>
+                                            <td class="text-center"><?php echo Buscarusu($datos['usuarios_rut_usuario']); ?></td>
                                             <td class="text-center"><?php echo $datos['canchas_id_cancha']; ?></td>
                                             <td class="text-center"><?php echo $datos['cantidad_hora_reserva']; ?></td>
                                             <td class="text-center"><?php echo $datos['fecha_reserva']; ?></td>
@@ -129,8 +129,7 @@ if (isset($_SESSION['usu'])) {
                                             </td>
 
                                             <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
-                                            <td class="text-center bg-dark"><input type="submit" name="pagar" value="Pagar" class="col-12 btn btn-outline-warning ">
-                                            </td>
+                                           
 
 
                                         </tr>

@@ -71,7 +71,18 @@ if (isset($_SESSION['usu'])) {
                             <div class="col-lg-3 order-lg-2">
                                 <div class="card-profile-image">
                                     <a href="#">
-                                        <img src="images/perfil.jpg" class="rounded-circle">
+                                    <?php
+                                        if ($datos['imagen_usuario'] == "") {
+                                        ?>
+                                            <img src="images/fotos/user.png" class="rounded-circle">
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <img src="images/fotos/<?php echo $datos['imagen_usuario']; ?>" class="rounded-circle">
+                                        <?php
+                                        }
+                                        ?>
+                                        
                                     </a>
                                 </div>
                             </div>

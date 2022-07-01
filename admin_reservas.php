@@ -118,20 +118,69 @@ if (isset($_SESSION['usu'])) {
                                         <th class="text-center" style="width: 10%;">Facturas</th>
                                     </tr>
                                     <tr>
-                                        <td class="text-center">10045</td>
-                                        <td class="text-center">21345234-1</td>
-                                        <td class="text-center">Nedjo Rojas</td>
-                                        <td class="text-center">01_cancha</td>
-                                        <td class="text-center">5</td>
-                                        <td class="text-center">25-31-2022</td>
-                                        <td class="text-center">$24.000</td>
-                                        <td class="text-center">14h</td>
-                                        <td class="text-center">19h</td>
-                                        <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
+                                        <?php
+                                        $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
 
+                                        // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
+                                        $resulcomple = mysqli_query(conectar(), $sqlcomple);
+
+                                        while ($datoscomple = mysqli_fetch_array($resulcomple)) {
+                                        ?>
+                                            <?php
+                                            $sqlpro = "select * from canchas where complejosDeportivos_id_complejo='" . $datoscomple['id_complejo'] . "'  and estado_cancha=1";
+
+                                            //$sqlpro = "SELECT * FROM canchas where estado_cancha=1";
+                                            $resultpro = mysqli_query(conectar(), $sqlpro);
+
+
+                                            while ($datospro = mysqli_fetch_array($resultpro)) {
+                                            ?>
+                                                <?php
+                                                $sql = "select * from reservas where canchas_id_cancha='" . $datospro['id_cancha'] . "'";
+
+                                                // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
+                                                $resulreservas = mysqli_query(conectar(), $sql);
+
+                                                while ($datos = mysqli_fetch_array($resulreservas)) {
+                                                ?>
+                                    <tr>
+                                        <td class="text-center"><?php echo $datos['folio_reserva']; ?></td>
+                                        <td class="text-center"><?php echo $datos['usuarios_rut_usuario']; ?></td>
+                                        <td class="text-center"><?php echo Buscarusu($datos['usuarios_rut_usuario']); ?></td>
+                                        <td class="text-center"><?php echo $datos['canchas_id_cancha']; ?></td>
+                                        <td class="text-center"><?php echo $datos['cantidad_hora_reserva']; ?></td>
+                                        <td class="text-center"><?php echo $datos['fecha_reserva']; ?></td>
+                                        <td class="text-center">$ <?php echo $datos['monto_total']; ?></td>
+                                        <td class="text-center"><?php
+                                                                if ($datos['estado_reserva'] == 0) {
+                                                                ?>
+                                                <img src="images/nook.png">
+                                            <?php
+                                                                } else {
+                                            ?>
+                                                <img src="images/ok.png">
+                                            <?php
+                                                                }
+                                            ?>
+                                        </td>
+
+                                        <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
+                                        <td class="text-center bg-dark"><input type="submit" name="pagar" value="Pagar" class="col-12 btn btn-outline-warning ">
+                                        </td>
 
 
                                     </tr>
+                                <?php
+                                                }
+                                ?>
+
+                            <?php
+                                            }
+                            ?>
+                        <?php
+                                        }
+                        ?>
+                        </tr>
                                 </thead>
                                 <tbody>
                                 </tbody>
