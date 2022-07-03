@@ -62,7 +62,7 @@ if (isset($_SESSION['usu'])) {
                 </div>
             </div>
         </div>
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><br>
+        <!-- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><br>
             <div>
                 <a class="btn btn-outline-success" href="form_admin.php" role="button">Administrador</a>
                 <a class="btn btn-outline-success" href="form_cancha.php" role="button">canchas</a>
@@ -73,8 +73,8 @@ if (isset($_SESSION['usu'])) {
                 <a class="btn btn-outline-success" href="perfil_admin.php" role="button">Perfil Administrador</a>
                 <a class="btn btn-outline-success" href="perfil_usuario.php" role="button">Perfil usuario</a>
             </div>
-        </div>
-        <section class="main">
+        </div> -->
+        <section class="main mt-2">
             <section class="caracteristicas bg-info">
                 <div class="container">
                     <div class="row">

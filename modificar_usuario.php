@@ -7,7 +7,8 @@ if(isset($_SESSION['usu']))
 {
 include "functions/db.php";
 if (isset($_GET['rut_usu'])) {
-    $sql = "select * from usuarios where rut_usuario=" . $_GET['rut_usu'];
+    // $sql = "select * from usuarios where rut_usuario=.$_GET['rut_usu'];
+    $sql = "select * from usuarios where rut_usuario='" .$_GET['rut_usu']. "'  and estado_usuario=1";
     $resul = mysqli_query(conectar(), $sql);
     $datos = mysqli_fetch_array($resul);
 }
