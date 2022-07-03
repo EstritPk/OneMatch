@@ -47,7 +47,7 @@ function modificar()
 
 function eliminar()
 {
-
+ echo "buenooooooooooo";
 }
 
 function cancelar()

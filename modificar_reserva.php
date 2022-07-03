@@ -5,11 +5,14 @@ include "functions/db.php";
 
 if(isset($_SESSION['usu'])){
 
-    if (isset($_GET['can_reserva'])) {
-        $sql = "select * from canchas where id_cancha=" . $_GET['can_reserva'];
+    if (isset($_GET['folio'])) {
+        $sql = "select * from reservas where folio_reserva=" . $_GET['folio'];
+        $res = mysqli_query(conectar(), $sql);
+        $datosreserva = mysqli_fetch_array($res);
+    }
+    $sql = "select * from canchas where id_cancha=" .$datosreserva['canchas_id_cancha'];
         $resul = mysqli_query(conectar(), $sql);
         $datoscancha = mysqli_fetch_array($resul);
-    }
     $sqlpro = "select * from usuarios where rut_usuario='" .$_SESSION['rut']. "'  and estado_usuario=1";
 
     $resultpro = mysqli_query(conectar(), $sqlpro);
@@ -23,7 +26,7 @@ if(isset($_SESSION['usu'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reservas</title>
+    <title>Las Canchas</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -112,7 +115,8 @@ if(isset($_SESSION['usu'])){
                                             <label for="monto" class="form-label">Monto Apagar</label>
                                             <input type="text" class="form-control"  placeholder="" id="monto" name="monto" readonly >
                                         </div>
-                                        <input type="hidden" value="Reservar" id="actionreserva" name="actionreserva" readonly>
+                                        <input type="hidden" value="Modificar" id="actionreserva" name="actionreserva" readonly>
+                                        <input type="hidden" value="<?php echo $_GET['folio']; ?>" id="folio" name="folio" readonly>
                                         <div class="col-12 col-sm-6 mb-3">
                                             <label class="metodoPago">Tipo de pago</label>
                                             <select name="metodoPago" id="metodoPago" class="form-select" required>
@@ -131,7 +135,7 @@ if(isset($_SESSION['usu'])){
                 </div>
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-info ">Confimar Resevacion</button>
+                    <button type="submit" class="btn btn-info ">Modificar Resevacion</button>
                     <button type="reset" class="btn btn-gray">Cancelar</button>
                 </div>
 

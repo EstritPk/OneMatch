@@ -96,7 +96,7 @@ if (isset($_SESSION['usu'])) {
                                         <th class="text-center">Monto</th>
                                         <th class="text-center">Estado Pago</th>
                                         <th class="text-center" style="width: 10%;">Facturas</th>
-                                        
+
                                     </tr>
 
                                     <?php
@@ -123,13 +123,19 @@ if (isset($_SESSION['usu'])) {
                                                                     } else {
                                                 ?>
                                                     <img src="images/ok.png">
-                                                    <?php
+                                                <?php
                                                                     }
-                                                    ?>
+                                                ?>
                                             </td>
 
                                             <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
-                                           
+                                            <td class="text-center "><a href="pagar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-info  ">Pagar</a>
+                                            </td>
+                                            <td class="text-center "><a href="modificar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-success ">Modificar</a>
+                                            </td>
+                                            <td class="text-center "><a href="functions/crud_reservas.php?cancelar=<?php echo $datos['folio_reserva']; ?>" onclick="return confimarEliminar();" value="Eliminar" class="col-12 btn btn-sm btn-outline-danger ">Cancelar</a>
+                                            </td>
+
 
 
                                         </tr>
@@ -173,6 +179,16 @@ if (isset($_SESSION['usu'])) {
 
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/main.js"></script>
+        <script type="text/javascript">
+            function confimarEliminar() {
+                var respuesta = confirm("Estas Segura que deseas cancelar la reservas ");
+                if (respuesta == true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
 
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>

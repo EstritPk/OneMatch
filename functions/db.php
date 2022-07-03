@@ -7,7 +7,7 @@ function conectar()
 function fechahoy()
 {
     date_default_timezone_set('America/Santiago');
-    $fecha = date('d-m-Y');
+    $fecha = date('Y-m-d');
     return $fecha;
 }
 
@@ -21,10 +21,11 @@ function hora()
 
 function fechabd($fecha)
 {
-    $dia = substr($fecha, 0, 2);
-    $mes = substr($fecha, 3, 2);
-    $anho = substr($fecha, 6, 4);
-    $fechabd = $anho . "-" . $mes . "-" . $dia;
+    $dia = substr($fecha, 8, 2);
+    $mes = substr($fecha, 5, 2);
+    $anho = substr($fecha, 0, 4);
+    $fechabd = $dia . "-" . $mes . "-" . $anho;
+    //$fechabd = $anho . "-" . $mes . "-" . $dia;
     return $fechabd;
 }
 
@@ -33,7 +34,7 @@ function fechaesp($fecha)
     $dia = substr($fecha, 8, 2);
     $mes = substr($fecha, 5, 2);
     $anho = substr($fecha, 0, 4);
-    $fechaesp = $dia . "-" . $mes . "-" . $anho;
+    $fechaesp = $anho . "-" . $mes . "-" . $dia;
     return $fechaesp;
 }
 function Buscarusu($rut)
