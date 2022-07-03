@@ -78,80 +78,91 @@ if (isset($_SESSION['usu'])) {
 
             <div class="card m-2">
                 <div class="card-header py-2  bg-info"">
-                <h5 class=" text-light">Mis Reservas</h5>
-                </div>
-                <div class="card-body bb ">
-                    <div class="row">
-
-                        <div class="box-body">
-                            <table id="tabla_Reservas" class="table table-bordered table-condensed table-hover responsive" cellspacing="0" width="100%">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">folio_reservas</th>
-                                        <th class="text-center">Rut</th>
-                                        <th class="text-center">Nombres</th>
-                                        <th class="text-center">Cancha</th>
-                                        <th class="text-center">Cantidad de hora</th>
-                                        <th class="text-center">Fecha reservacion</th>
-                                        <th class="text-center">Monto</th>
-                                        <th class="text-center">Estado Pago</th>
-                                        <th class="text-center" style="width: 10%;">Facturas</th>
-
-                                    </tr>
-
-                                    <?php
-                                    $sql = "select * from reservas where usuarios_rut_usuario='" . $_SESSION['rut'] . "'";
-
-                                    // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
-                                    $resulreservas = mysqli_query(conectar(), $sql);
-
-                                    while ($datos = mysqli_fetch_array($resulreservas)) {
-                                    ?>
-                                        <tr>
-                                            <td class="text-center"><?php echo $datos['folio_reserva']; ?></td>
-                                            <td class="text-center"><?php echo $datos['usuarios_rut_usuario']; ?></td>
-                                            <td class="text-center"><?php echo Buscarusu($datos['usuarios_rut_usuario']); ?></td>
-                                            <td class="text-center"><?php echo $datos['canchas_id_cancha']; ?></td>
-                                            <td class="text-center"><?php echo $datos['cantidad_hora_reserva']; ?></td>
-                                            <td class="text-center"><?php echo $datos['fecha_reserva']; ?></td>
-                                            <td class="text-center">$ <?php echo $datos['monto_total']; ?></td>
-                                            <td class="text-center"><?php
-                                                                    if ($datos['estado_reserva'] == 0) {
-                                                                    ?>
-                                                    <img src="images/nook.png">
-                                                <?php
-                                                                    } else {
-                                                ?>
-                                                    <img src="images/ok.png">
-                                                <?php
-                                                                    }
-                                                ?>
-                                            </td>
-
-                                            <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
-                                            <td class="text-center "><a href="pagar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-info  ">Pagar</a>
-                                            </td>
-                                            <td class="text-center "><a href="modificar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-success ">Modificar</a>
-                                            </td>
-                                            <td class="text-center "><a href="functions/crud_reservas.php?cancelar=<?php echo $datos['folio_reserva']; ?>" onclick="return confimarEliminar();" value="Eliminar" class="col-12 btn btn-sm btn-outline-danger ">Cancelar</a>
-                                            </td>
-
-
-
-                                        </tr>
-                                    <?php
-                                    }
-                                    ?>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-
-
-                        </div>
+                <div class=" row">
+                    <div class="col-8">
+                        <h5 class=" text-light">Mis Reservas</h5>
+                    </div>
+                    <div class="col-2">
+                        <a href="functions/generar_excel.php?descarga=<?php echo $_SESSION['rut']; ?>" class="col-12 btn  btn-outline-dark  ">descargar Reaservas</a>
 
                     </div>
                 </div>
+
+
+
+            </div>
+            <div class="card-body bb ">
+                <div class="row">
+
+                    <div class="box-body">
+                        <table id="tabla_Reservas" class="table table-bordered table-condensed table-hover responsive" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">folio_reservas</th>
+                                    <th class="text-center">Rut</th>
+                                    <th class="text-center">Nombres</th>
+                                    <th class="text-center">Cancha</th>
+                                    <th class="text-center">Cantidad de hora</th>
+                                    <th class="text-center">Fecha reservacion</th>
+                                    <th class="text-center">Monto</th>
+                                    <th class="text-center">Estado Pago</th>
+                                    <th class="text-center" style="width: 10%;">Facturas</th>
+
+                                </tr>
+
+                                <?php
+                                $sql = "select * from reservas where usuarios_rut_usuario='" . $_SESSION['rut'] . "'";
+
+                                // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
+                                $resulreservas = mysqli_query(conectar(), $sql);
+
+                                while ($datos = mysqli_fetch_array($resulreservas)) {
+                                ?>
+                                    <tr>
+                                        <td class="text-center"><?php echo $datos['folio_reserva']; ?></td>
+                                        <td class="text-center"><?php echo $datos['usuarios_rut_usuario']; ?></td>
+                                        <td class="text-center"><?php echo Buscarusu($datos['usuarios_rut_usuario']); ?></td>
+                                        <td class="text-center"><?php echo $datos['canchas_id_cancha']; ?></td>
+                                        <td class="text-center"><?php echo $datos['cantidad_hora_reserva']; ?></td>
+                                        <td class="text-center"><?php echo $datos['fecha_reserva']; ?></td>
+                                        <td class="text-center">$ <?php echo $datos['monto_total']; ?></td>
+                                        <td class="text-center"><?php
+                                                                if ($datos['estado_reserva'] == 0) {
+                                                                ?>
+                                                <img src="images/nook.png">
+                                            <?php
+                                                                } else {
+                                            ?>
+                                                <img src="images/ok.png">
+                                            <?php
+                                                                }
+                                            ?>
+                                        </td>
+
+                                        <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
+                                        <td class="text-center "><a href="pagar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-info  ">Pagar</a>
+                                        </td>
+                                        <td class="text-center "><a href="modificar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-success ">Modificar</a>
+                                        </td>
+                                        <td class="text-center "><a href="functions/crud_reservas.php?cancelar=<?php echo $datos['folio_reserva']; ?>" onclick="return confimarEliminar();" value="Eliminar" class="col-12 btn btn-sm btn-outline-danger ">Cancelar</a>
+                                        </td>
+
+
+
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+            </div>
 
 
 
