@@ -80,7 +80,7 @@ if(isset($_SESSION['usu']))
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="imagen_usu" class="form-label">Imagen</label>
-                                <input type="file" class="form-control" name="imagen_usu" id="imagen_usu" required>
+                                <input type="file" class="form-control" name="imagen_usu" id="imagen_usu"  accept="image/png, .jpeg, .jpg, image/gif" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="descripcion_usu" class="form-label">Descripcion</label>

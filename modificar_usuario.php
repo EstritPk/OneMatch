@@ -81,7 +81,7 @@ if (isset($_GET['rut_usu'])) {
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="imagen_usu" class="form-label">Imagen</label>
-                                <input type="file" class="form-control" name="imagen_usu" id="imagen_usu" value="<?php echo $datos['email_usuario']; ?>" required>
+                                <input type="file" class="form-control" name="imagen_usu" id="imagen_usu" accept="image/png, .jpeg, .jpg, image/gif" value="<?php echo $datos['email_usuario']; ?>" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="descripcion_usu" class="form-label">Descripcion</label>

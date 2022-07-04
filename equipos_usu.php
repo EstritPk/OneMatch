@@ -75,7 +75,8 @@ if (isset($_SESSION['usu'])) {
                                 $result = mysqli_query(conectar(), $sqlpro);
                                 $cont = mysqli_num_rows($result);
                                 if ($cont == 0) {
-                                    echo  "<center><h4>No se encuentra un equipo con ese nombre</h4></center>";  }
+                                    echo  "<center><h4>No se encuentra un equipo con ese nombre</h4></center>";
+                                }
                             } else {
                                 $sqlpro = "select * from equipos where creador_equipo !='" . $_SESSION['rut'] . "'  and estado_equipo=1";
                                 $result = mysqli_query(conectar(), $sqlpro);
@@ -103,10 +104,29 @@ if (isset($_SESSION['usu'])) {
                                             <p class="card-text">
 
                                             </p>
+                                            <?php
+                                            $consulta = "select * from nominas where usuarios_rut_usuario ='" . $_SESSION['rut'] . "' and equipos_id_equipo=".$datosequi['id_equipo']  ;
+                                            $resul = mysqli_query(conectar(),  $consulta);
+                                            $ferificar = mysqli_num_rows($resul);
+                                            if ($ferificar == 0) {
+                                            
+                                            ?> 
+                                             <a href="functions/crud_equipo.php?id_equipo=<?php echo $datosequi['id_equipo']; ?>&rut=<?php echo $_SESSION['rut']; ?>" class="btn btn-outline-success p-md-1 mb-0">UNIRME</a>
+                                           
+                                            <?php   
+                                            } else {
+                                                while ($ferificar = mysqli_fetch_array($resul)) {
+                                                ?>
+                                                <a href="functions/crud_equipo.php?salir_equipo=<?php echo $ferificar['id_nomina']; ?>" class="btn btn-outline-success p-md-1 mb-0">SALIR</a>
+                                           
+                                           
+                                            <?php
+                                            }
+                                            }
+                                            ?>
+                                           
+                                            <a href="nominas_equipo.php?idequipo=<?php echo $datosequi['id_equipo']; ?>" class="btn btn-outline-info p-md-1 mb-0">Ver nominas</a>
 
-                                            <a href="modificar_equipo.php?idequipo=<?php echo $datosequi['id_equipo']; ?>" class="btn btn-outline-success p-md-1 mb-0">UNIRME</a>
-
-                                            <a href="#!" class="btn btn-outline-info p-md-1 mb-0">Ver nominas</a>
 
                                         </div>
                                     </div>
@@ -171,10 +191,10 @@ if (isset($_SESSION['usu'])) {
 
                                             </p>
 
-                                            <a href="modificar_equipo.php?idequipo=<?php echo $datosequi['id_equipo']; ?>" class="btn btn-outline-success p-md-1 mb-0">Modificar</a>
-                                            <a href="functions/crud_equipo.php?equipoeli=<?php echo $datosequi['id_equipo']; ?>" class=" p-md-1 mb-0"><button class="btn btn-outline-danger" onclick="return confimarEliminar();">Eliminar</button> </a>
+                                            <a href="modificar_equipo.php?idequipo=<?php echo $datos['id_equipo']; ?>" class="btn btn-outline-success p-md-1 mb-0">Modificar</a>
+                                            <a href="functions/crud_equipo.php?equipoeli=<?php echo $datos['id_equipo']; ?>" class=" p-md-1 mb-0"><button class="btn btn-outline-danger" onclick="return confimarEliminar();">Eliminar</button> </a>
 
-                                            <a href="#!" class="btn btn-outline-info p-md-1 mb-0">Ver nominas</a>
+                                            <a href="nominas_equipo.php?idequipo=<?php echo $datos['id_equipo']; ?>" class="btn btn-outline-info p-md-1 mb-0">Ver nominas</a>
 
                                         </div>
                                     </div>

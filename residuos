@@ -138,3 +138,7 @@ body{ font: 14px sans-serif; text-align: center; }
                 }
                 ?>
             </div>
+            <a href="modificar_equipo.php?idequipo=<?php echo $datosequi['id_equipo']; ?>" class="btn btn-outline-success p-md-1 mb-0">UNIRME</a>
+                                            <a href="modificar_equipo.php?idequipo=<?php echo $datosequi['id_equipo']; ?>" class="btn btn-outline-success p-md-1 mb-0">SALIR</a>
+                                            }
+                                            ?>

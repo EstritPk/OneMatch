@@ -96,7 +96,7 @@ include "functions/db.php";
 
                             <div class="col-12 col-sm-6 mb-3">
                             <label class="form-label">Deportes</label>
-                            <select name="deporte_equ" id="deporte_equ" class="form-select" required>
+                            <select  name="deporte_equ" id="deporte_equ" class="form-select"  required>
                                 <option selected disabled value="">Seleccione Deporte</option>
                                 <?php
                                 $sqlpro = "SELECT * FROM deportes";
