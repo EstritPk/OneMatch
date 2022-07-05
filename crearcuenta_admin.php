@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_adm" class="form-label">Rut</label>
-                                <input type="text" class="form-control" ninput="checkRut(this)" placeholder="Ingrese RUT= 11111111-1" id="rut" name="rut_adm" required>
+                                <input type="text" class="form-control"  placeholder="Ingrese RUT= 11111111-1" id="rut" oninput="checkRut(this)" name="rut_adm" required>
                                 <div id="msgerror" class="invalid-feedback">
                                 </div>
                                 <div id="msgvalid" class="valid-feedback">
