@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_adm" class="form-label">Rut</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut" name="rut_adm" required>
+                                <input type="text" class="form-control" ninput="checkRut(this)" placeholder="Ingrese RUT= 11111111-1" id="rut" name="rut_adm" required>
                                 <div id="msgerror" class="invalid-feedback">
                                 </div>
                                 <div id="msgvalid" class="valid-feedback">
@@ -35,31 +35,31 @@
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="name_adm" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="name_adm" name="name_adm" required>
+                                <input type="text" class="form-control" placeholder="" id="name_adm" name="name_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_paterno_adm" class="form-label">Apellido Paterno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_paterno_adm" name="ap_paterno_adm" required>
+                                <input type="text" class="form-control" placeholder=" " id="ap_paterno_adm" name="ap_paterno_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_materno_adm" class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_adm" name="ap_materno_adm" required>
+                                <input type="text" class="form-control" placeholder="" id="ap_materno_adm" name="ap_materno_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_adm" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="direccion_adm" name="direccion_adm" required>
+                                <input type="text" class="form-control" placeholder="" id="direccion_adm" name="direccion_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="edad_adm" class="form-label">Edad</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_adm" name="edad_adm">
+                                <input type="number" class="form-control" placeholder="" id="edad_adm" name="edad_adm">
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="telefono_adm" class="form-label">Telefono</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="telefono_adm" name="telefono_adm" required>
+                                <input type="number" class="form-control" placeholder="" id="telefono_adm" name="telefono_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="clave_adm" class="form-label">Clave</label>
-                                <input type="password" class="form-control" placeholder="Mala Leche" id="clave_adm" name="clave_adm" required>
+                                <input type="password" class="form-control" placeholder="" id="clave_adm" name="clave_adm" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="email_adm" class="form-label">E-Mail</label>

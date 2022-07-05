@@ -35,7 +35,8 @@ include "functions/db.php";
                     <div class="row">
                         <div class="col-12 col-md-6 mb-3">
                             <label for="rut_usu" class="form-label">Rut</label>
-                            <input type="text" class="form-control" placeholder="" id="rut_usu" name="rut_usu" required>
+                            <input type="text" class="form-control" placeholder="" id="rut_usu" oninput="checkRut(this)" name="rut_usu"  required>
+                            <p class="text-info" id="msgerror"></p>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
                             <label for="name_usu" class="form-label">Nombre de Usuario</label>
@@ -130,6 +131,9 @@ include "functions/db.php";
 
     <script src="js/validaciones.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <Script>
+
+    </Script>
 </body>
 
 </html>
