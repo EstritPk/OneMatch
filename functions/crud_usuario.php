@@ -23,10 +23,11 @@ switch($op){
 function crear()
 {
     $conn=mysqli_connect("localhost","root","root","onematch");
-    $sql="INSERT INTO usuarios SET rut_usuario='".$_POST['rut_usu']."' , nombre_usuario='".$_POST['nombre_usu']."' , email_usuario='".$_POST['email_usu']."' , clave_usuario='".md5($_POST['clave_usu'])."' , 
-    name_usuario='".$_POST['name_usu']."' , apellido_p_usuario='".$_POST['ap_paterno_usu']."' , apellido_m_usuario='".$_POST['ap_materno_usu']."' , direccion_usuario='".$_POST['direccion_usu']."' , 
-    edad_usuario='".$_POST['edad_usu']."' , telefono_usuario='".$_POST['telefono_usu']."' , identidad_usuario='".$_POST['identidad_usu']."' , descripcion_usuario='".$_POST['descripcion_usu']."' , 
-    estado_usuario=1 , imagen_usuario='".$_FILES['imagen_usu']['name']."' ";
+    $sql="INSERT INTO usuarios SET rut_usuario='".validarCaracteres($_POST['rut_usu'])."' , nombre_usuario='".validarCaracteres($_POST['nombre_usu'])."' , email_usuario='".validarCaracteres($_POST['email_usu'])."' , 
+    clave_usuario='".validarCaracteres(md5($_POST['clave_usu']))."' , name_usuario='".validarCaracteres($_POST['name_usu'])."' , apellido_p_usuario='".validarCaracteres($_POST['ap_paterno_usu'])."' , 
+    apellido_m_usuario='".validarCaracteres($_POST['ap_materno_usu'])."' , direccion_usuario='".validarCaracteres($_POST['direccion_usu'])."' , edad_usuario='".validarCaracteres($_POST['edad_usu'])."' , 
+    telefono_usuario='".validarCaracteres($_POST['telefono_usu'])."' , identidad_usuario='".validarCaracteres($_POST['identidad_usu'])."' , descripcion_usuario='".validarCaracteres($_POST['descripcion_usu'])."' , 
+    estado_usuario=1 , imagen_usuario='".validarCaracteres($_FILES['imagen_usu']['name'])."' ";
 
     mysqli_query($conn,$sql);
     move_uploaded_file($_FILES['imagen_usu']['tmp_name'],"../images/fotos/".$_FILES['imagen_usu']['name']);
@@ -36,10 +37,10 @@ function crear()
 
 function modificar()
 {
-    $sql="UPDATE usuarios SET rut_usuario='".$_POST['rut_usu']."' , nombre_usuario='".$_POST['nombre_usu']."' , email_usuario='".$_POST['email_usu']."' , clave_usuario='".md5($_POST['clave_usu'])."' , 
-    name_usuario='".$_POST['name_usu']."' , apellido_p_usuario='".$_POST['ap_paterno_usu']."' , apellido_m_usuario='".$_POST['ap_materno_usu']."' , direccion_usuario='".$_POST['direccion_usu']."' , 
-    edad_usuario='".$_POST['edad_usu']."' , telefono_usuario='".$_POST['telefono_usu']."' , identidad_usuario='".$_POST['identidad_usu']."' , descripcion_usuario='".$_POST['descripcion_usu']."' , 
-    imagen_usuario='".$_FILES['imagen_usu']['name']."' WHERE rut_usuario=".$_POST['rutusuario'];
+    $sql="UPDATE usuarios SET rut_usuario='".validarCaracteres($_POST['rut_usu'])."' , nombre_usuario='".validarCaracteres($_POST['nombre_usu'])."' , email_usuario='".validarCaracteres($_POST['email_usu'])."' , clave_usuario='".validarCaracteres(md5($_POST['clave_usu']))."' , 
+    name_usuario='".validarCaracteres($_POST['name_usu'])."' , apellido_p_usuario='".validarCaracteres($_POST['ap_paterno_usu'])."' , apellido_m_usuario='".validarCaracteres($_POST['ap_materno_usu'])."' , direccion_usuario='".validarCaracteres($_POST['direccion_usu'])."' , 
+    edad_usuario='".validarCaracteres($_POST['edad_usu'])."' , telefono_usuario='".validarCaracteres($_POST['telefono_usu'])."' , identidad_usuario='".validarCaracteres($_POST['identidad_usu'])."' , descripcion_usuario='".validarCaracteres($_POST['descripcion_usu'])."' , 
+    imagen_usuario='".validarCaracteres($_FILES['imagen_usu']['name'])."' WHERE rut_usuario=".$_POST['rutusuario'];
     move_uploaded_file($_FILES['imagen_usu']['tmp_name'],"../images/fotos/".$_FILES['imagen_usu']['name']);
 
     mysqli_query(conectar(),$sql);

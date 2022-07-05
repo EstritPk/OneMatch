@@ -64,13 +64,18 @@ function checkRut(rut) {
         form.classList.add('was-validated')
       }, false)
     })
-}
+})
 
 
-
-
-)
 ()
+
+
+function validarCaracteres($atributo)
+{
+  $atributosql = mysqli_real_escape_string(conectar(), $atributo);
+  $atributohtml = filter_var($atributosql, FILTER_SANITIZE_STRING);
+  return $atributohtml;
+}
 
 
 

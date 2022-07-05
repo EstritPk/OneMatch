@@ -23,8 +23,9 @@ switch($op){
 function  reservar()
 {
     
-   $sql="INSERT INTO reservas SET fecha_reserva='".fechaesp($_POST['fecha_reser'])."' , fecha_emitida_reserva='".fechaesp(fechahoy())."' , cantidad_hora_reserva='".$_POST['cantidad']."' , usuarios_rut_usuario='".$_POST['rut_usu']."' , 
-   canchas_id_cancha='".$_POST['Id_cancha']."', monto_total='".$_POST['monto']."',estado_reserva=0";
+   $sql="INSERT INTO reservas SET fecha_reserva='".validarCaracteres(fechaesp($_POST['fecha_reser']))."' , fecha_emitida_reserva='".validarCaracteres(fechaesp(fechahoy()))."' , 
+   cantidad_hora_reserva='".validarCaracteres($_POST['cantidad'])."' , usuarios_rut_usuario='".validarCaracteres($_POST['rut_usu'])."' , canchas_id_cancha='".validarCaracteres($_POST['Id_cancha'])."' , 
+   monto_total='".validarCaracteres($_POST['monto'])."' , estado_reserva=0";
     
     mysqli_query(conectar(),$sql);
     header('Location:../usuario_reservas.php');
@@ -33,8 +34,9 @@ function  reservar()
 function modificar()
 {
     
-    $sql="UPDATE reservas SET  fecha_reserva='".fechaesp($_POST['fecha_reser'])."' , fecha_emitida_reserva='".fechaesp(fechahoy())."' , cantidad_hora_reserva='".$_POST['cantidad']."' , usuarios_rut_usuario='".$_POST['rut_usu']."' , 
-    canchas_id_cancha='".$_POST['Id_cancha']."', monto_total='".$_POST['monto']."'WHERE folio_reserva=".$_POST['folio'];
+    $sql="UPDATE reservas SET  fecha_reserva='".validarCaracteres(fechaesp($_POST['fecha_reser']))."' , fecha_emitida_reserva='".validarCaracteres(fechaesp(fechahoy()))."' , 
+    cantidad_hora_reserva='".validarCaracteres($_POST['cantidad'])."' , usuarios_rut_usuario='".validarCaracteres($_POST['rut_usu'])."' , canchas_id_cancha='".validarCaracteres($_POST['Id_cancha'])."' , 
+    monto_total='".validarCaracteres($_POST['monto'])."' WHERE folio_reserva=".$_POST['folio'];
       mysqli_query(conectar(),$sql);
   
     header('Location:../usuario_reservas.php');

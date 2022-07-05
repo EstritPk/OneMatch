@@ -25,8 +25,9 @@ switch($op){
 
 function crear()
 {
-    $sql="INSERT INTO canchas SET precio_cancha='".$_POST['precio_can']."',horario_cancha='".$_POST['horario_can']."',complejosDeportivos_id_complejo='".$_POST['complejos_can']."',tipo_cancha='".$_POST['deportes_can']."',
-    dimension_cancha='".$_POST['dimension_can']."',estado_cancha=".$_POST['estado_can'].",imagen_cancha='".$_FILES['imagen_can']['name']."'";
+    $sql="INSERT INTO canchas SET precio_cancha='".validarCaracteres($_POST['precio_can'])."' , horario_cancha='".validarCaracteres($_POST['horario_can'])."' , 
+    complejosDeportivos_id_complejo='".validarCaracteres($_POST['complejos_can'])."' , tipo_cancha='".validarCaracteres($_POST['deportes_can'])."' , dimension_cancha='".validarCaracteres($_POST['dimension_can'])."' , 
+    estado_cancha=".validarCaracteres($_POST['estado_can'])." , imagen_cancha='".validarCaracteres($_FILES['imagen_can']['name'])."'";
     
     mysqli_query(conectar(),$sql);
     move_uploaded_file($_FILES['imagen_can']['tmp_name'],"../images/fotos/".$_FILES['imagen_can']['name']);
@@ -37,8 +38,8 @@ function crear()
 
 function modificar()
 {
-    $sql="UPDATE canchas SET precio_cancha='".$_POST['precio']."',horario_cancha='".$_POST['horario']."',tipo_cancha='".$_POST['deportes']."',
-    dimension_cancha='".$_POST['dimension']."',estado_cancha=".$_POST['estado'].",imagen_cancha='".$_FILES['foto']['name']."' WHERE id_cancha=".$_POST['idcancha'];
+    $sql="UPDATE canchas SET precio_cancha='".validarCaracteres($_POST['precio'])."' , horario_cancha='".validarCaracteres($_POST['horario'])."' , tipo_cancha='".validarCaracteres($_POST['deportes'])."',
+    dimension_cancha='".validarCaracteres($_POST['dimension'])."' , estado_cancha=".validarCaracteres($_POST['estado'])." , imagen_cancha='".validarCaracteres($_FILES['foto']['name'])."' WHERE id_cancha=".$_POST['idcancha'];
     move_uploaded_file($_FILES['foto']['tmp_name'],"../images/fotos/".$_FILES['foto']['name']);
 
     mysqli_query(conectar(),$sql);

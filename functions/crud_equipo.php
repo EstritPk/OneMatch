@@ -42,10 +42,11 @@ switch ($op) {
 function crear()
 {
 
-    $sql = "INSERT INTO equipos SET nombre_equipo='" . $_POST['nombre_equ'] . "' , creador_equipo='" . $_POST['creador_equ'] . "' , tipo_equipo='" . $_POST['tipo_equ'] . "' , descripcion_equipo='" . $_POST['descripcion_equ'] . "' , 
-    deportes_id_deporte='" . $_POST['deporte_equ'] . "',estado_equipo=1,imagen_equipo='" . $_FILES['imagen_equi']['name'] . "'";
+    $sql = "INSERT INTO equipos SET nombre_equipo='".validarCaracteres($_POST['nombre_equ'])."' , creador_equipo='".validarCaracteres($_POST['creador_equ'])."' , tipo_equipo='".validarCaracteres($_POST['tipo_equ'])."' , 
+    descripcion_equipo='".validarCaracteres($_POST['descripcion_equ'])."' , deportes_id_deporte='".validarCaracteres($_POST['deporte_equ'])."' , estado_equipo=1 , 
+    imagen_equipo='".validarCaracteres($_FILES['imagen_equi']['name'])."' ";
 
-    move_uploaded_file($_FILES['imagen_equi']['tmp_name'], "../images/fotos/" . $_FILES['imagen_equi']['name']);
+    move_uploaded_file($_FILES['imagen_equi']['tmp_name'],"../images/fotos/".$_FILES['imagen_equi']['name']);
     mysqli_query(conectar(), $sql);
     header('Location:../equipos_usu.php');
 }
@@ -53,10 +54,11 @@ function crear()
 function modificar()
 {
 
-    $sql = "UPDATE equipos SET nombre_equipo='" . $_POST['nombre_equ'] . "' , creador_equipo='" . $_POST['creador_equ'] . "' , tipo_equipo='" . $_POST['tipo_equ'] . "' , descripcion_equipo='" . $_POST['descripcion_equ'] . "' , 
-    deportes_id_deporte='" . $_POST['deporte_equ'] . "',estado_equipo=1,imagen_equipo='" . $_FILES['imagen_equi']['name'] . "'WHERE id_equipo=" . $_POST['idequipo'];
+    $sql = "UPDATE equipos SET nombre_equipo='".validarCaracteres($_POST['nombre_equ'])."' , creador_equipo='".validarCaracteres($_POST['creador_equ'])."' , tipo_equipo='".validarCaracteres($_POST['tipo_equ'])."' , 
+    descripcion_equipo='".validarCaracteres($_POST['descripcion_equ'])."' , deportes_id_deporte='".validarCaracteres($_POST['deporte_equ'])."' , estado_equipo=1 , 
+    imagen_equipo='".validarCaracteres($_FILES['imagen_equi']['name'])."' WHERE id_equipo=".$_POST['idequipo'];
     mysqli_query(conectar(), $sql);
-    move_uploaded_file($_FILES['imagen_equi']['tmp_name'], "../images/fotos/" . $_FILES['imagen_equi']['name']);
+    move_uploaded_file($_FILES['imagen_equi']['tmp_name'],"../images/fotos/".$_FILES['imagen_equi']['name']);
 
     header('Location:../equipos_usu.php');
 }
