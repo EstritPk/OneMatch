@@ -1,15 +1,10 @@
 <?php
 session_start();
-
 include "functions/db.php";
-
 if (isset($_SESSION['usu'])) {
 ?>
-
-
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +18,6 @@ if (isset($_SESSION['usu'])) {
         <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/form.css">
     </head>
-
     <body>
         <div class="pt-5">
             <?php
@@ -37,22 +31,17 @@ if (isset($_SESSION['usu'])) {
                         <a href="#"><img src="images/complejologo.png" alt=""></a>
                     </div>
                 </div>
-
                 <div class="row textos">
                     <div class="col-md-12">
                         <h2 class="primera_linea">Complejos deportivos los Angeles</h2>
                         <h3 class="segunda_linea">"Los campeones siguen jugando hasta que lo hacen bien".</h3>
                         <div class="contenedor-btns">
-
                             <a href="#" class="btn-outline-info">Mis Complejos</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
         <section>
             <div class="row">
                 <div class="col">
@@ -61,27 +50,21 @@ if (isset($_SESSION['usu'])) {
                     </div>
                 </div>
             </div>
-
             <div class="card m-2">
                 <div class="card-header py-2  bg-info">
                     <h5 class=" text-light">Busequeda de Reservas</h5>
                 </div>
                 <div class="card-body bg-dark">
                     <div class="row">
-
                         <div class="input-group col-12 col-sm-4 m-1">
                             <span class="input-group-text bg-info text-light">Deportes</span>
                             <input type="text" aria-label="Deportes" class="form-control">
                         </div>
-
                         <div class="input-group col-12 col-sm-4 m-1">
                             <span class="input-group-text bg-info text-light">Fechas</span>
                             <input type="date" aria-label="Fechas" class="form-control">
                         </div>
-
-
                         <div class="col-4 col-sm-3 m-1">
-
                             <a href="#" class="btn btn-outline-info">Buscar</a>
                         </div>
 

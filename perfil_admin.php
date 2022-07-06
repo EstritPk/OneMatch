@@ -160,7 +160,7 @@ if (isset($_SESSION['usu'])) {
                                     <div class="col-lg-6">
                                         <div class="form-group focused">
                                             <label class="form-control-label text-light" for="">Apellidos</label>
-                                            <input type="text" class="form-control form-control-alternative" readonly placeholder="Last name" value="<?php echo $datos['apellido_p_administrador'] . "  " . $datos['apellido_p_administrador']; ?>">
+                                            <input type="text" class="form-control form-control-alternative" readonly placeholder="Last name" value="<?php echo $datos['apellido_p_administrador'] . "  " . $datos['apellido_m_administrador']; ?>">
                                         </div>
                                     </div>
                                 </div>
