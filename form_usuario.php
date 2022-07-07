@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 include "functions/db.php";
-
 if(isset($_SESSION['usu']))
 {
 ?>
@@ -18,12 +16,7 @@ if(isset($_SESSION['usu']))
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
-
 <body>
-    <!-- DEBO HACER CRUD -->
-
-    <!--RICKELSON, FALTA LA DIRECCION DEL USUARIO -->
-
     <body>
         <div class="pt-5">
             <?php

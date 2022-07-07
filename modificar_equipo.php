@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -6,7 +5,6 @@ session_start();
 if(isset($_SESSION['usu']))
 {
 include "functions/db.php";
-
 if (isset($_GET['idequipo'])) {
     $sql = "SELECT * FROM equipos where id_equipo=" . $_GET['idequipo'];
     $resul = mysqli_query(conectar(), $sql);
@@ -23,10 +21,7 @@ if (isset($_GET['idequipo'])) {
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
-
 <body>
-    <!-- DEBO HACER CRUD -->
-
     <body>
         <div class="pt-5">
             <?php
@@ -49,7 +44,6 @@ if (isset($_GET['idequipo'])) {
                                 <label for="creador_equ" class="form-label">Creador Equipo</label>
                                 <input type="text" class="form-control" value="<?php echo $datos['creador_equipo']; ?>" placeholder="" id="creador_equ" name="creador_equ" required>
                             </div>
-
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Tipo de eqipo</label>
                                 <select name="tipo_equ" id="tipo_equ" class="form-select" required>
@@ -60,7 +54,6 @@ if (isset($_GET['idequipo'])) {
                                     <option value="Otro">Otro</option>
                                 </select>
                             </div>
-                            
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="descripcion_equ" class="form-label">Descripcion</label>
                                 <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control" required></textarea>
@@ -84,7 +77,6 @@ if (isset($_GET['idequipo'])) {
                                 <label for="imagen_equi" class="form-label">Imagen Equipo</label>
                                 <input type="file" class="form-control" name="imagen_equi"  accept="image/png, .jpeg, .jpg, image/gif" id="imagen_equi" required>
                                 <input type="hidden" class="form-control" id="idequipo" name="idequipo" value="<?php echo $_GET['idequipo']; ?>">
-                               
                             </div>
                         </div>
                         <input type="hidden" value="Modificar" id="actionequipo" name="actionequipo" readonly>
@@ -109,7 +101,6 @@ if (isset($_GET['idequipo'])) {
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
 </html>
 <?php
 }else{

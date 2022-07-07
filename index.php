@@ -1,11 +1,8 @@
 <?php
-
 include "functions/db.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +11,6 @@ include "functions/db.php";
     <link rel="stylesheet" href="css/estlog.css">
     <title>Login</title>
 </head>
-
 <body>
     <section class="h-100 gradient-form bg-dark">
         <div class="container py-5 h-100">
@@ -34,7 +30,6 @@ include "functions/db.php";
                                         <div class="form-outline form-white mb-4">
                                             <input type="password" id="form2Example22" name="clave" class="form-control" required />
                                         </div>
-
                                         <div class="row">
                                             <div class="col-6 col-sm-6 d-flex justify-content-center">
                                                 <div>
@@ -51,44 +46,30 @@ include "functions/db.php";
                                     <div class="d-flex align-items-center justify-content-center p-4">
                                         <p class="mb-0 me-2 text-white">No tienes una cuenta?</p>
                                         <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#myModal">Crear cuenta</button>
-
                                     </div>
-
                                 </div>
-
-                                <!-- The Modal -->
                                 <div class="modal " id="myModal">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
-
-                                            <!-- Modal Header -->
                                             <div class="modal-header">
                                                 <h4 class="modal-title"></h4>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                             </div>
-
-                                            <!-- Modal body -->
                                             <div class="modal-body bg-dark">
                                                 <div class="d-flex align-items-center justify-content-center p-4">
                                                     <p class="mb-0 me-2 text-white">Crear una cuenta como Usuario</p>
                                                     <a href="crearcuenta_usuario.php"><button type="button" class="btn btn-outline-warning" >Crear cuenta</button></a>
-
                                                 </div>
                                                 <div class="d-flex align-items-center justify-content-center p-4">
                                                     <p class="mb-0 me-2 text-white">Crear una cuenta como Administrador</p>
                                                     <a href="crearcuenta_admin.php"><button type="button" class="btn btn-outline-warning" >Crear cuenta</button></a>
-
                                                 </div>
                                             </div>
-
-
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                                             </div>
-
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center  gradient-custom-2">
@@ -106,8 +87,5 @@ include "functions/db.php";
     </section>
     <script src="js/validaciones.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    
-
 </body>
-
 </html>

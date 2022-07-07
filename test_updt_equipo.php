@@ -14,10 +14,7 @@ include "functions/db.php";
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/form.css">
 </head>
-
 <body>
-    <!-- DEBO HACER CRUD -->
-
     <body>
         <div class="pt-5">
             <?php

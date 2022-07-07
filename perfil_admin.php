@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-
-
 if (isset($_SESSION['usu'])) {
 ?>
     <!DOCTYPE html>
@@ -10,15 +7,10 @@ if (isset($_SESSION['usu'])) {
     <?php
     $rut = $_SESSION['rut'];
     include "functions/db.php";
-
-
     $sqlpro = "select * from adminsitradores where rut_admin='" . $_SESSION['rut'] . "'  and estado_administrador=1";
     $resultpro = mysqli_query(conectar(), $sqlpro);
     $datos = mysqli_fetch_array($resultpro);
-
-
     ?>
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,36 +24,25 @@ if (isset($_SESSION['usu'])) {
         <link rel="stylesheet" href="css/miperfil.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-
     <body>
-
-
-
-
-
         <div class="pt-3">
             <?php
             include "includes/header.php";
             ?>
         </div>
-
         <div class="header pb-8 pt-5 pt-lg-8 d-flex bg-info align-items-center" style="min-height: 600px; background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-simple-atmosphere-blue-technology-panel-background-image_277438.jpg); background-size: cover; background-position: center top;">
-
             <span class="mask bg-gradient-default opacity-8"></span>
-
             <div class="container-fluid d-flex align-items-center">
                 <div class="row">
                     <div class="col-lg-12 col-md-10">
                         <h1 class=" text-white">Bienvenido <?php echo $datos['name_administrador'], " ", $datos['apellido_p_administrador']; ?></h1>
                         <p class="text-white mt-0 mb-5">"No preguntes lo que tus compañeros de equipo pueden hacer por ti. <br>
                             Pregúntate qué puedes hacer tú por tus compañeros de equipo".</p>
-
                         <a href="modificar_admin.php?rut_adm=<?php echo $datos['rut_admin']; ?> " class="btn btn-info"> Editar tu prerfil</a>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="container-fluid mb-5 mt--7">
             <div class="row">
                 <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
@@ -81,24 +62,20 @@ if (isset($_SESSION['usu'])) {
                                         <?php
                                         }
                                         ?>
-                                        
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-
                         </div>
                         <div class="card-body pt-0 pt-md-4">
                             <div class="row">
                                 <div class="col">
                                     <div class="card-profile-stats d-flex justify-content-center mt-md-5">
-
                                         <div>
                                             <span class="heading">10</span>
                                             <span class="description">Complejos</span>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -113,9 +90,7 @@ if (isset($_SESSION['usu'])) {
                                 <div class="h5 mt-4">
                                     <i class="ni business_briefcase-24 mr-2"></i>Mi Descripcion
                                 </div>
-
                                 <p><?php echo $datos['descripcion_administrador']; ?></p>
-
                             </div>
                         </div>
                     </div>
@@ -133,7 +108,6 @@ if (isset($_SESSION['usu'])) {
                             </div>
                         </div>
                         <div class="card-body">
-
                             <h4 class="  text-light mb-4">Datos del Usuario</h4>
                             <div class="pl-lg-4">
                                 <div class="row">
@@ -186,40 +160,21 @@ if (isset($_SESSION['usu'])) {
 
                             </div>
                             <hr class="my-4">
-                            <!-- Description -->
-
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
         <?php
         include "includes/footer.php";
         ?>
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.js"></script>
-
         <script src="js/owl.carousel.min.js"></script>
-
         <script src="js/main.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
     </html>
 <?php
 } else {

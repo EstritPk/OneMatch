@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-
-
 if(isset($_SESSION['usu']))
 {
 include "functions/db.php";
@@ -11,7 +8,6 @@ if (isset($_GET['idcomple'])) {
     $resul = mysqli_query(conectar(), $sql);
     $datos = mysqli_fetch_array($resul);
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +28,6 @@ if (isset($_GET['idcomple'])) {
             include "includes/header.php";
             ?>
         </div>
-
         <div class="container ">
             <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
                 <div class="card-header text-center bg-info">
@@ -69,16 +64,14 @@ if (isset($_GET['idcomple'])) {
                                 <label for="horario_comp" class="form-label">Horario</label>
                                 <input type="text" class="form-control" placeholder="Lunes 8h " id="horario_comp" name="horario_comp" required>
                             </div>
-                        </div>
-                             
+                        </div>               
                         <input type="hidden" value="Modificar" id="actioncomp" name="actioncomp" readonly>
                         <div class="row">
                             <div class="col-12 d-flex justify-content-center">
                                 <div>
                                     <div class="form-check mb-3">
                                         <input type="checkbox" name="terminos" id="terminos_equ" class="form-check-input" required>
-                                        <input type="hidden" class="form-control" id="idcomple" name="idcomple" value="<?php echo $_GET['idcomple']; ?>">
-                               
+                                        <input type="hidden" class="form-control" id="idcomple" name="idcomple" value="<?php echo $_GET['idcomple']; ?>">                             
                                         <label for="terminos" class="form-check-label">Acepto los terminos y condiciones</label>
                                     </div>
                                     <button type="submit" name="Modificar" value="Modificar" class="col-12 btn btn-info button">Modificar</button>

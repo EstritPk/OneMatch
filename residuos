@@ -325,4 +325,124 @@ body{ font: 14px sans-serif; text-align: center; }
         // })
 
 
-        
+<!-- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"><br>
+            <div>
+                <a class="btn btn-outline-success" href="form_admin.php" role="button">Administrador</a>
+                <a class="btn btn-outline-success" href="form_cancha.php" role="button">canchas</a>
+                <a class="btn btn-outline-success" href="form_complejo.php" role="button">complejos</a>
+                <a class="btn btn-outline-success" href="form_equipo.php" role="button">Equipos</a>
+                <a class="btn btn-outline-success" href="form_reservas.php" role="button">Reservas</a>
+                <a class="btn btn-outline-success" href="form_usuario.php" role="button">Usuarios</a>
+                <a class="btn btn-outline-success" href="perfil_admin.php" role="button">Perfil Administrador</a>
+                <a class="btn btn-outline-success" href="perfil_usuario.php" role="button">Perfil usuario</a>
+            </div>
+        </div> -->        
+
+<!-- <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_2.jpg');">
+                                    </a>
+                                    <div class="text border border-top-0 p-4">
+                                        <h5 class="heading"><a href="#"> Legal Working
+                                            </a></h5>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                            <p class="ml-auto meta2 mb-0">
+                                                <a href="#" class="mr-2">Admin</a>
+                                                <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_3.jpg');">
+                                    </a>
+                                    <div class="text border border-top-0 p-4">
+                                        <h3 class="heading"><a href="#"> Occur
+                                                Throughout</a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                            <p class="ml-auto meta2 mb-0">
+                                                <a href="#" class="mr-2">Admin</a>
+                                                <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_4.jpg');">
+                                    </a>
+                                    <div class="text border border-top-0 p-4">
+                                        <h3 class="heading"><a href="#"> Legal Working </a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                            <p class="ml-auto meta2 mb-0">
+                                                <a href="#" class="mr-2">Admin</a>
+                                                <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_5.jpg');">
+                                    </a>
+                                    <div class="text border border-top-0 p-4">
+                                        <h3 class="heading"><a href="#">Finance Legal </a></h3>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-info">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                            <p class="ml-auto meta2 mb-0">
+                                                <a href="#" class="mr-2">Admin</a>
+                                                <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="blog-entry">
+                                    <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/image_6.jpg');">
+                                    </a>
+                                    <div class="text border border-top-0 p-4">
+                                        <h3 class="heading"><a href="#"> Working Streams </a></h3>
+
+                                        <div class="d-flex align-items-center mt-4">
+                                            <p class="mb-0"><a href="#" class="btn btn-info">Ver Mas <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                            <p class="ml-auto meta2 mb-0">
+                                                <a href="#" class="mr-2">Admin</a>
+                                                <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->        
+
+
+
+                            <!--<div class="container ">
+            <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
+                <div class="card-header text-center bg-info">
+                    <h2 class="">Registro de Equipo</h2>
+                </div>
+                <div class="col mt-3">
+                    
+                </div>
+            </div>
+        </div>-->
+
+        //$conn = mysqli_connect("localhost", "root", "root", "onematch");
+                            //$sql = "SELECT * FROM equipos";
+                            //$result = mysqli_query($conn, $sql);
+
+                            <!--<a href="functions/crud_equipo.php?actionequipo=<?php //echo $datos['nombre_equ']; ?>" > -->
+                                            <!--<img src="images/refresh.png" width="25px" height="25px" ></a> -->
+
+                                            <!--<a href="functions/crud_equipo.php?nombre_equ=<?php //echo $datos['nombre_equ']; ?>" > -->
+                                            <!--<img src="images/delete.png" width="25px" height="25px" ></a> -->
+
+                                            
