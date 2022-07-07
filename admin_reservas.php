@@ -73,18 +73,13 @@ if (isset($_SESSION['usu'])) {
                 </div>
             </div>
         </section>
-
-
         <section>
-
-
             <div class="card m-2">
                 <div class="card-header py-2  bg-info"">
                 <h5 class=" text-light">Mis Reservas</h5>
                 </div>
                 <div class="card-body bb ">
                     <div class="row">
-
                         <div class="box-body">
                             <table id="tabla_Reservas" class="table table-bordered table-condensed table-hover responsive" cellspacing="0" width="100%">
                                 <thead>
@@ -103,27 +98,20 @@ if (isset($_SESSION['usu'])) {
                                     <tr>
                                         <?php
                                         $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
-
                                         // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
                                         $resulcomple = mysqli_query(conectar(), $sqlcomple);
-
                                         while ($datoscomple = mysqli_fetch_array($resulcomple)) {
                                         ?>
                                             <?php
                                             $sqlpro = "select * from canchas where complejosDeportivos_id_complejo='" . $datoscomple['id_complejo'] . "'  and estado_cancha=1";
-
                                             //$sqlpro = "SELECT * FROM canchas where estado_cancha=1";
                                             $resultpro = mysqli_query(conectar(), $sqlpro);
-
-
                                             while ($datospro = mysqli_fetch_array($resultpro)) {
                                             ?>
                                                 <?php
                                                 $sql = "select * from reservas where canchas_id_cancha='" . $datospro['id_cancha'] . "'";
-
                                                 // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
                                                 $resulreservas = mysqli_query(conectar(), $sql);
-
                                                 while ($datos = mysqli_fetch_array($resulreservas)) {
                                                 ?>
                                     <tr>
@@ -146,17 +134,13 @@ if (isset($_SESSION['usu'])) {
                                                                 }
                                             ?>
                                         </td>
-
                                         <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
                                         <td class="text-center bg-dark"><input type="submit" name="pagar" value="Pagar" class="col-12 btn btn-outline-warning ">
                                         </td>
-
-
                                     </tr>
                                 <?php
                                                 }
                                 ?>
-
                             <?php
                                             }
                             ?>
@@ -168,43 +152,21 @@ if (isset($_SESSION['usu'])) {
                                 <tbody>
                                 </tbody>
                             </table>
-
-
                         </div>
-
                     </div>
                 </div>
-
-
-
         </section>
-
-
-
-
-
-
-
-
-
         <div class="pt-5">
-
             <?php
             include "includes/footer.php";
             ?>
         </div>
-
-
-
         <script src="js/jquery.min.js"></script>
         <script src="js/popper.js"></script>
-
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/main.js"></script>
-
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
     </html>
 <?php
 } else {

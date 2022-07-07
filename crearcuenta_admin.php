@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +9,9 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
     <body>
         <div class="pt-5">
-
         </div>
         <div class="container ">
             <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
@@ -94,15 +90,12 @@
                             </div>
                         </div>
                 </div>
-
                 </form>
             </div>
         </div>
         </div>
-
         <script src="js/main.js"></script>
         <script src="js/validaciones.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
-
 </html>

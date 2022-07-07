@@ -1,13 +1,10 @@
 <?php
 session_start();
-
 include "functions/db.php";
-
 if (isset($_SESSION['usu'])) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,10 +15,7 @@ if (isset($_SESSION['usu'])) {
         <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/form.css">
     </head>
-
     <body>
-        <!-- DEBO HACER CRUD -->
-
         <body>
             <div class="pt-5">
                 <?php
@@ -44,7 +38,6 @@ if (isset($_SESSION['usu'])) {
                                     <label for="creador_equ" class="form-label">Creador Equipo</label>
                                     <input type="text" class="form-control" placeholder="" id="creador_equ" value="<?php echo strtoupper($_SESSION['rut']); ?>" readonly name="creador_equ" required>
                                 </div>
-
                                 <div class="col-12 col-sm-6 mb-3">
                                     <label class="form-label">Tipo de eqipo</label>
                                     <select name="tipo_equ" id="tipo_equ" class="form-select" required>
@@ -55,7 +48,6 @@ if (isset($_SESSION['usu'])) {
                                         <option value="Otro">Otro</option>
                                     </select>
                                 </div>
-
                                 <div class="col-12 col-md-6 mb-3">
                                     <label for="descripcion_equ" class="form-label">Descripcion</label>
                                     <textarea value="descripcion_equ" name="descripcion_equ" id="descripcion_equ" class="form-control" required></textarea>
@@ -102,7 +94,6 @@ if (isset($_SESSION['usu'])) {
             <script src="js/validaciones.js"></script>
             <script src="js/bootstrap.bundle.min.js"></script>
         </body>
-
     </html>
 <?php
 } else {

@@ -199,3 +199,130 @@ body{ font: 14px sans-serif; text-align: center; }
                     </div>
                 </div>
             </div> -->
+
+             <!-- Modal -->
+
+
+            <!-- <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="images/futbol5.jpg" alt="">
+                    <div class="card-body">
+
+                        <p class="card-text ">cancha de futbol,75mx65m, direccion:ñuble780, complejos los panas </p>
+                        <p class="ml-auto meta2 m-3">
+                            <a href="#" class="mr-2">Precio</a>
+                            <a href="#" class="meta-chat">$24000 x hora</a>
+                        </p>
+                        <p><a href="#" class="btn btn-sm btn-info">Reservar</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card " style="width: 100%;">
+                    <img class="card-img-top" src="images/CanchasPaddle.jpg" alt="">
+                    <div class="card-body">
+
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p class="ml-auto meta2 m-3">
+                            <a href="#" class="mr-2">Precio</a>
+                            <a href="#" class="meta-chat">$24000 x hora</a>
+                        </p>
+                        <p><a href="#" class="btn btn-sm btn-info">Reservar</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card " style="width: 100%;">
+
+                    <img class="card-img-top" src="images/tenis.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cancha tenis</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-info">Reservar</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card " style="width: 100%;">
+                    <img class="card-img-top" src="images/canchafutbol.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cancha football</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-info">Reservar</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card " style="width: 100%;">
+
+                    <img class="card-img-top" src="images/voley.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cancha voley</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-info">Reservar</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card " style="width: 100%;">
+                    <img class="card-img-top" src="images/bascket.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cancha </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-info">Reservar</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card " style="width: 100%;">
+                    <img class="card-img-top" src="images/canchafutbol.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cancha football</h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-info">Reservar</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="col-6 col-sm-6 col-lg-3 mb-4">
+                <div class="card " style="width: 100%;">
+                    <img class="card-img-top" src="images/futbol5.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cancha </h4>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="#" class="btn btn-sm btn-info">Reservar</a>
+                        <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
+                    </div>
+                </div>
+            </div> -->
+
+
+            // $('#exampleModal').on('show.bs.modal', function(event) {
+        // var button = $(event.relatedTarget) // Button that triggered the modal
+        // var recipient = button.data('whatever') // Extract info from data-* attributes
+        // // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        // var modal = $(this)
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        // modal.find('.modal-body input').val(recipient)
+        // })
+
+
+        
