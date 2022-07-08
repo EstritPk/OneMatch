@@ -163,14 +163,14 @@ if (isset($_SESSION['usu'])) {
                         <div class="row cd" >
                             <div class="col-12 col-sm-6">
                                 <h3>Billing Address</h3>
-                                <label for="fname"><i class="fa fa-user"></i> nombres Completo</label>
-                                <input type="text" id="fname" name="firstname" placeholder="Ravi Raushan">
-                                <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                                <input type="text" id="email" name="email" placeholder="ravi@raushan.com"><br>
-                                <label for="adr"><i class="fa fa-address-card-o"></i>DICRECCION</label>
-                                <input type="text" id="adr" name="adr" placeholder="La Serena">
-                                <label for="ciudad"><i class="fa fa-institution"></i> Ciudad</label>
-                                <input type="text" id="ciudad" name="ciudad" placeholder="Coquimbo">
+                                <label for="fname"><i class="fa fa-user"></i>Nombre Completo</label>
+                                <input type="text" id="fname" name="firstname" placeholder="">
+                                <label for="email"><i class="fa fa-envelope"></i>Email</label>
+                                <input type="text" id="email" name="email" placeholder=""><br>
+                                <label for="adr"><i class="fa fa-address-card-o"></i>Direccion</label>
+                                <input type="text" id="adr" name="adr" placeholder="">
+                                <label for="ciudad"><i class="fa fa-institution"></i>Ciudad</label>
+                                <input type="text" id="ciudad" name="ciudad" placeholder="">
 
 
                             </div>
@@ -184,20 +184,20 @@ if (isset($_SESSION['usu'])) {
                                     <i class="fa fa-cc-mastercard" style="color:red;"></i>
                                     <i class="fa fa-cc-discover" style="color:orange;"></i>
                                 </div>
-                                <label for="cname">Nombre </label>
-                                <input type="text" id="cname" name="cardname" placeholder="Ravi Raushan">
+                                <label for="cname">Nombre</label>
+                                <input type="text" id="cname" name="cardname" placeholder="">
                                 <label for="ccnum">Número de Tarjeta</label>
-                                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                <input type="text" id="ccnum" name="cardnumber" placeholder="">
                                 <label for="expmonth">Mes de Exp.</label>
-                                <input type="text" id="expmonth" name="expmonth" placeholder="Septiembre">
+                                <input type="text" id="expmonth" name="expmonth" placeholder="">
                                 <div class="row">
                                     <div class="col-50">
-                                        <label for="expyear">Años Exp.r</label>
-                                        <input type="text" id="expyear" name="expyear" placeholder="2033">
+                                        <label for="expyear">Años Exp.</label>
+                                        <input type="text" id="expyear" name="expyear" placeholder="">
                                     </div>
                                     <div class="col-50">
                                         <label for="cvv">CVV</label>
-                                        <input type="text" id="cvv" name="cvv" placeholder="111">
+                                        <input type="text" id="cvv" name="cvv" placeholder="">
                                     </div>
                                 </div>
                             </div>

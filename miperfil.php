@@ -103,7 +103,7 @@ if (isset($_SESSION['usu'])) {
                                     <h3 class="mb-0">Mi Cuenta</h3>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <a href="#!" class="btn btn-sm btn-primary">Mis Reservas</a>
+                                    <a href="usuario_reservas.php" class="btn btn-sm btn-primary">Mis Reservas</a>
                                 </div>
                             </div>
                         </div>
