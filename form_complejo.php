@@ -33,15 +33,15 @@ if(isset($_SESSION['usu']))
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_comp" class="form-label">Nombre Complejos</label>
-                                <input type="text" class="form-control" placeholder="Deportes olimpicos" id="nombre_comp" name="nombre_comp" required>
+                                <input type="text" class="form-control" placeholder="" id="nombre_comp" name="nombre_comp" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="admin_comp" class="form-label">Rut Administrador</label>
-                                <input type="text" class="form-control" placeholder="Nombre Administrador" value="<?php echo strtoupper($_SESSION['rut']); ?>" id="admin_comp" name="admin_comp" readonly >
+                                <input type="text" class="form-control" placeholder="" value="<?php echo strtoupper($_SESSION['rut']); ?>" id="admin_comp" name="admin_comp" readonly >
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_comp" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Ñuble #289" id="direccion_comp" name="direccion_comp" required>
+                                <input type="text" class="form-control" placeholder=""  id="direccion_comp" name="direccion_comp" required>
                             </div>
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Estado</label>
