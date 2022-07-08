@@ -47,6 +47,13 @@ function Buscardeportes($id)
     $datos = mysqli_fetch_array($result);
     return $datos['nombre_deporte'];
 }
+function Buscarcancha($id)
+{
+    $sql = "select * from canchas where id_cancha='" . $id. "' ";
+    $result = mysqli_query(conectar(), $sql);
+    $datos = mysqli_fetch_array($result);
+    return $datos['nombre_cancha'];
+}
 function validarCaracteres($atributo)
 {
     $atributosql = mysqli_real_escape_string(conectar(), $atributo);

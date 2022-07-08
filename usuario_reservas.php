@@ -74,7 +74,7 @@ if (isset($_SESSION['usu'])) {
                                     <th class="text-center">folio_reservas</th>
                                     <th class="text-center">Rut</th>
                                     <th class="text-center">Nombres</th>
-                                    <th class="text-center">Cancha</th>
+                                    <th class="text-center">Nombre Cancha</th>
                                     <th class="text-center">Cantidad de hora</th>
                                     <th class="text-center">Fecha reservacion</th>
                                     <th class="text-center">Monto</th>
@@ -91,7 +91,7 @@ if (isset($_SESSION['usu'])) {
                                         <td class="text-center"><?php echo $datos['folio_reserva']; ?></td>
                                         <td class="text-center"><?php echo $datos['usuarios_rut_usuario']; ?></td>
                                         <td class="text-center"><?php echo Buscarusu($datos['usuarios_rut_usuario']); ?></td>
-                                        <td class="text-center"><?php echo $datos['canchas_id_cancha']; ?></td>
+                                        <td class="text-center"><?php echo Buscarcancha($datos['canchas_id_cancha']); ?></td>
                                         <td class="text-center"><?php echo $datos['cantidad_hora_reserva']; ?></td>
                                         <td class="text-center"><?php echo $datos['fecha_reserva']; ?></td>
                                         <td class="text-center">$ <?php echo $datos['monto_total']; ?></td>
