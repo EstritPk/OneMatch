@@ -40,7 +40,7 @@ if (isset($_GET['rut_usu'])) {
                             <input type="hidden" class="form-control" id="rutusuario" name="rutusuario" value="<?php echo $_GET['rut_usu']; ?>">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_usu" class="form-label">Rut</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu" value="<?php echo $datos['rut_usuario']; ?>" required>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="rut_usu" name="rut_usu" value="<?php echo $datos['rut_usuario']; ?>" readonly>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="name_usu" class="form-label">Nombre de Usuario</label>

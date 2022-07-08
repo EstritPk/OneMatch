@@ -58,7 +58,7 @@ if (isset($_SESSION['usu'])) {
                                         <?php
                                         } else {
                                         ?>
-                                            <img src="images/fotos/<?php echo $datos['imagen_usuario']; ?>" class="rounded-circle">
+                                            <img src="images/fotos/<?php echo $datos['imagen_usuario']; ?>" style="width: 100px;" class="rounded-circle">
                                         <?php
                                         }
                                         ?>
@@ -73,8 +73,6 @@ if (isset($_SESSION['usu'])) {
                                 <div class="col">
                                     <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                                         <div>
-                                            <span class="heading">10</span>
-                                            <span class="description">Equipos</span>
                                         </div>
                                     </div>
                                 </div>
