@@ -73,7 +73,7 @@ include "functions/db.php";
                         </div>                  
                             <div class="col-12 col-sm-6 mb-3">
                                 <label class="form-label">Identidad</label>
-                                <select name="identidad_adm" id="identidad_adm" class="form-select" required>
+                                <select name="identidad_usu" id="identidad_usu" class="form-select" required>
                                     <option selected disabled value="">Seleccione Identidad</option>
                                     <option value="Hombre">Hombre</option>
                                     <option value="Mujer">Mujer</option>

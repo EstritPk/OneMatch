@@ -121,7 +121,7 @@ if (isset($_SESSION['usu'])) {
                             <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('images/fotos/<?php echo $datospro['imagen_cancha']; ?>');">
                                 </a>
                                 <div class="card-body">
-                                    <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
+                                    <h4 class="card-title">Cancha <?php echo $datospro['nombre_cancha']; ?></h4>
                                     <p class="card-text "><?php echo $datospro['dimension_cancha']; ?>,
                                         <?php echo $datoscomple['direccion_complejo']; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
                                     <p class="ml-auto meta2 m-3">
