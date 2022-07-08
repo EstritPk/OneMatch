@@ -72,6 +72,7 @@ if (isset($_SESSION['usu'])) {
                         <div class="col-sm-4 caracteristica">
                             <img src="images/reserva.png" alt="" class="icono">
                             <h4 class="primera_linea">Reservar Canchas</h4>
+                            <a href="admin_canchas.php" class="btn-outline-info"></a>
                             <p class="parrafo">Dolor sit amet, consectetur adipiscing elit. In dignissim odio ut sagittis elementum.</p>
                         </div>
                         <div class="col-sm-4 caracteristica">
@@ -108,7 +109,7 @@ if (isset($_SESSION['usu'])) {
                                             <div class="text border border-top-0 p-4">
                                                 <h5 class="heading"><a href="#"><?php echo $datoscomple['nombre_complejo']; ?></a></h5>
                                                 <div class="d-flex align-items-center mt-4">
-                                                    <p class="mb-0"><a href="#" class="btn btn-info">Ver mas<span class="ion-ios-arrow-round-forward"></span></a></p>
+                                                    <p class="mb-0"><a href="admin_canchas.php" class="btn btn-info">Ver mas<span class="ion-ios-arrow-round-forward"></span></a></p>
                                                     <p class="ml-auto meta2 mb-0">
                                                         <a href="#" class="mr-2"><?php echo $datoscomple['direccion_complejo']; ?></a>
                                                         <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a>

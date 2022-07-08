@@ -37,7 +37,7 @@ if (isset($_SESSION['usu'])) {
                         <h3 class="segunda_linea">"Los campeones siguen jugando hasta que lo hacen bien".</h3>
                         <div class="contenedor-btns">
                             <a href="admin_reservas.php" class=" btn btn-outline-info">Mis reservas</a>
-                            <a href="#" class="btn-outline-info">Mis Complejos</a>
+                            <a href="canchas.php" class="btn-outline-info">Mis canchas</a>
                         </div>
                     </div>
                 </div>
@@ -59,6 +59,7 @@ if (isset($_SESSION['usu'])) {
             <div class="row py-3">
                 <?php
                 $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
+                $sqlcomple = "select * from complejosdeportivos where  estado_complejo=1";
                 // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
                 $resulcomple = mysqli_query(conectar(), $sqlcomple);
                 while ($datoscomple = mysqli_fetch_array($resulcomple)) {
@@ -106,6 +107,7 @@ if (isset($_SESSION['usu'])) {
             <div class="row ">
                 <?php
                 $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
+                $sqlcomple = "select * from complejosdeportivos where  estado_complejo=1";
                 // $sqlcomple = "SELECT * FROM complejosdeportivos WHERE estado_complejo=1";
                 $resulcomple = mysqli_query(conectar(), $sqlcomple);
                 while ($datoscomple = mysqli_fetch_array($resulcomple)) {
@@ -131,7 +133,7 @@ if (isset($_SESSION['usu'])) {
                                     <p>
                                         <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha']; ?>" class=""><button class="btn btn-outline-danger" onclick="return confimarEliminar();">Eliminar</button></a>
                                         <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-success">Modificar</a>
-                                        <a href="#" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Detalles</a>
+                                        <a href="detalle_cancha.php" class="btn btn-sm btn-secondary"  >Detalles</a>
                                     </p>
                                 </div>
                             </div>
@@ -143,7 +145,7 @@ if (isset($_SESSION['usu'])) {
                 }
                 ?>
                 <!-- Button trigger modal -->
-                <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!--<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -158,7 +160,7 @@ if (isset($_SESSION['usu'])) {
                                     </div>
                                     <div class="row">
                                         <div class="col-12 col-sm-6">
-                                            <img class="card-img-top" src="images/<?php echo $datospro['imagen_cancha']; ?>" alt="">
+                                            <img class="card-img-top" src="images/<?php //echo $datospro['imagen_cancha']; ?>" alt="">
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <table class="table table-bordered border-info">
@@ -171,23 +173,23 @@ if (isset($_SESSION['usu'])) {
                                                 <tbody>
                                                     <tr>
                                                         <th scope="row">Dimencion</th>
-                                                        <td><?php echo $datospro['dimension_cancha']; ?></td>
+                                                        <td><?php //echo $datospro['dimension_cancha']; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Precio</th>
-                                                        <td>$<?php echo $datospro['precio_cancha']; ?> x hora</td>
+                                                        <td>$<?php //echo $datospro['precio_cancha']; ?> x hora</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Complejos deportivos</th>
-                                                        <td><?php echo $datoscomple['nombre_complejo']; ?></td>
+                                                        <td><?php //echo $datoscomple['nombre_complejo']; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Direccion</th>
-                                                        <td><?php echo $datoscomple['direccion_complejo'];; ?></td>
+                                                        <td><?php //echo $datoscomple['direccion_complejo'];; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Horario</th>
-                                                        <td><?php echo $datoscomple['horario_complejo'];; ?></td>
+                                                        <td><?php //echo $datoscomple['horario_complejo'];; ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Estados</th>
@@ -195,7 +197,7 @@ if (isset($_SESSION['usu'])) {
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">Tipos de Cancha</th>
-                                                        <td><?php echo $datospro['tipo_cancha']; ?></td>
+                                                        <td><?php //echo $datospro['tipo_cancha']; ?></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -208,7 +210,7 @@ if (isset($_SESSION['usu'])) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="pt-5">

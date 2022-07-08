@@ -36,7 +36,7 @@ if (isset($_SESSION['usu'])) {
                         <h2 class="primera_linea">Complejo deportivos los Angeles</h2>
                         <h3 class="segunda_linea">"Los campeones siguen jugando hasta que lo hacen bien".</h3>
                         <div class="contenedor-btns">
-                            <a href="#" class="btn-outline-info">Mis Complejos</a>
+                            <a href="admin_canchas.php" class="btn-outline-info">Mis Complejos</a>
                         </div>
                     </div>
                 </div>
