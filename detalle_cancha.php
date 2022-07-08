@@ -4,6 +4,11 @@
 session_start();
 include "functions/db.php";
 if (isset($_SESSION['usu'])) {
+    if (isset($_GET['idcancha'])) {
+        $sql = "select * from canchas where id_cancha=" . $_GET['can_reserva'];
+        $resul = mysqli_query(conectar(), $sql);
+        $datoscancha = mysqli_fetch_array($resul);
+    }
 ?>
 <head>
     <meta charset="UTF-8">
