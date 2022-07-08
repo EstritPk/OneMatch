@@ -38,6 +38,10 @@ if (isset($_SESSION['usu'])) {
                                 <input type="hidden" class="form-control" id="actiones" value="Modificar" name="actiones">
                                 <input type="hidden" class="form-control" id="idcancha" name="idcancha" value="<?php echo $_GET['idcancha']; ?>">
                                 <div class="col-12 col-md-6 mb-3">
+                                    <label for="nombre_can" class="form-label">Nombre de la cancha</label>
+                                    <input type="text" class="form-control" placeholder="" id="nombre_can" name="nombre_can" value="<?php echo $datos['nombre_cancha']; ?>" required>
+                                </div>
+                                <div class="col-12 col-md-6 mb-3">
                                     <label for="nombre" class="form-label">Precio</label>
                                     <input type="number" class="form-control" placeholder="$24" id="precio" name="precio" value="<?php echo $datos['precio_cancha']; ?>" required>
                                 </div>
