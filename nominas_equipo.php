@@ -7,6 +7,9 @@ if (isset($_SESSION['usu'])) {
         $resul = mysqli_query(conectar(), $sql);
         $datosequi = mysqli_fetch_array($resul);
     }
+    $sqlusu = "select * from usuarios where rut_usuario='" .$datosequi['creador_equipo']. "'  and estado_usuario=1";
+        $res = mysqli_query(conectar(), $sqlusu);
+        $datosusu = mysqli_fetch_array($res);
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -71,20 +74,45 @@ if (isset($_SESSION['usu'])) {
                         </div>
                     </div>
                     <div class="row  m-3">
+                    <div class="col-12 col-md-3 mb-3">
+                                    <div class="card mb-4 shadow-lg " style="width: 300px;">
+                                        <div class="card-body text-center">
+                                            <a href="#">
+                                                <?php
+                                                if ($datosusu['imagen_usuario'] == "") {
+                                                ?>
+                                                    <img src="images/fotos/user.png" class="rounded-circle" style="width: 100px;">
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <img src="images/fotos/<?php echo $datosusu['imagen_usuario']; ?>" class="rounded-circle img-fluid" style="width: 200px;">
+                                                <?php
+                                                }
+                                                ?>
+                                            </a>
+                                            <!-- <img src="images/fotos/<?php echo $datos['imagen_usuario']; ?>" alt="avatar" class="rounded img-fluid"> -->
+                                            <h5 class="my-3"><?php echo $datosusu['nombre_usuario'], " ", $datosusu['apellido_p_usuario']; ?></h5>
+                                            <p class="mb-1"><?php echo $datosusu['descripcion_usuario']; ?></p>
+                                            <div class="d-flex justify-content-center mb-2">
+                                                <p><img src="images/whatsapp.png" alt="">+56 <?php echo $datosusu['telefono_usuario']; ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                         <?php
                         $consulta = "select * from nominas where  equipos_id_equipo=" . $datosequi['id_equipo'];
                         $resul = mysqli_query(conectar(),  $consulta);
                         $ferificar = mysqli_num_rows($resul);
                         if ($ferificar == 0) {
                         ?>
-                            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                            <!-- <div class="alert alert-warning d-flex align-items-center" role="alert">
                                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
                                     <use xlink:href="#exclamation-triangle-fill" />
                                 </svg>
                                 <div>
                                     Por el momento el equipo se encuentra sin nominas
                                 </div>
-                            </div>
+                            </div> -->
                         <?php
                         } else {
                         ?>
