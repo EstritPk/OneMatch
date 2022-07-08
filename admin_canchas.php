@@ -133,7 +133,7 @@ if (isset($_SESSION['usu'])) {
                                     <p>
                                         <a href="functions/crud_cancha.php?ideliminar=<?php echo $datospro['id_cancha']; ?>" class=""><button class="btn btn-outline-danger" onclick="return confimarEliminar();">Eliminar</button></a>
                                         <a href="modificar_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-success">Modificar</a>
-                                        <a href="detalle_cancha.php" class="btn btn-sm btn-secondary"  >Detalles</a>
+                                        <a href="detalle_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-secondary"  >Detalles</a>
                                     </p>
                                 </div>
                             </div>

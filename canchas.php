@@ -106,7 +106,7 @@ if(isset($_SESSION['usu']))
                         
                         <div class="card-body">
 
-                            <h4 class="card-title">cancha <?php echo $datospro['tipo_cancha']; ?></h4>
+                            <h4 class="card-title">cancha <?php echo $datospro['nombre_cancha']; ?></h4>
                             <p class="card-text "><?php echo $datospro['dimension_cancha']; ?>,
                                 <?php echo $datoscomple['direccion_complejo'];; ?>, Complejos <?php echo $datoscomple['nombre_complejo']; ?> </p>
                             <p class="ml-auto meta2 m-3">
@@ -114,10 +114,8 @@ if(isset($_SESSION['usu']))
                                 <a href="#" class="meta-chat"><?php echo $datospro['precio_cancha']; ?> x hora</a>
                             </p>
                             <p><a href="form_reservas.php?can_reserva=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-info">Reservar</a>
+                            <a href="detalle_cancha.php?idcancha=<?php echo $datospro['id_cancha']; ?>" class="btn btn-sm btn-secondary"  >Detalles</a>
                                 
-                                <button type="submit" onclick="recibir();" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Detalles
-                                </button>
                                 
                             </p>
 
@@ -158,6 +156,12 @@ if(isset($_SESSION['usu']))
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>
+                                                    <th scope="row">Nombre</th>
+                                                    <td><?php echo $datospro['nombre_cancha']; ?></td>
+
+
+                                                </tr>
                                                 <tr>
                                                     <th scope="row">Dimencion</th>
                                                     <td><?php echo $datospro['dimension_cancha']; ?></td>
