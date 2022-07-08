@@ -55,7 +55,7 @@ if (isset($_SESSION['usu'])) {
                 <a href="form_complejo.php" class="btn btn-outline-info" style="font-size: 20px;">Agregar nuevo complejo<i class="fa-solid fa-circle-plus p-2" style="font-size: 20px;"></i></a>
             </div>
         </div>
-        <div class="row">
+        <div class="row m-4">
             <div class="row py-3">
                 <?php
                 $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";
@@ -102,7 +102,7 @@ if (isset($_SESSION['usu'])) {
                 <a href="form_cancha.php" class="btn btn-outline-info" style="font-size: 20px;">Agregar nueva cancha<i class="fa-solid fa-circle-plus p-2" style="font-size: 20px;"></i></a>
             </div>
         </div>
-        <div class="  row  justify-content-center">
+        <div class="  row   m-4">
             <div class="row ">
                 <?php
                 $sqlcomple = "select * from complejosdeportivos where adminsitradores_rut_admin='" . $_SESSION['rut'] . "'  and estado_complejo=1";

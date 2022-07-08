@@ -40,6 +40,13 @@ function Buscarusu($rut)
     $datos = mysqli_fetch_array($result);
     return $datos['nombre_usuario']." ".$datos['apellido_p_usuario'];
 }
+function Buscardeportes($id)
+{
+    $sql = "select * from deportes where id_deporte='" . $id. "' ";
+    $result = mysqli_query(conectar(), $sql);
+    $datos = mysqli_fetch_array($result);
+    return $datos['nombre_deporte'];
+}
 function validarCaracteres($atributo)
 {
     $atributosql = mysqli_real_escape_string(conectar(), $atributo);
