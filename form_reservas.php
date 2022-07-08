@@ -35,7 +35,7 @@ if(isset($_SESSION['usu'])){
     <section class="">
         <div class=" card m-4">
             <div class="card-header py-2  bg-info">
-                <h4 class="text-light"><i class="fa fa-calendar"></i>Haz tu reservas de canchas en minutos</h4>
+                <h4 class="text-light"><i class="fa fa-calendar"></i>Haz tu reserva de canchas en minutos</h4>
             </div>
             <form  action="functions/crud_reservas.php" id="reserva" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
                 <div class="card-body">
@@ -91,7 +91,7 @@ if(isset($_SESSION['usu'])){
                                             <input type="Date" class="form-control" placeholder="" name="fecha_reser" id="fecha_reser " required>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
-                                            <label for="cantidad" class="form-label">Cantidade de hora</label>
+                                            <label for="cantidad" class="form-label">Cantidad de horas</label>
                                             <input type="number" class="form-control" onblur=" calculaMonto();" placeholder="" id="cantidad" name="cantidad" required>
                                         </div>
                                         <div class="col-12 col-md-6 mb-3">
@@ -103,7 +103,7 @@ if(isset($_SESSION['usu'])){
                                             <label class="metodoPago">Tipo de pago</label>
                                             <select name="metodoPago" id="metodoPago" class="form-select" required>
                                                 <option selected disabled value="">Seleccione metodo de pago</option>
-                                                <option value="visa">visa</option>
+                                                <option value="visa">Visa</option>
                                                 <option value="debito">Debito</option>
                                                 <option value="Paypal">Paypal</option>
                                                 <option value="Otro">Otro</option>
@@ -116,7 +116,7 @@ if(isset($_SESSION['usu'])){
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-info ">Confimar Resevacion</button>
+                    <button type="submit" class="btn btn-info ">Confimar Reseva</button>
                     <button type="reset" class="btn btn-gray">Cancelar</button>
                 </div>
             </form>

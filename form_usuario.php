@@ -33,35 +33,35 @@ if(isset($_SESSION['usu']))
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="rut_usu" class="form-label">Rut</label>
-                                <input type="text" class="form-control" placeholder="21345654-7" id="rut_usu" name="rut_usu" required>
+                                <input type="text" class="form-control" placeholder="" id="rut_usu" name="rut_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="name_usu" class="form-label">Nombre de Usuario</label>
-                                <input type="text" class="form-control" placeholder="Ramos569" id="name_usu" name="name_usu" required>
+                                <input type="text" class="form-control" placeholder="" id="name_usu" name="name_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="nombre_usu" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Ramos" id="nombre_usu" name="nombre_usu" required>
+                                <input type="text" class="form-control" placeholder="" id="nombre_usu" name="nombre_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_paterno_usu" class="form-label">Apellido Paterno</label>
-                                <input type="text" class="form-control" placeholder="Sergio" id="ap_paterno_usu" name="ap_paterno_usu" required>
+                                <input type="text" class="form-control" placeholder="" id="ap_paterno_usu" name="ap_paterno_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_materno_usu" class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" placeholder="Rojas" id="ap_materno_usu" name="ap_materno_usu" required>
+                                <input type="text" class="form-control" placeholder="" id="ap_materno_usu" name="ap_materno_usu" >
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_usu" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" placeholder="Tarapaca 780" id="direccion_usu" name="direccion_usu" required>
+                                <input type="text" class="form-control" placeholder="" id="direccion_usu" name="direccion_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="edad_usu" class="form-label">Edad</label>
-                                <input type="number" class="form-control" placeholder="12" id="edad_usu" name="edad_usu" required>
+                                <input type="number" class="form-control" placeholder="" id="edad_usu" name="edad_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="telefono_usu" class="form-label">Telefono</label>
-                                <input type="number" class="form-control" placeholder="984574664" id="telefono_usu" name="telefono_usu" required>
+                                <input type="number" class="form-control" placeholder="" id="telefono_usu" name="telefono_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="clave_usu" class="form-label">Clave</label>
@@ -69,7 +69,7 @@ if(isset($_SESSION['usu']))
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="email_usu" class="form-label">E-Mail</label>
-                                <input type="email" class="form-control" placeholder="correo@correo.com" id="email_usu" name="email_usu" required>
+                                <input type="email" class="form-control" placeholder="" id="email_usu" name="email_usu" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="imagen_usu" class="form-label">Imagen</label>

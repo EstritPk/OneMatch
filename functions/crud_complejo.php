@@ -23,7 +23,7 @@ switch($op){
 function crear()
 {
     $sql="INSERT INTO complejosdeportivos SET nombre_complejo='".validarCaracteres($_POST['nombre_comp'])."' , direccion_complejo='".validarCaracteres($_POST['direccion_comp'])."' , 
-    horario_complejo='".validarCaracteres($_POST['horario_comp'])."' , imagen_complejo='".validarCaracteres($_FILES['imagen_comple']['name'])."' , estado_complejo='".validaCaracteres($_POST['estado_comp'])."', 
+    horario_complejo='".validarCaracteres($_POST['horario_comp'])."' , imagen_complejo='".$_FILES['imagen_comple']['name']."' , estado_complejo='".validaCaracteres($_POST['estado_comp'])."', 
     adminsitradores_rut_admin='".validarCaracteres($_POST['admin_comp'])."'";
     mysqli_query(conectar(),$sql);
     if(move_uploaded_file($_FILES['imagen_comple']['tmp_name'],"../images/fotos/".$_FILES['imagen_comple']['name']));

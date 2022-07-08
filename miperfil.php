@@ -85,7 +85,7 @@ if (isset($_SESSION['usu'])) {
                                         <?php echo $datos['edad_usuario']; ?></span>
                                 </h3>
                                 <div class="h5 font-weight-300">
-                                    <i class="ni location_pin mr-2"></i>Chile,Coquimbo
+                                    <i class="ni location_pin mr-2"></i>Chile, Coquimbo
                                 </div>
                                 <div class="h5 mt-4">
                                     <i class="ni business_briefcase-24 mr-2"></i>Mi Descripcion
@@ -100,7 +100,7 @@ if (isset($_SESSION['usu'])) {
                         <div class="card-header bg-white border-0">
                             <div class="row align-items-center">
                                 <div class="col-8">
-                                    <h3 class="mb-0">MI Cuentas</h3>
+                                    <h3 class="mb-0">Mi Cuenta</h3>
                                 </div>
                                 <div class="col-4 text-right">
                                     <a href="#!" class="btn btn-sm btn-primary">Mis Reservas</a>

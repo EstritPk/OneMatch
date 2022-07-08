@@ -157,7 +157,7 @@ if (isset($_SESSION['usu'])) {
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript">
             function confimarEliminar() {
-                var respuesta = confirm("Estas Segura que deseas eliminar tu equipo");
+                var respuesta = confirm("Estas Seguro/a que deseas eliminar tu equipo");
                 if (respuesta == true) {
                     return true;
                 } else {

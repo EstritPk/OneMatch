@@ -33,7 +33,7 @@ if (isset($_SESSION['usu'])) {
                 </div>
                 <div class="row textos">
                     <div class="col-md-12">
-                        <h2 class="primera_linea">Complejos deportivos los Angeles</h2>
+                        <h2 class="primera_linea">Complejo deportivos los Angeles</h2>
                         <h3 class="segunda_linea">"Los campeones siguen jugando hasta que lo hacen bien".</h3>
                         <div class="contenedor-btns">
                             <a href="#" class="btn-outline-info">Mis Complejos</a>

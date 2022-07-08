@@ -67,7 +67,7 @@ if(isset($_SESSION['usu']))
     <div class="row py-5">
         <div class="col">
             <div class="border-bottom">
-                <h3 class="text-dark text-center">Nuestro Canchas</h3>
+                <h3 class="text-dark text-center">Nuestras Canchas</h3>
             </div>
         </div>
     </div>

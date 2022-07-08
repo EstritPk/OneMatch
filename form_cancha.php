@@ -10,7 +10,7 @@ if(isset($_SESSION['usu']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario Cancha</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
@@ -32,6 +32,10 @@ if(isset($_SESSION['usu']))
                     <form action="functions/crud_cancha.php" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
                         <div class="row">
                             <input type="hidden" class="form-control" id="actiones" value="Crear" name="actiones">
+                            <div class="col-12 col-md-6 mb-3">
+                                <label for="nombre_can" class="form-label">Nombre de la cancha</label>
+                                <input type="text" class="form-control" placeholder="" id="nombre_can" name="nombre_can" required>
+                            </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="precio_can" class="form-label">Precio</label>
                                 <input type="text" class="form-control" placeholder="$24" id="precio_can" name="precio_can" required>

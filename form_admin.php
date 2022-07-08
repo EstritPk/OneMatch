@@ -48,7 +48,7 @@ if(isset($_SESSION['usu']))
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_materno_adm" class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" placeholder="" id="ap_materno_adm" name="ap_materno_adm" required>
+                                <input type="text" class="form-control" placeholder="" id="ap_materno_adm" name="ap_materno_adm" >
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_adm" class="form-label">Direccion</label>

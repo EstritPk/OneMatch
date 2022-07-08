@@ -44,7 +44,7 @@ include "functions/db.php"
     <div class="row">
         <div class="col">
             <div class="border-bottom">
-                <h3 class="text-dark text-center">Mi complejos</h3>
+                <h3 class="text-dark text-center">Mis complejos</h3>
             </div>
         </div>
     </div>

@@ -16,7 +16,7 @@ if (isset($_GET['rut_adm'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modificar Usuario</title>
+    <title>Modificar Administrador</title>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
@@ -31,7 +31,7 @@ if (isset($_GET['rut_adm'])) {
         <div class="container ">
             <div class="row mt-3 form shadow-lg p-3 mb-5  rounded card">
                 <div class="card-header text-center bg-info">
-                    <h2 class=""> Modificar Administrador</h2>
+                    <h2 class="">Modificar Administrador</h2>
                 </div>
                 <div class="col mt-3">
                     <form action="functions/crud_admin.php" class="needs-validation" enctype="multipart/form-data" method="POST" novalidate>
@@ -52,7 +52,7 @@ if (isset($_GET['rut_adm'])) {
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="ap_materno_adm" class="form-label">Apellido Materno</label>
-                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_adm" name="ap_materno_adm" value="<?php echo $datos['apellido_m_administrador']; ?>" required>
+                                <input type="text" class="form-control" placeholder="Mala Leche" id="ap_materno_adm" name="ap_materno_adm" value="<?php echo $datos['apellido_m_administrador']; ?>" >
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="direccion_adm" class="form-label">Direccion</label>
@@ -60,7 +60,7 @@ if (isset($_GET['rut_adm'])) {
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="edad_adm" class="form-label">Edad</label>
-                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_adm" name="edad_adm" value="<?php echo $datos['edad_administrador']; ?>" >
+                                <input type="number" class="form-control" placeholder="Mala Leche" id="edad_adm" name="edad_adm" value="<?php echo $datos['edad_administrador']; ?>" required>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <label for="telefono_adm" class="form-label">Telefono</label>
