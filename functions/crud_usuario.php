@@ -31,7 +31,8 @@ function crear()
 
     mysqli_query($conn,$sql);
     move_uploaded_file($_FILES['imagen_usu']['tmp_name'],"../images/fotos/".$_FILES['imagen_usu']['name']);
-
+    $sql1="INSERT INTO usu_deportes SET usuarios_rut_usuario ='".validarCaracteres($_POST['rut_usu'])."', 	deportes_id_deporte ='".validarCaracteres($_POST['deporte_usu'])."'";
+    mysqli_query($conn,$sql1);
     header('Location:../home.php');
 }
 
@@ -44,7 +45,9 @@ function modificar()
     imagen_usuario='".validarCaracteres($_FILES['imagen_usu']['name'])."' WHERE rut_usuario= '".$_POST['rutusuario']. "'";
     move_uploaded_file($_FILES['imagen_usu']['tmp_name'],"../images/fotos/".$_FILES['imagen_usu']['name']);
 
+    
     mysqli_query($conn,$sql);
+    
     header('Location:../home.php');
     
 }
