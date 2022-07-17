@@ -73,8 +73,7 @@ if (isset($_SESSION['usu'])) {
                                 <div class="col">
                                     <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                                         <div>
-                                            <span class="heading">10</span>
-                                            <span class="description">Complejos</span>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -87,10 +86,7 @@ if (isset($_SESSION['usu'])) {
                                 <div class="h5 font-weight-300">
                                     <i class="ni location_pin mr-2"></i>Chile,Coquimbo
                                 </div>
-                                <div class="h5 mt-4">
-                                    <i class="ni business_briefcase-24 mr-2"></i>Mi Descripcion
-                                </div>
-                                <p><?php echo $datos['descripcion_administrador']; ?></p>
+                                
                             </div>
                         </div>
                     </div>
