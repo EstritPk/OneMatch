@@ -22,6 +22,7 @@ if (isset($_SESSION['usu'])) {
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <title>Pagar</title>
+        <link rel="stylesheet" href="css/style.css">
         <link href='' rel='stylesheet'>
         <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
         <style>
@@ -158,7 +159,7 @@ if (isset($_SESSION['usu'])) {
         <div class="row">
             <div class="col-75">
                 <div class="container bg-gray">
-                    <form action="">
+                    <form >
 
                         <div class="row cd" >
                             <div class="col-12 col-sm-6">
@@ -203,8 +204,8 @@ if (isset($_SESSION['usu'])) {
                             </div>
 
                         </div>
-
-                        <input type="submit" value="Pagar Reserva" class="btn btn-outline-info">
+                        <a href="functions/crud_reservas.php?folpagar=<?php echo $datosreserva['folio_reserva']; ?>" class="btn btn-outline-info">Pagar</a>
+                        
                         <input type="reset" value="Cancelar" class="btn btn-outline-dark">
                     </form>
                 </div>

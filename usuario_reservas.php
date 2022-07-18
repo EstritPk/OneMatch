@@ -5,6 +5,7 @@ if (isset($_SESSION['usu'])) {
 ?>
     <!DOCTYPE html>
     <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +19,7 @@ if (isset($_SESSION['usu'])) {
         <script src="https://kit.fontawesome.com/b8c0c93cb3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/form.css">
     </head>
+
     <body>
         <div class="pt-5">
             <?php
@@ -108,8 +110,20 @@ if (isset($_SESSION['usu'])) {
                                             ?>
                                         </td>
                                         <td class="text-center"><i class="fa-solid fa-receipt" style="font-size: 30px;"></i></td>
-                                        <td class="text-center "><a href="pagar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-info  ">Pagar</a>
-                                        </td>
+                                        <?php
+                                        if ($datos['estado_reserva'] == 0) {
+                                        ?>
+                                            <td class="text-center "><a href="pagar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-info  ">Pagar</a>
+                                            </td>
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <td class="text-center "><img src="images/ok.png"></td>
+                                        <?php
+                                        }
+                                        ?>
+
+
                                         <td class="text-center "><a href="modificar_reserva.php?folio=<?php echo $datos['folio_reserva']; ?>" class="col-12 btn btn-sm btn-outline-success ">Modificar</a>
                                         </td>
                                         <td class="text-center "><a href="functions/crud_reservas.php?cancelar=<?php echo $datos['folio_reserva']; ?>" onclick="return confimarEliminar();" value="Eliminar" class="col-12 btn btn-sm btn-outline-danger ">Cancelar</a>
@@ -147,6 +161,7 @@ if (isset($_SESSION['usu'])) {
         </script>
         <script src="js/bootstrap.bundle.min.js"></script>
     </body>
+
     </html>
 <?php
 } else {

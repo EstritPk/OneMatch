@@ -8,6 +8,13 @@ if(isset($_GET['cancelar']))
         mysqli_query(conectar(),$sql);
         header('Location:../usuario_reservas.php');
 }
+if(isset($_GET['folpagar']))
+{
+    $sql="UPDATE  reservas SET estado_reserva=1 WHERE folio_reserva=".$_GET['folpagar'];
+        mysqli_query(conectar(),$sql);
+        header('Location:../usuario_reservas.php');
+}
+
 $op=$_POST['actionreserva'];
 switch($op){
     case "Reservar": reservar();
